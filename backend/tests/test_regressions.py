@@ -10,7 +10,7 @@ os.environ["DATABASE_URL"] = "sqlite:///" + str(Path(_temp.name) / "test.db")
 from fastapi.testclient import TestClient
 from app.main import app
 from app import config
-from app.services import bm25_service, chatbot_service, knowledge_graph_service
+from app.services import bm25_service, chatbot_service, knowledge_graph_service, retrieval_service
 
 
 class RegressionTests(unittest.TestCase):
@@ -90,58 +90,50 @@ class RegressionTests(unittest.TestCase):
             self.assertEqual(self.client.post("/feedback/submit", json=body).status_code, 422)
 
     def test_chat_status_no_key_and_missing_domain_pdf(self):
-        with patch.object(chatbot_service.settings, "OPENAI_API_KEY", None):
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "", "CHATBOT_MURDER_PDF": "does-not-exist.pdf"}):
             data = self.client.get("/chatbot/status").json()
-            self.assertFalse(data["ipc"]["available"])
-            self.assertIn("OPENAI_API_KEY", data["ipc"]["reason"])
-            self.assertEqual(self.client.post("/chatbot/ipc", json={"message": "Hello"}).status_code, 503)
-        with patch.object(chatbot_service.settings, "CHATBOT_MURDER_PDF", "does-not-exist.pdf"):
-            self.assertIsNone(chatbot_service._resolve_pdf_path("murder"))
+            self.assertTrue(data["ipc"]["available"])
+            self.assertEqual(data["ipc"]["mode"], "excerpts")
+            self.assertFalse(data["murder"]["available"])
+            self.assertEqual(self.client.post("/chatbot/murder", json={"message": "Hello"}).status_code, 503)
 
     def test_chat_history_is_request_scoped(self):
-        chain = MagicMock()
-        chain.invoke.return_value = {"answer": "An answer"}
-        with patch.object(chatbot_service, "_get_chain_for_domain", return_value=chain):
-            chatbot_service.chat("ipc", "Follow up", [{"role": "user", "content": "My question"}, {"role": "assistant", "content": "My answer"}])
-            first = chain.invoke.call_args.args[0]
-            self.assertEqual([m.content for m in first["chat_history"]], ["My question", "My answer"])
-            chatbot_service.chat("ipc", "A new visitor")
-            self.assertEqual(chain.invoke.call_args.args[0]["chat_history"], [])
+        sources = [{"id": "sample:1", "rank": 1, "title": "Test", "page": 1, "excerpt": "Source text", "corpus_status": "historical"}]
+        result = {"results": sources, "retrieval": {"method": "bm25", "elapsed_ms": 1, "warning": None}}
+        generated = chatbot_service.EvidenceAnswer(sufficient_evidence=True, claims=[chatbot_service.EvidenceClaim(text="Answer", citation_ids=["sample:1"])])
+        classification = {"status": "ready", "scope": "historical", "intent": "explanation"}
+        document = MagicMock(corpus_status="historical")
+        history = [{"role": "user", "content": "My question"}, {"role": "assistant", "content": "My answer"}]
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-only"}), \
+             patch.object(chatbot_service.classification_service, "classify", return_value=classification), \
+             patch.object(chatbot_service.source_service, "for_domain", return_value=document), \
+             patch.object(retrieval_service, "retrieve", return_value=result), \
+             patch.object(chatbot_service, "_cooldown_reason", return_value=None), \
+             patch.object(chatbot_service, "_generate", return_value=generated) as generate:
+            self.assertEqual(chatbot_service.chat("ipc", "Follow up", history)["mode"], "generated")
+            self.assertEqual(generate.call_args.args[2], history)
+            self.assertEqual(chatbot_service.chat("ipc", "A new visitor")["mode"], "generated")
+            self.assertEqual(generate.call_args.args[2], [])
 
     def test_embedding_cache_reuse_and_invalidation(self):
-        from langchain_core.embeddings import Embeddings
-        class TestEmbeddings(Embeddings):
-            calls = 0
-            def embed_documents(self, texts):
-                self.calls += 1
-                return [[1.0, 0.0] for _ in texts]
-            def embed_query(self, text):
-                return [1.0, 0.0]
-        embeddings = TestEmbeddings()
-        pdf = Path(_temp.name) / "fake.pdf"
-        pdf.write_bytes(b"version-one")
-        with patch.object(chatbot_service, "BASE_DIR", Path(_temp.name)), \
-             patch.object(chatbot_service, "domain_status", return_value={"available": True}), \
-             patch.object(chatbot_service, "_resolve_pdf_path", return_value=pdf), \
-             patch.object(chatbot_service, "_get_pdf_text", return_value="maternity benefit law"), \
-             patch.object(chatbot_service.settings, "EMBEDDING_MODEL", "test-model"), \
-             patch.dict(chatbot_service._chains, {}, clear=True), \
-             patch("langchain_community.embeddings.HuggingFaceEmbeddings", return_value=embeddings), \
-             patch("langchain_openai.ChatOpenAI"), \
-             patch("langchain.chains.ConversationalRetrievalChain.from_llm", return_value=MagicMock()):
-            chatbot_service._get_chain_for_domain("ipc")
-            chatbot_service._chains.clear()
-            chatbot_service._get_chain_for_domain("ipc")
-            self.assertEqual(embeddings.calls, 1)
-            pdf.write_bytes(b"version-two")
-            chatbot_service._chains.clear()
-            chatbot_service._get_chain_for_domain("ipc")
-            self.assertEqual(embeddings.calls, 2)
-            for cache in (Path(_temp.name)/"instance"/"embeddings").glob("*.npz"):
+        from types import SimpleNamespace
+        import numpy as np
+        model = MagicMock()
+        model.encode.return_value = np.array([[1.0, 0.0]], dtype=np.float32)
+        def corpus(fingerprint):
+            return SimpleNamespace(fingerprint=fingerprint, ids=["id"], pages=[1], texts=["source"], vectors=None)
+        with tempfile.TemporaryDirectory() as directory, \
+             patch.object(retrieval_service, "BASE_DIR", Path(directory)), \
+             patch.object(retrieval_service, "_model", return_value=model):
+            retrieval_service._vectors(corpus("version-one"))
+            retrieval_service._vectors(corpus("version-one"))
+            self.assertEqual(model.encode.call_count, 1)
+            retrieval_service._vectors(corpus("version-two"))
+            self.assertEqual(model.encode.call_count, 2)
+            for cache in (Path(directory) / "instance" / "embeddings").glob("*.npz"):
                 cache.write_bytes(b"corrupt cache")
-            chatbot_service._chains.clear()
-            chatbot_service._get_chain_for_domain("ipc")
-            self.assertEqual(embeddings.calls, 3)
+            retrieval_service._vectors(corpus("version-one"))
+            self.assertEqual(model.encode.call_count, 3)
 
     def test_chat_validation_and_removed_auth_routes(self):
         for path, body in [("/chatbot/unknown", {"message": "Hello"}), ("/chatbot/ipc", {"message": " "}), ("/chatbot/ipc", {"message": "Hi", "history": [{"role": "system", "content": "bad"}]}), ("/chatbot/ipc", {"message": "Hi", "domain": "child"})]:

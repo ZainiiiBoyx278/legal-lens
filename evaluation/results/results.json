@@ -1,0 +1,1985 @@
+{
+  "dataset": "Historical IPC evidence and scope pilot",
+  "label_status": "Author-created pilot; source-checked, not independently reviewed by legal experts or sampled from real users.",
+  "executed_at": "2026-10-30T09:42:21.131749+00:00",
+  "corpus_sha256": "5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237",
+  "corpus_pages": 1871,
+  "source_title": "Indian Penal Code Book",
+  "corpus_status": "historical",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunking": "page-aware-1100-140-v1",
+  "model_error": null,
+  "summary": {
+    "bm25": {
+      "hits": 14,
+      "total": 27,
+      "hit_rate": 0.5185185185185185,
+      "mrr": 0.2654320987654321,
+      "p50_ms": 14.03,
+      "p95_ms": 17.91,
+      "fallbacks": 0,
+      "unavailable": 0
+    },
+    "semantic": {
+      "hits": 10,
+      "total": 27,
+      "hit_rate": 0.37037037037037035,
+      "mrr": 0.13950617283950617,
+      "p50_ms": 12.19,
+      "p95_ms": 14.29,
+      "fallbacks": 0,
+      "unavailable": 0
+    },
+    "hybrid": {
+      "hits": 14,
+      "total": 27,
+      "hit_rate": 0.5185185185185185,
+      "mrr": 0.2506172839506173,
+      "p50_ms": 26.64,
+      "p95_ms": 31.76,
+      "fallbacks": 0,
+      "unavailable": 0
+    }
+  },
+  "supported": [
+    {
+      "id": "h01",
+      "group": "section_lookup",
+      "query": "In this historical book, what does section 24 say about acting dishonestly?",
+      "section": 24,
+      "pages": [
+        55
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            55,
+            55,
+            1695,
+            661,
+            862
+          ],
+          "elapsed_ms": 15.18,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            55,
+            55,
+            55,
+            229
+          ],
+          "elapsed_ms": 10.86,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            55,
+            55,
+            55,
+            1695,
+            229
+          ],
+          "elapsed_ms": 31.08,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          55,
+          55,
+          1695,
+          661,
+          862,
+          524
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 30.77
+      }
+    },
+    {
+      "id": "h02",
+      "group": "section_lookup",
+      "query": "In the historical IPC, what does section 34 say about common intention?",
+      "section": 34,
+      "pages": [
+        75,
+        93
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            77,
+            95,
+            82,
+            101,
+            100
+          ],
+          "elapsed_ms": 15.0,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            95,
+            82,
+            79,
+            78,
+            79
+          ],
+          "elapsed_ms": 10.13,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            82,
+            95,
+            96,
+            101,
+            101
+          ],
+          "elapsed_ms": 21.87,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          77,
+          95,
+          82,
+          101,
+          100,
+          84
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 21.37
+      }
+    },
+    {
+      "id": "h03",
+      "group": "section_lookup",
+      "query": "What does section 96 say about private defence in the historical IPC?",
+      "section": 96,
+      "pages": [
+        320
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            86,
+            103,
+            322,
+            325,
+            321
+          ],
+          "elapsed_ms": 15.11,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_pages": [
+            321,
+            325,
+            322,
+            323,
+            320
+          ],
+          "elapsed_ms": 13.25,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_pages": [
+            321,
+            325,
+            322,
+            86,
+            320
+          ],
+          "elapsed_ms": 23.15,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          86,
+          103,
+          322,
+          325,
+          321,
+          86
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 27.32
+      }
+    },
+    {
+      "id": "h04",
+      "group": "section_lookup",
+      "query": "What does the historical IPC state in section 299 about culpable homicide?",
+      "section": 299,
+      "pages": [
+        1012
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1132,
+            1024,
+            1104,
+            1026,
+            1016
+          ],
+          "elapsed_ms": 15.99,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1026,
+            1026,
+            1104,
+            1026,
+            1106
+          ],
+          "elapsed_ms": 14.62,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1104,
+            1132,
+            1024,
+            1026,
+            1026
+          ],
+          "elapsed_ms": 28.29,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1132,
+          1024,
+          1104,
+          1026,
+          1016,
+          1014
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 29.78
+      }
+    },
+    {
+      "id": "h05",
+      "group": "section_lookup",
+      "query": "What does section 300 say about murder in the historical IPC?",
+      "section": 300,
+      "pages": [
+        1021
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1026,
+            1104,
+            1023,
+            1013,
+            1029
+          ],
+          "elapsed_ms": 14.2,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1026,
+            1026,
+            1104,
+            1460,
+            1459
+          ],
+          "elapsed_ms": 12.82,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1026,
+            1104,
+            1026,
+            1104,
+            1026
+          ],
+          "elapsed_ms": 26.64,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1026,
+          1104,
+          1023,
+          1013,
+          1029,
+          1025
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 28.37
+      }
+    },
+    {
+      "id": "h06",
+      "group": "section_lookup",
+      "query": "What punishment does section 302 describe in the historical IPC?",
+      "section": 302,
+      "pages": [
+        1077
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1095,
+            1077,
+            1460,
+            569,
+            568
+          ],
+          "elapsed_ms": 13.18,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1095,
+            1460,
+            1459,
+            100,
+            1039
+          ],
+          "elapsed_ms": 12.68,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1460,
+            1095,
+            1095,
+            569,
+            100
+          ],
+          "elapsed_ms": 25.62,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1095,
+          1077,
+          1460,
+          569,
+          568,
+          1095
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 21.94
+      }
+    },
+    {
+      "id": "h07",
+      "group": "section_lookup",
+      "query": "What does section 304 say about culpable homicide not amounting to murder in this historical book?",
+      "section": 304,
+      "pages": [
+        1103
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1132,
+            1014,
+            1104,
+            273,
+            1104
+          ],
+          "elapsed_ms": 17.91,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1132,
+            1026,
+            1026,
+            1024,
+            1104
+          ],
+          "elapsed_ms": 11.11,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1132,
+            1104,
+            1024,
+            1025,
+            1026
+          ],
+          "elapsed_ms": 26.27,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1132,
+          1014,
+          1104,
+          273,
+          1104,
+          1025
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 35.68
+      }
+    },
+    {
+      "id": "h08",
+      "group": "section_lookup",
+      "query": "What is hurt according to section 319 of the historical IPC?",
+      "section": 319,
+      "pages": [
+        1199
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 4,
+          "reciprocal_rank": 0.25,
+          "top_pages": [
+            1203,
+            1838,
+            1199,
+            1199,
+            1199
+          ],
+          "elapsed_ms": 11.85,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [],
+          "elapsed_ms": 11.46,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 4,
+          "reciprocal_rank": 0.25,
+          "top_pages": [
+            1203,
+            1838,
+            1199,
+            1199,
+            1199
+          ],
+          "elapsed_ms": 29.07,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1203,
+          1838,
+          1199,
+          1199,
+          1199,
+          130
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 27.72
+      }
+    },
+    {
+      "id": "h09",
+      "group": "section_lookup",
+      "query": "Which kinds of injury are designated grievous hurt in section 320 of the historical IPC?",
+      "section": 320,
+      "pages": [
+        1201
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1201,
+            1201,
+            1204,
+            1202,
+            1203
+          ],
+          "elapsed_ms": 15.79,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 3,
+          "reciprocal_rank": 0.3333333333333333,
+          "top_pages": [
+            1201,
+            1247,
+            1201,
+            1202,
+            1203
+          ],
+          "elapsed_ms": 13.93,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1201,
+            1201,
+            1203,
+            1247,
+            1204
+          ],
+          "elapsed_ms": 28.21,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1201,
+          1201,
+          1204,
+          1202,
+          1203,
+          1203
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 32.54
+      }
+    },
+    {
+      "id": "h10",
+      "group": "section_lookup",
+      "query": "What does section 322 of the historical IPC say about voluntarily causing grievous hurt?",
+      "section": 322,
+      "pages": [
+        1207
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1839,
+            1207
+          ],
+          "elapsed_ms": 17.91,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1839,
+            1207
+          ],
+          "elapsed_ms": 13.86,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1839,
+            1207
+          ],
+          "elapsed_ms": 32.05,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1839,
+          1207
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 34.52
+      }
+    },
+    {
+      "id": "h11",
+      "group": "section_lookup",
+      "query": "In the historical IPC what does section 323 state about punishment for voluntarily causing hurt?",
+      "section": 323,
+      "pages": [
+        1208
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_pages": [
+            1208,
+            1215,
+            1248,
+            117,
+            1222
+          ],
+          "elapsed_ms": 18.83,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1177,
+            1208,
+            1215,
+            1210,
+            1209
+          ],
+          "elapsed_ms": 14.39,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_pages": [
+            1208,
+            1215,
+            1177,
+            1248,
+            117
+          ],
+          "elapsed_ms": 26.72,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1208,
+          1215,
+          1248,
+          117,
+          1222,
+          1199
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 27.67
+      }
+    },
+    {
+      "id": "h12",
+      "group": "section_lookup",
+      "query": "What does the historical IPC section 378 say about theft?",
+      "section": 378,
+      "pages": [
+        1407
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1409,
+            1413,
+            1419,
+            1413,
+            1419
+          ],
+          "elapsed_ms": 12.86,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1409,
+            1407,
+            1413
+          ],
+          "elapsed_ms": 12.84,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 3,
+          "reciprocal_rank": 0.3333333333333333,
+          "top_pages": [
+            1409,
+            1413,
+            1407,
+            1413,
+            1419
+          ],
+          "elapsed_ms": 22.92,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1409,
+          1413,
+          1419,
+          1413,
+          1419,
+          1412
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 26.1
+      }
+    },
+    {
+      "id": "h13",
+      "group": "section_lookup",
+      "query": "What punishment for theft is described in section 379 of the historical IPC?",
+      "section": 379,
+      "pages": [
+        1410
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1413,
+            1419,
+            1413,
+            1412,
+            1414
+          ],
+          "elapsed_ms": 12.92,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1423
+          ],
+          "elapsed_ms": 14.05,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1423,
+            1413,
+            1419,
+            1413,
+            1412
+          ],
+          "elapsed_ms": 26.98,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1413,
+          1419,
+          1413,
+          1412,
+          1414,
+          1419
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 29.5
+      }
+    },
+    {
+      "id": "h14",
+      "group": "section_lookup",
+      "query": "What does section 390 of the historical IPC say about robbery?",
+      "section": 390,
+      "pages": [
+        1440
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 3,
+          "reciprocal_rank": 0.3333333333333333,
+          "top_pages": [
+            1850,
+            1441,
+            1440,
+            1441,
+            1442
+          ],
+          "elapsed_ms": 12.0,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1441,
+            1442,
+            1442,
+            1850
+          ],
+          "elapsed_ms": 11.59,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_pages": [
+            1441,
+            1850,
+            1442,
+            1442,
+            1440
+          ],
+          "elapsed_ms": 21.88,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1850,
+          1441,
+          1440,
+          1441,
+          1442,
+          1442
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 19.97
+      }
+    },
+    {
+      "id": "h15",
+      "group": "section_lookup",
+      "query": "What does section 405 of the historical IPC describe as criminal breach of trust?",
+      "section": 405,
+      "pages": [
+        1483
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1503,
+            1484,
+            1488,
+            1488,
+            1852
+          ],
+          "elapsed_ms": 13.88,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_pages": [
+            1503,
+            1484,
+            1484,
+            1488,
+            1483
+          ],
+          "elapsed_ms": 12.19,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_pages": [
+            1503,
+            1484,
+            1488,
+            1488,
+            1483
+          ],
+          "elapsed_ms": 22.24,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1503,
+          1484,
+          1488,
+          1488,
+          1852,
+          1483
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 21.93
+      }
+    },
+    {
+      "id": "h16",
+      "group": "section_lookup",
+      "query": "What is cheating in section 415 of the historical IPC?",
+      "section": 415,
+      "pages": [
+        1527
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1532,
+            1529,
+            1544,
+            1534,
+            1536
+          ],
+          "elapsed_ms": 12.12,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1532,
+            1536,
+            1548,
+            1544,
+            1532
+          ],
+          "elapsed_ms": 12.7,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1532,
+            1536,
+            1544,
+            1548,
+            1532
+          ],
+          "elapsed_ms": 18.98,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1532,
+          1529,
+          1544,
+          1534,
+          1536,
+          1534
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 26.85
+      }
+    },
+    {
+      "id": "h17",
+      "group": "section_lookup",
+      "query": "What does section 420 say about cheating and delivery of property in the historical IPC?",
+      "section": 420,
+      "pages": [
+        1547
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1534,
+            1547,
+            1542,
+            1531,
+            1548
+          ],
+          "elapsed_ms": 17.27,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 3,
+          "reciprocal_rank": 0.3333333333333333,
+          "top_pages": [
+            1548,
+            55,
+            1547,
+            1532,
+            203
+          ],
+          "elapsed_ms": 13.39,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_pages": [
+            1547,
+            1548,
+            1534,
+            1542,
+            55
+          ],
+          "elapsed_ms": 30.84,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1534,
+          1547,
+          1542,
+          1531,
+          1548,
+          57
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 24.14
+      }
+    },
+    {
+      "id": "h18",
+      "group": "section_lookup",
+      "query": "In the historical IPC what is criminal trespass under section 441?",
+      "section": 441,
+      "pages": [
+        1585
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1588,
+            1585,
+            1591,
+            1587,
+            1587
+          ],
+          "elapsed_ms": 9.01,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1607,
+            1591,
+            1586,
+            1587,
+            1857
+          ],
+          "elapsed_ms": 11.3,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 4,
+          "reciprocal_rank": 0.25,
+          "top_pages": [
+            1591,
+            1607,
+            1587,
+            1585,
+            1587
+          ],
+          "elapsed_ms": 26.57,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1588,
+          1585,
+          1591,
+          1587,
+          1587,
+          1008
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 29.75
+      }
+    },
+    {
+      "id": "h19",
+      "group": "section_lookup",
+      "query": "What does the historical IPC say about defamation in section 499?",
+      "section": 499,
+      "pages": [
+        1729
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1750,
+            1732,
+            1733,
+            1749,
+            1752
+          ],
+          "elapsed_ms": 13.31,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1746,
+            1752,
+            779,
+            1746,
+            1748
+          ],
+          "elapsed_ms": 11.05,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1752,
+            1732,
+            779,
+            1750,
+            1746
+          ],
+          "elapsed_ms": 23.36,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1750,
+          1732,
+          1733,
+          1749,
+          1752,
+          779
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 18.73
+      }
+    },
+    {
+      "id": "h20",
+      "group": "section_lookup",
+      "query": "What does the historical IPC say about criminal intimidation in section 503?",
+      "section": 503,
+      "pages": [
+        1764
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1765,
+            1764,
+            703,
+            1868,
+            1765
+          ],
+          "elapsed_ms": 15.59,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1868,
+            1764,
+            1765
+          ],
+          "elapsed_ms": 13.59,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1765,
+            1764,
+            1868,
+            703,
+            1765
+          ],
+          "elapsed_ms": 29.29,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1765,
+          1764,
+          703,
+          1868,
+          1765,
+          1532
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 28.82
+      }
+    },
+    {
+      "id": "h21",
+      "group": "section_lookup",
+      "query": "What does section 511 of the historical IPC say about attempts?",
+      "section": 511,
+      "pages": [
+        1780
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1836,
+            1780,
+            425,
+            180,
+            399
+          ],
+          "elapsed_ms": 12.94,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1783,
+            1784
+          ],
+          "elapsed_ms": 10.69,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1784,
+            1783,
+            1836,
+            1780,
+            425
+          ],
+          "elapsed_ms": 25.01,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1836,
+          1780,
+          425,
+          180,
+          399,
+          1470
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 24.15
+      }
+    },
+    {
+      "id": "p01",
+      "group": "paraphrase",
+      "query": "In the old IPC book, where does it define taking movable property without consent?",
+      "section": 378,
+      "pages": [
+        1407
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 4,
+          "reciprocal_rank": 0.25,
+          "top_pages": [
+            1409,
+            1476,
+            1419,
+            1407,
+            1854
+          ],
+          "elapsed_ms": 12.21,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            51,
+            1583,
+            1484,
+            483,
+            1634
+          ],
+          "elapsed_ms": 10.75,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1409,
+            51,
+            1417,
+            1488,
+            794
+          ],
+          "elapsed_ms": 31.06,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1409,
+          1476,
+          1419,
+          1407,
+          1854,
+          1410
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 33.28
+      }
+    },
+    {
+      "id": "p02",
+      "group": "paraphrase",
+      "query": "In the old IPC book, where does it define causing bodily pain or disease?",
+      "section": 319,
+      "pages": [
+        1199
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 2,
+          "reciprocal_rank": 0.5,
+          "top_pages": [
+            1199,
+            1199,
+            1202,
+            1244,
+            1838
+          ],
+          "elapsed_ms": 14.03,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": true,
+          "rank": 5,
+          "reciprocal_rank": 0.2,
+          "top_pages": [
+            1018,
+            754,
+            1244,
+            1177,
+            1199
+          ],
+          "elapsed_ms": 10.79,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_pages": [
+            1199,
+            1244,
+            1199,
+            1202,
+            1838
+          ],
+          "elapsed_ms": 26.71,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1199,
+          1199,
+          1202,
+          1244,
+          1838,
+          1021
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 27.49
+      }
+    },
+    {
+      "id": "p03",
+      "group": "paraphrase",
+      "query": "In the old IPC book, where does it discuss threatening injury to reputation or property?",
+      "section": 503,
+      "pages": [
+        1764
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1764,
+            731,
+            130,
+            1533,
+            1541
+          ],
+          "elapsed_ms": 11.92,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1649,
+            590,
+            598,
+            754,
+            1583
+          ],
+          "elapsed_ms": 9.23,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            591,
+            599,
+            1509,
+            1753,
+            1564
+          ],
+          "elapsed_ms": 23.32,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1764,
+          731,
+          130,
+          1533,
+          1541,
+          1764
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 33.16
+      }
+    },
+    {
+      "id": "p04",
+      "group": "paraphrase",
+      "query": "In the old IPC book, where does it discuss dishonest misappropriation of entrusted property?",
+      "section": 405,
+      "pages": [
+        1483
+      ],
+      "methods": {
+        "bm25": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1478,
+            1488,
+            1476,
+            1484,
+            1476
+          ],
+          "elapsed_ms": 11.64,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1560,
+            1484,
+            590,
+            598,
+            1486
+          ],
+          "elapsed_ms": 12.73,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1486,
+            1484,
+            1476,
+            1477,
+            1476
+          ],
+          "elapsed_ms": 34.5,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": false,
+        "pages": [
+          1478,
+          1488,
+          1476,
+          1484,
+          1476,
+          1851
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 30.9
+      }
+    },
+    {
+      "id": "p05",
+      "group": "paraphrase",
+      "query": "In the old IPC book, where does it describe deception that induces delivery of property?",
+      "section": 415,
+      "pages": [
+        1527
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 3,
+          "reciprocal_rank": 0.3333333333333333,
+          "top_pages": [
+            1547,
+            1431,
+            1527,
+            1527,
+            979
+          ],
+          "elapsed_ms": 16.88,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1536,
+            1548,
+            1484,
+            1528,
+            754
+          ],
+          "elapsed_ms": 11.96,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            1528,
+            1528,
+            63,
+            1541,
+            1854
+          ],
+          "elapsed_ms": 25.16,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          1547,
+          1431,
+          1527,
+          1527,
+          979,
+          1531
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 28.74
+      }
+    },
+    {
+      "id": "p06",
+      "group": "paraphrase",
+      "query": "In the old IPC book, where does it describe acting to cause wrongful gain or wrongful loss?",
+      "section": 24,
+      "pages": [
+        55
+      ],
+      "methods": {
+        "bm25": {
+          "hit": true,
+          "rank": 1,
+          "reciprocal_rank": 1.0,
+          "top_pages": [
+            55,
+            53,
+            53,
+            1634,
+            55
+          ],
+          "elapsed_ms": 16.75,
+          "actual_method": "bm25",
+          "warning": null
+        },
+        "semantic": {
+          "hit": false,
+          "rank": null,
+          "reciprocal_rank": 0.0,
+          "top_pages": [
+            72,
+            754,
+            53,
+            1566,
+            1649
+          ],
+          "elapsed_ms": 10.93,
+          "actual_method": "semantic_baseline",
+          "warning": null
+        },
+        "hybrid": {
+          "hit": true,
+          "rank": 3,
+          "reciprocal_rank": 0.3333333333333333,
+          "top_pages": [
+            53,
+            53,
+            55,
+            1566,
+            55
+          ],
+          "elapsed_ms": 27.44,
+          "actual_method": "hybrid",
+          "warning": null
+        }
+      },
+      "chat": {
+        "mode": "excerpts",
+        "labelled_evidence": true,
+        "pages": [
+          55,
+          53,
+          53,
+          1634,
+          55,
+          53
+        ],
+        "reason": "Document excerpts were requested.",
+        "elapsed_ms": 26.26
+      }
+    }
+  ],
+  "unsupported": [
+    {
+      "id": "u01",
+      "group": "unsupported_current",
+      "query": "What is the current punishment under BNS for murder?",
+      "actual_mode": "no_evidence",
+      "reason": "This question mentions BNS/BNSS/BSA material that is not verified in the selected source. Selected source status: historical.",
+      "passed": true,
+      "elapsed_ms": 10.03
+    },
+    {
+      "id": "u02",
+      "group": "unsupported_current",
+      "query": "Compare IPC section 302 with BNS section 103.",
+      "actual_mode": "no_evidence",
+      "reason": "This question mentions BNS/BNSS/BSA material that is not verified in the selected source. Selected source status: historical.",
+      "passed": true,
+      "elapsed_ms": 8.92
+    },
+    {
+      "id": "u03",
+      "group": "unsupported_current",
+      "query": "What is the latest criminal law for theft in India?",
+      "actual_mode": "no_evidence",
+      "reason": "This question asks about current law or present applicability. Selected source status: historical.",
+      "passed": true,
+      "elapsed_ms": 9.38
+    },
+    {
+      "id": "u04",
+      "group": "unsupported_current",
+      "query": "Is this provision still in force today?",
+      "actual_mode": "no_evidence",
+      "reason": "This question asks about current law or present applicability. Selected source status: historical.",
+      "passed": true,
+      "elapsed_ms": 8.8
+    },
+    {
+      "id": "u05",
+      "group": "unsupported_applicability",
+      "query": "Which law applies to a murder incident in 2025?",
+      "actual_mode": "no_evidence",
+      "reason": "A dated event requires verified applicability and effective-date evidence. The selected source has no such verification. Selected source status: historical.",
+      "passed": true,
+      "elapsed_ms": 9.77
+    },
+    {
+      "id": "u06",
+      "group": "unsupported_applicability",
+      "query": "Will the accused be convicted for an offence in 2024?",
+      "actual_mode": "no_evidence",
+      "reason": "A dated event requires verified applicability and effective-date evidence. The selected source has no such verification. Selected source status: historical.",
+      "passed": true,
+      "elapsed_ms": 10.12
+    },
+    {
+      "id": "u07",
+      "group": "unsupported_cross_era",
+      "query": "Does the BNSS change procedure for IPC cases?",
+      "actual_mode": "no_evidence",
+      "reason": "This question mentions BNS/BNSS/BSA material that is not verified in the selected source. Selected source status: historical.",
+      "passed": true,
+      "elapsed_ms": 13.47
+    },
+    {
+      "id": "u08",
+      "group": "unsupported_cross_era",
+      "query": "What does the BSA say about evidence?",
+      "actual_mode": "no_evidence",
+      "reason": "This question mentions BNS/BNSS/BSA material that is not verified in the selected source. Selected source status: historical.",
+      "passed": true,
+      "elapsed_ms": 13.74
+    }
+  ],
+  "generated_answer_quality": "not evaluated; no provider called",
+  "method_order": [
+    "bm25",
+    "semantic",
+    "hybrid"
+  ]
+}

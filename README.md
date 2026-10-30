@@ -6,6 +6,8 @@ Legal Lens 2.0 extends the original CSE508 group project into a runnable FastAPI
 
 The bundled book is **historical IPC research material**. Current-law BNS/BNSS/BSA coverage and legal-applicability verification are future work.
 
+**Retrieval evaluation pilot:** [35 labelled historical/scope questions and per-question results](evaluation/results/REPORT.md) compare application BM25 and hybrid retrieval with an evaluation-only semantic baseline. The author-created set is not representative or legally expert-reviewed; evidence-location hits are not answer-accuracy scores. [Method and reproduction](evaluation/README.md).
+
 [Run locally](#run-locally-on-windows) · [What we built](#what-we-built) · [Architecture](ARCHITECTURE.md) · [Demo guide](docs/DEMO.md) · [Classifier model card](backend/app/data/classification/README.md)
 
 ## What we built
