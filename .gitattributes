@@ -1,2 +1,6 @@
 # Keep classifier dataset/artifact hashes stable across Windows and Linux.
 backend/app/data/classification/*.json text eol=lf
+
+# Preserve the exact frozen benchmark bytes on every checkout platform.
+backend/evaluation/retrieval/questions.json -text
+backend/evaluation/retrieval/results.json -text
