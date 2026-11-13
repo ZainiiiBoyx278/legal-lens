@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "authorship": "Agent-authored questions and reference answers; agent-reviewed generated claims. No independent human or legal review.",
+  "holdout_sha256": "3c9731d0741ac00d36f710a7e40eea05bb43b2d8d9de764789033fa254d93e60",
+  "development_sha256": "48925250b0c096259acfd29cf17589004be76b032788a51446d37bd8627bb048",
+  "baseline_sha256": "8ff7aa2aee56bf60639da88615f08439a543156e83f0d89e7ac9976c772d3a9e",
+  "baseline_origin": "origin/main 0b19bd9, retrieval_service.py copied without modification",
+  "split": "40 held-out sections absent from the original 20 development sections; two correlated variants each. Topic is the independent sampling unit. Entire source corpus is indexed for both sets.",
+  "retrieval_protocol": {
+    "systems": [
+      "v1_bm25",
+      "v1_hybrid",
+      "v2_bm25",
+      "v2_hybrid"
+    ],
+    "top_k": 10,
+    "warm_repeats": 3,
+    "seed": 20261113,
+    "metrics": [
+      "Hit@1",
+      "Hit@5",
+      "Hit@10",
+      "MRR@10",
+      "empty results by negative category",
+      "warm p50/p95 latency",
+      "chunks over encoder limit"
+    ],
+    "relevance": "Complete normalized gold passage present in a returned chunk; unjudged alternate evidence may also be valid. No claim of exhaustive recall.",
+    "tuning": "Use only v1 development questions. Freeze code and settings before new holdout ranking. Retain failures and regressions.",
+    "timing": "Serial local CPU service calls, excludes HTTP, cold index creation and generation; not an isolated server load test."
+  },
+  "generation_protocol": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "payment": "Local only, no inference API",
+    "cases": "One paraphrase for each of 40 topics plus all 20 negatives, 60 total",
+    "sources": "Top six v2 hybrid excerpts; source-scope guard skips unsupported current-law requests",
+    "sampling": "Greedy, one completion per query; no selection of best outputs",
+    "contract": "Shared production evidence prompt/schema and citation validator. Local generator component test; not production OpenAI or classifier/end-to-end API performance.",
+    "review": "Every returned claim reviewed against only its cited passages, with supporting quote and reasoning. Assess answer completeness separately against reference. Abstentions do not count as supported claims.",
+    "review_labels": [
+      "supported",
+      "unsupported",
+      "contradicted",
+      "uncertain"
+    ],
+    "metrics": [
+      "generated answer coverage",
+      "fully supported complete answers / all answerable cases",
+      "claim support / all generated claims",
+      "citation and schema failures",
+      "negative abstention by category",
+      "generation latency"
+    ],
+    "tuning": "Generation settings selected using only development smoke cases, frozen before holdout generation. Questions, labels and judgments are agent-authored; not independent evaluation."
+  }
+}

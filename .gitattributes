@@ -1,2 +1,6 @@
 # Keep classifier dataset/artifact hashes stable across Windows and Linux.
 backend/app/data/classification/*.json text eol=lf
+
+# Preserve the byte-level identities of frozen evaluation artifacts.
+backend/evaluation/retrieval_v2/*.json -text
+backend/evaluation/retrieval_v2/baselines/retrieval_v1.py -text

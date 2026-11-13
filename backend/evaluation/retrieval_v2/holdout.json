@@ -1,0 +1,453 @@
+{
+  "schema_version": 2,
+  "name": "historical-ipc-disjoint-topics-v2",
+  "domain": "ipc",
+  "document_id": "ipc-book",
+  "source_sha256": "5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237",
+  "authorship": "Agent-authored source-aware questions and reference answers; no independent human or legal review.",
+  "split_policy": "40 sections absent from v1. Two correlated query variants per section. Authored and hashed before v2 implementation/ranking; v1 is development only.",
+  "topics": [
+    {
+      "id": "s20",
+      "page": 42,
+      "quote": "The words \"Court of Justice\" denote a Judge who is empowered by law to act judicially alone, or a body of Judges which is empowered by law to act judicially as a body, when such Judge or body of Judges is acting judicially.",
+      "section_lookup": "In the historical IPC, what does Section 20 call a Court of Justice?",
+      "paraphrase": "In the historical IPC, can a single judge acting judicially qualify as a court, or must there be several judges?",
+      "reference_answer": "A judge legally empowered to act judicially alone, or a body of judges legally empowered to act judicially together, qualifies while acting judicially."
+    },
+    {
+      "id": "s22",
+      "page": 51,
+      "quote": "The words \"movable property\" are intended to include corporeal property 1 of every description, except land and things attached to the earth 2 or permanently fastened to anything which is attached to the earth.",
+      "section_lookup": "In the historical IPC, what does Section 22 exclude from movable property?",
+      "paraphrase": "In the historical IPC, does the definition of movable property cover land and objects permanently attached to the earth?",
+      "reference_answer": "It excludes land, things attached to the earth, and things permanently fastened to something attached to the earth."
+    },
+    {
+      "id": "s23",
+      "page": 53,
+      "quote": "\"Wrongful gain\" is gain by unlawful means of property to which the person gaining is not legally entitled.",
+      "section_lookup": "In the historical IPC, how does Section 23 define wrongful gain?",
+      "paraphrase": "In the historical IPC, what kind of acquisition counts as gaining property wrongfully?",
+      "reference_answer": "Gain by unlawful means of property to which the person gaining is not legally entitled."
+    },
+    {
+      "id": "s25",
+      "page": 57,
+      "quote": "A person is said to do a thing fraudulently if he does that thing with intent to defraud 1 but not otherwise.",
+      "section_lookup": "In the historical IPC, what intention is required by Section 25 for acting fraudulently?",
+      "paraphrase": "In the historical IPC, is an intention to defraud required for the term fraudulently?",
+      "reference_answer": "The person must do the thing with intent to defraud."
+    },
+    {
+      "id": "s27",
+      "page": 61,
+      "quote": "When property is in the possession of a person's wife, clerk or servant, on account of that person, it is in that person's possession within the meaning of this Code.",
+      "section_lookup": "In the historical IPC, whose possession is described in Section 27 when a clerk holds property on a person's account?",
+      "paraphrase": "In the historical IPC, if a clerk or servant holds an item on behalf of an employer, whose possession does the text recognize?",
+      "reference_answer": "Property held by a person's wife, clerk or servant on that person's account is in that person's possession under the Code."
+    },
+    {
+      "id": "s28",
+      "page": 63,
+      "quote": "144. [Explanation 1.—It is not essential to counterfeiting that the imitation should be exact.",
+      "section_lookup": "In the historical IPC, what does Section 28 say about an exact imitation in counterfeiting?",
+      "paraphrase": "In the historical IPC, must a counterfeit be a perfect copy of the original?",
+      "reference_answer": "An exact imitation is not essential to counterfeiting."
+    },
+    {
+      "id": "s29",
+      "page": 65,
+      "quote": "Explanation 1.—It is immaterial by what means or upon what substance the letters, figures or marks are formed, or whether the evidence is intended for, or may be used in, a Court of Justice, or not.",
+      "section_lookup": "In the historical IPC, does Section 29 require a document to be intended for use in a Court of Justice?",
+      "paraphrase": "In the historical IPC, must written or marked evidence be intended for a courtroom to count as a document?",
+      "reference_answer": "It is immaterial whether the evidence is intended for, or may be used in, a Court of Justice."
+    },
+    {
+      "id": "s30",
+      "page": 69,
+      "quote": "The words \"valuable security\" denote a document which is, or purports to be, 1 a document whereby any legal right is created, extended, transferred, restricted, extinguished or released, or where by any person acknowledges that he lies under legal liability, or has not a certain legal right.",
+      "section_lookup": "In the historical IPC, which changes to legal rights are described in Section 30 on valuable security?",
+      "paraphrase": "In the historical IPC, can a document releasing a legal right or acknowledging a legal liability be valuable security?",
+      "reference_answer": "The definition includes documents creating, extending, transferring, restricting, extinguishing or releasing legal rights, and acknowledgments of legal liability or absence of a legal right."
+    },
+    {
+      "id": "s39",
+      "page": 117,
+      "quote": "A person is said to cause an effect \"voluntarily\" when he causes it by means whereby he intended to cause it, or by means which, at the time of employing those means, he knew or had reason to believe to be likely to cause it.",
+      "section_lookup": "In the historical IPC, does Section 39 restrict voluntarily caused effects to intended effects?",
+      "paraphrase": "In the historical IPC, can someone cause an effect voluntarily when they knew it was likely, even if it was not their purpose?",
+      "reference_answer": "Yes. The definition includes effects caused by means the person knew or had reason to believe were likely to cause the effect when those means were used."
+    },
+    {
+      "id": "s44",
+      "page": 130,
+      "quote": "The word \"injury\" denotes any harm whatever illegally caused to any person, in body, mind, reputation or property.",
+      "section_lookup": "In the historical IPC, which kinds of harm are included in injury under Section 44?",
+      "paraphrase": "In the historical IPC, can harm to a person's reputation or mind count as injury in this text?",
+      "reference_answer": "Injury includes harm illegally caused to a person's body, mind, reputation or property."
+    },
+    {
+      "id": "s45",
+      "page": 132,
+      "quote": "The word \"life\" denotes the life of a human being, unless the contrary appears from the context.",
+      "section_lookup": "In the historical IPC, whose life does Section 45 ordinarily mean?",
+      "paraphrase": "In the historical IPC, does life normally refer to a human being or to every living organism in this definition?",
+      "reference_answer": "It denotes the life of a human being unless the context indicates otherwise."
+    },
+    {
+      "id": "s46",
+      "page": 134,
+      "quote": "The word \"death\" denotes the death of a human being, unless the contrary appears from the context.",
+      "section_lookup": "In the historical IPC, whose death does Section 46 ordinarily mean?",
+      "paraphrase": "In the historical IPC, does the defined word death normally concern humans, subject to context?",
+      "reference_answer": "It denotes the death of a human being unless the context indicates otherwise."
+    },
+    {
+      "id": "s79",
+      "page": 227,
+      "quote": "Nothing is an offence which is done by any person who is justified by law1, or who by reason of a mistake of fact2 and not by reason of a mistake of law3 in good faith, believes himself to be justified by law, in doing it.",
+      "section_lookup": "In the historical IPC, does Section 79 distinguish mistake of fact from mistake of law?",
+      "paraphrase": "In the historical IPC, what kind of mistaken belief can justify an act when a person in good faith believes the law permits it?",
+      "reference_answer": "The provision concerns being justified by law, or a good-faith belief in legal justification arising from a mistake of fact, not a mistake of law."
+    },
+    {
+      "id": "s93",
+      "page": 308,
+      "quote": "No communication made in good faith is an offence by reason of any harm1 to the person to whom it is made, if it is made for the benefit of that person.",
+      "section_lookup": "In the historical IPC, what conditions does Section 93 place on a communication that causes harm?",
+      "paraphrase": "In the historical IPC, when does a harmful communication made honestly for its recipient's benefit fall within the stated exception?",
+      "reference_answer": "The communication must be made in good faith and for the benefit of the person to whom it is made."
+    },
+    {
+      "id": "s96",
+      "page": 320,
+      "quote": "Nothing is an offence which is done in the exercise of the right of private defence.",
+      "section_lookup": "In the historical IPC, what does Section 96 say about exercising the right of private defence?",
+      "paraphrase": "In the historical IPC, how does the text treat an act done in exercise of the right of private defence?",
+      "reference_answer": "Nothing done in the exercise of the right of private defence is an offence under this provision."
+    },
+    {
+      "id": "s108",
+      "page": 403,
+      "quote": "Explanation 2.—To constitute the offence of abetment it is not necessary that the act abetted should be committed, or that the effect requisite to constitute the offence should be caused.",
+      "section_lookup": "In the historical IPC, does Explanation 2 to Section 108 require the abetted act to occur?",
+      "paraphrase": "In the historical IPC, must the encouraged act actually happen, or its required consequence occur, for abetment to be an offence?",
+      "reference_answer": "Neither commission of the abetted act nor occurrence of the effect required to constitute that offence is necessary."
+    },
+    {
+      "id": "s120",
+      "page": 432,
+      "quote": "shall, if the offence be committed, be punished with imprisonment of the description provided for the offence, for a term which may extend to one-fourth, and, if the offence be not committed, to one-eighth, of the longest term for such imprisonment, or with such fine as is provided for the offence, or with both.",
+      "section_lookup": "In the historical IPC, what fractions of the maximum prison term are stated in Section 120 when the concealed offence is or is not committed?",
+      "paraphrase": "In the historical IPC, how does the stated imprisonment limit differ when an offence whose plan was concealed actually happens versus when it does not?",
+      "reference_answer": "The stated limit is one-fourth of the longest term if the offence is committed, and one-eighth if it is not committed."
+    },
+    {
+      "id": "s146",
+      "page": 550,
+      "quote": "Whenever force or violence is used by an unlawful assembly,1 or by any member thereof, in prosecution of the common object2 of such assembly, every member of such assembly is guilty of the offence of rioting.",
+      "section_lookup": "In the historical IPC, when does Section 146 make every member of an unlawful assembly guilty of rioting?",
+      "paraphrase": "In the historical IPC, if one member uses violence in pursuit of an unlawful group's common object, who is described as guilty of rioting?",
+      "reference_answer": "Every member is guilty when the unlawful assembly or a member uses force or violence in prosecution of the assembly's common object."
+    },
+    {
+      "id": "s160",
+      "page": 624,
+      "quote": "Whoever commits an affray, shall be punished with imprisonment of either description for a term which may extend to one month, or with fine which may extend to one hundred rupees, or with both.",
+      "section_lookup": "In the historical IPC, what punishment does Section 160 specify for affray in the historical text?",
+      "paraphrase": "In the historical IPC, what maximum imprisonment and fine does the book state for committing an affray?",
+      "reference_answer": "Imprisonment of either description up to one month, a fine up to one hundred rupees, or both."
+    },
+    {
+      "id": "s191",
+      "page": 706,
+      "quote": "Whoever, being legally bound by an oath or by an express provision of law to state the truth, or being bound by law to make a declaration upon any subject,1 makes any statement which is false,2. and which he either knows or believes to be false or does not believe to be true,3. is said to give false evidence.",
+      "section_lookup": "In the historical IPC, what knowledge or belief about a false statement is described in Section 191?",
+      "paraphrase": "In the historical IPC, when a person is legally bound to tell the truth, what belief about an untrue statement makes it false evidence?",
+      "reference_answer": "The statement is false and the person knows or believes it to be false, or does not believe it to be true, while legally bound to state the truth or make the declaration."
+    },
+    {
+      "id": "s201",
+      "page": 744,
+      "quote": "Whoever, knowing or having reason to believe that an offence has been committed,1 causes any evidence of the commission of that offence to disappear, with the intention of screening the offender2 from legal punishment, or with that intention gives any information respecting the offence which he knows or believes to be false;",
+      "section_lookup": "In the historical IPC, what intention is described in Section 201 for removing evidence of an offence?",
+      "paraphrase": "In the historical IPC, what purpose links making evidence disappear with supplying false information about an offence?",
+      "reference_answer": "The purpose is screening the offender from legal punishment; the person knows or has reason to believe an offence occurred."
+    },
+    {
+      "id": "s269",
+      "page": 923,
+      "quote": "Whoever unlawfully or negligently does any act which is, and which he knows or has reason to believe to be, likely to spread the infection of any disease dangerous to life, shall be punished with imprisonment of either description for a term which may extend to six months, or with fine, or with both.",
+      "section_lookup": "In the historical IPC, what conduct does Section 269 describe as likely to spread dangerous disease?",
+      "paraphrase": "In the historical IPC, what does the text say about an unlawful or negligent act known to be likely to spread a life-threatening infection?",
+      "reference_answer": "It concerns an unlawful or negligent act that the person knows or has reason to believe is likely to spread infection of a disease dangerous to life."
+    },
+    {
+      "id": "s277",
+      "page": 942,
+      "quote": "Whoever voluntarily corrupts or fouls the water of any public spring or reservoir, so as to render it less fit for the purpose for which it is ordinarily used, shall be punished with imprisonment of either description for a term which may extend to three months, or with fine which may extend to five hundred rupees, or with both.",
+      "section_lookup": "In the historical IPC, what change in water quality is described in Section 277?",
+      "paraphrase": "In the historical IPC, what is the offence described when a public spring or reservoir is deliberately fouled?",
+      "reference_answer": "Voluntarily corrupting or fouling its water so that it is less fit for its ordinary use."
+    },
+    {
+      "id": "s279",
+      "page": 946,
+      "quote": "Whoever drives any vehicle, or rides, on any public way in a manner so rash or negligent 1 as to endanger human life, 2 or to be likely to cause hurt or injury to any other person, shall be punished with imprisonment of either description for a term which may extend to six months, or with fine which may extend to one thousand rupees, or with both.",
+      "section_lookup": "In the historical IPC, which location and risk are described in Section 279 on rash driving?",
+      "paraphrase": "In the historical IPC, where must the rash driving occur, and what danger does the passage require?",
+      "reference_answer": "It concerns driving or riding on a public way so rashly or negligently as to endanger human life or be likely to cause hurt or injury to another person."
+    },
+    {
+      "id": "s320",
+      "page": 1201,
+      "quote": "Seventhly.—Fracture or dislocation of a bone or tooth.",
+      "section_lookup": "In the historical IPC, does Section 320 list fracture or dislocation of a tooth as grievous hurt?",
+      "paraphrase": "In the historical IPC, does the listed category for a broken or dislocated bone also include a tooth?",
+      "reference_answer": "Yes. The seventh category includes fracture or dislocation of a bone or tooth."
+    },
+    {
+      "id": "s321",
+      "page": 1206,
+      "quote": "Whoever does any act with the intention of thereby causing hurt to any person, or with the knowledge that he is likely thereby to cause hurt to any person, and does thereby cause hurt to any person, is said \"voluntarily to cause hurt\".",
+      "section_lookup": "In the historical IPC, what mental state and result are required by Section 321 for voluntarily causing hurt?",
+      "paraphrase": "In the historical IPC, does deliberately trying to cause hurt suffice for this definition, or must hurt actually result?",
+      "reference_answer": "The person must intend to cause hurt or know hurt is likely, and must thereby actually cause hurt."
+    },
+    {
+      "id": "s350",
+      "page": 1277,
+      "quote": "Whoever intentionally uses force to any person, without that person's consent, in order to the committing of any offence, or intending by the use of such force to cause, or knowing it to be likely that by the use of such force he will cause injury, fear or annoyance to the person to whom the force is used, is said to use criminal force to that other.",
+      "section_lookup": "In the historical IPC, how does Section 350 relate consent to criminal force?",
+      "paraphrase": "In the historical IPC, what does the text require about consent and the purpose or likely consequences of intentionally using force?",
+      "reference_answer": "The force is used without consent, to commit an offence or with intent or knowledge of likely injury, fear or annoyance to that person."
+    },
+    {
+      "id": "s351",
+      "page": 1280,
+      "quote": "Explanation.—Mere words do not amount to an assault. But the words which a person uses may give to his gestures or preparation such a meaning as may make those gestures or preparations amount to an assault.",
+      "section_lookup": "In the historical IPC, what does the explanation to Section 351 say about mere words and assault?",
+      "paraphrase": "In the historical IPC, can words alone constitute assault, and can words change the meaning of a threatening gesture?",
+      "reference_answer": "Mere words do not amount to assault, but words can give gestures or preparations a meaning that makes them amount to assault."
+    },
+    {
+      "id": "s361",
+      "page": 1312,
+      "quote": "Explanation.—The words \"lawful guardian\" in this section include any person lawfully entrusted with the care or custody of such minor or other person.",
+      "section_lookup": "In the historical IPC, who is included in lawful guardian in the explanation to Section 361?",
+      "paraphrase": "In the historical IPC, must a lawful guardian be a parent, or can someone entrusted with a person's care or custody qualify?",
+      "reference_answer": "The term includes anyone lawfully entrusted with the care or custody of the minor or other person described."
+    },
+    {
+      "id": "s362",
+      "page": 1317,
+      "quote": "Whoever by force compels, or by any deceitful means induces, any person to go from any place, is said to abduct that person.",
+      "section_lookup": "In the historical IPC, which two means of making someone leave a place are described in Section 362?",
+      "paraphrase": "In the historical IPC, what methods of making a person go from a place fall within the definition of abduction?",
+      "reference_answer": "Compelling the person by force, or inducing the person by deceitful means, to go from any place."
+    },
+    {
+      "id": "s374",
+      "page": 1352,
+      "quote": "Whoever unlawfully compels any person to labour against the will of that person, shall be punished with imprisonment of either description for a term which may extend to one year, or with fine, or with both.",
+      "section_lookup": "In the historical IPC, what conduct does Section 374 describe as unlawful compulsory labour?",
+      "paraphrase": "In the historical IPC, what does the text say about forcing someone to work against their will?",
+      "reference_answer": "It describes unlawfully compelling a person to labour against that person's will."
+    },
+    {
+      "id": "s390",
+      "page": 1440,
+      "quote": "In all robbery there is either theft or extortion.",
+      "section_lookup": "In the historical IPC, which two offences does Section 390 say are present in every robbery?",
+      "paraphrase": "In the historical IPC, according to the opening robbery rule, is robbery based on theft or extortion?",
+      "reference_answer": "In every robbery there is either theft or extortion."
+    },
+    {
+      "id": "s403",
+      "page": 1476,
+      "quote": "Whoever dishonestly misappropriates or converts to his own use1 any movable property, shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both.",
+      "section_lookup": "In the historical IPC, what conduct involving movable property is described in Section 403?",
+      "paraphrase": "In the historical IPC, what is the provision about dishonestly keeping movable property for one's own use?",
+      "reference_answer": "It concerns dishonestly misappropriating movable property or converting it to one's own use."
+    },
+    {
+      "id": "s410",
+      "page": 1516,
+      "quote": "But, if such property subsequently comes into the possession of a person legally entitled to the possession thereof, it then ceases to be stolen property.",
+      "section_lookup": "In the historical IPC, when does Section 410 say property ceases to be stolen property?",
+      "paraphrase": "In the historical IPC, does an item's stolen-property status continue after it reaches someone legally entitled to possess it?",
+      "reference_answer": "It ceases to be stolen property when it subsequently comes into the possession of a person legally entitled to possess it."
+    },
+    {
+      "id": "s425",
+      "page": 1562,
+      "quote": "Explanation 2.—Mischief may be committed by an act affecting property belonging to the person who commits the act, or to that person and others jointly.",
+      "section_lookup": "In the historical IPC, can mischief under Section 425 affect the offender's own property?",
+      "paraphrase": "In the historical IPC, can damaging property owned by the person causing the damage, or owned jointly, fall within mischief?",
+      "reference_answer": "Yes. Explanation 2 says mischief may affect property belonging to the actor alone or jointly with others."
+    },
+    {
+      "id": "s441",
+      "page": 1585,
+      "quote": "or having lawfully entered into or upon such property, unlawfully remains there4 with intent thereby to intimidate, insult or annoy any such person, or with intent to commit an offence,",
+      "section_lookup": "In the historical IPC, can Section 441 cover someone who originally entered property lawfully?",
+      "paraphrase": "In the historical IPC, can a lawful visitor later commit criminal trespass by remaining on the property?",
+      "reference_answer": "Yes, by unlawfully remaining with intent to intimidate, insult or annoy a person in possession, or with intent to commit an offence."
+    },
+    {
+      "id": "s463",
+      "page": 1627,
+      "quote": "1. [Whoever makes any false documents or false electronic record or part of a document or electronic record, with intent to cause damage or injury], to the public or to any person, or to support any claim or title, or to cause any person to part with property, or to enter into any express or implied contract, or with intent to commit fraud or that fraud may be committed, commits forgery.",
+      "section_lookup": "In the historical IPC, what kinds of false record are included in Section 463?",
+      "paraphrase": "In the historical IPC, does the forgery provision include false electronic records as well as documents?",
+      "reference_answer": "It includes false documents, false electronic records, or parts of them, with the specified harmful or fraudulent intents."
+    },
+    {
+      "id": "s499",
+      "page": 1729,
+      "quote": "Explanation 2.—It may amount to defamation to make an imputation concerning a company or an association or collection of persons as such.",
+      "section_lookup": "In the historical IPC, can an imputation about a company be defamation under Explanation 2 to Section 499?",
+      "paraphrase": "In the historical IPC, does the text allow defamation to concern a company or collection of people?",
+      "reference_answer": "Yes. An imputation concerning a company, association or collection of persons as such may amount to defamation."
+    },
+    {
+      "id": "s506",
+      "page": 1772,
+      "quote": "Whoever commits, the offence of criminal intimidation shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both;",
+      "section_lookup": "In the historical IPC, what basic punishment does the opening paragraph of Section 506 specify?",
+      "paraphrase": "In the historical IPC, what is the ordinary stated punishment for criminal intimidation before the aggravated-threat paragraph?",
+      "reference_answer": "Imprisonment of either description up to two years, a fine, or both."
+    },
+    {
+      "id": "s511",
+      "page": 1780,
+      "quote": "Whoever attempts to commit an offence punishable by this Code1. with 1 [imprisonment for life] or imprisonment, or to cause such an offence to be committed, and in such attempt does any act towards the commission of the offence, shall, where no express provision is made by this Code2. for the punishment of such attempt, be punished with 2 [imprisonment of any description provided for the offence, for a term which may extend to one-half of the imprisonment for life or, as the case may be, one- half of the longest term of imprisonment provided for that offence], or with such fine as is provided for the offence, or with both.",
+      "section_lookup": "In the historical IPC, does Section 511 apply where the Code already expressly punishes the attempt?",
+      "paraphrase": "In the historical IPC, when does the general attempt provision supply punishment instead of a specific attempt provision?",
+      "reference_answer": "It applies where the Code makes no express provision punishing the attempt, and the person has done an act towards committing the specified offence."
+    }
+  ],
+  "negative_queries": [
+    {
+      "id": "n01",
+      "kind": "unrelated",
+      "query": "How does a graphics card allocate shader memory for rendering triangles?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n02",
+      "kind": "unrelated",
+      "query": "What ingredients and oven temperature make a sourdough loaf rise?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n03",
+      "kind": "unrelated",
+      "query": "How is a neural network's gradient calculated during backpropagation?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n04",
+      "kind": "unrelated",
+      "query": "Which telescope measured the atmospheric spectrum of the latest exoplanet?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n05",
+      "kind": "unrelated",
+      "query": "How do I configure a PostgreSQL replica for database failover?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n06",
+      "kind": "unrelated",
+      "query": "What is the weather prediction for Tokyo this weekend?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n07",
+      "kind": "unrelated",
+      "query": "How do mitochondrial ribosomes synthesize proteins?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n08",
+      "kind": "unrelated",
+      "query": "What causes paint pigments to fade under ultraviolet radiation?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n09",
+      "kind": "unrelated",
+      "query": "What is the derivative of the hyperbolic tangent function?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n10",
+      "kind": "unrelated",
+      "query": "How should I tune a guitar to the open D arrangement?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n11",
+      "kind": "insufficient_context",
+      "query": "In the historical IPC, what was the street address of the person called A in the theft illustrations?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n12",
+      "kind": "insufficient_context",
+      "query": "In the historical IPC, what was the bank account number of the person called Z in the extortion illustration?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n13",
+      "kind": "insufficient_context",
+      "query": "What was the exact birth date of the child in my neighbour's historical kidnapping case?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n14",
+      "kind": "insufficient_context",
+      "query": "How many convictions for theft were recorded in my town last Tuesday?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n15",
+      "kind": "insufficient_context",
+      "query": "What medical test result did the accused in my private case receive yesterday?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n16",
+      "kind": "insufficient_context",
+      "query": "What is the filing number and next hearing date of my uncle's criminal appeal?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n17",
+      "kind": "current_scope",
+      "query": "What is the current law governing punishment for theft in India?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n18",
+      "kind": "current_scope",
+      "query": "Map historical IPC Section 320 to the exact BNS provision.",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n19",
+      "kind": "current_scope",
+      "query": "Which BNSS provision replaced the procedure mentioned in this book?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    },
+    {
+      "id": "n20",
+      "kind": "current_scope",
+      "query": "Does IPC Section 279 apply to an incident in 2026?",
+      "reference_answer": "The provided source does not establish the requested answer."
+    }
+  ]
+}
