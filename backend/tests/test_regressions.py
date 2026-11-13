@@ -2,7 +2,7 @@ import os
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 _temp = tempfile.TemporaryDirectory()
 os.environ["DATABASE_URL"] = "sqlite:///" + str(Path(_temp.name) / "test.db")
@@ -89,59 +89,35 @@ class RegressionTests(unittest.TestCase):
         for body in ({"message": " "}, {"message": "test", "email": "invalid"}):
             self.assertEqual(self.client.post("/feedback/submit", json=body).status_code, 422)
 
-    def test_chat_status_no_key_and_missing_domain_pdf(self):
-        with patch.object(chatbot_service.settings, "OPENAI_API_KEY", None):
+    def test_chat_status_no_key_keeps_excerpt_mode_available(self):
+        from app.services import classification_service, retrieval_service
+        classification = {"status": "unavailable", "model_version": None, "scope": "uncertain", "intent": "uncertain", "note": "test"}
+        retrieval = {"results": [], "retrieval": {"method": "bm25", "elapsed_ms": 0.0, "warning": None}, "corpus_status": "historical"}
+        with patch.dict(os.environ, {"OPENAI_API_KEY": ""}), \
+             patch.object(classification_service, "classify", return_value=classification), \
+             patch.object(retrieval_service, "retrieve", return_value=retrieval):
             data = self.client.get("/chatbot/status").json()
-            self.assertFalse(data["ipc"]["available"])
-            self.assertIn("OPENAI_API_KEY", data["ipc"]["reason"])
-            self.assertEqual(self.client.post("/chatbot/ipc", json={"message": "Hello"}).status_code, 503)
-        with patch.object(chatbot_service.settings, "CHATBOT_MURDER_PDF", "does-not-exist.pdf"):
-            self.assertIsNone(chatbot_service._resolve_pdf_path("murder"))
+            self.assertTrue(data["ipc"]["available"])
+            self.assertEqual(data["ipc"]["mode"], "excerpts")
+            response = self.client.post("/chatbot/ipc", json={"message": "Historical theft definition"})
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json()["mode"], "no_evidence")
 
-    def test_chat_history_is_request_scoped(self):
-        chain = MagicMock()
-        chain.invoke.return_value = {"answer": "An answer"}
-        with patch.object(chatbot_service, "_get_chain_for_domain", return_value=chain):
-            chatbot_service.chat("ipc", "Follow up", [{"role": "user", "content": "My question"}, {"role": "assistant", "content": "My answer"}])
-            first = chain.invoke.call_args.args[0]
-            self.assertEqual([m.content for m in first["chat_history"]], ["My question", "My answer"])
-            chatbot_service.chat("ipc", "A new visitor")
-            self.assertEqual(chain.invoke.call_args.args[0]["chat_history"], [])
+    def test_missing_chat_domain_pdf_returns_503(self):
+        with patch.dict(os.environ, {"CHATBOT_MURDER_PDF": str(Path(_temp.name) / "missing.pdf")}):
+            self.assertEqual(self.client.post("/chatbot/murder", json={"message": "Historical definition"}).status_code, 503)
 
-    def test_embedding_cache_reuse_and_invalidation(self):
-        from langchain_core.embeddings import Embeddings
-        class TestEmbeddings(Embeddings):
-            calls = 0
-            def embed_documents(self, texts):
-                self.calls += 1
-                return [[1.0, 0.0] for _ in texts]
-            def embed_query(self, text):
-                return [1.0, 0.0]
-        embeddings = TestEmbeddings()
-        pdf = Path(_temp.name) / "fake.pdf"
-        pdf.write_bytes(b"version-one")
-        with patch.object(chatbot_service, "BASE_DIR", Path(_temp.name)), \
-             patch.object(chatbot_service, "domain_status", return_value={"available": True}), \
-             patch.object(chatbot_service, "_resolve_pdf_path", return_value=pdf), \
-             patch.object(chatbot_service, "_get_pdf_text", return_value="maternity benefit law"), \
-             patch.object(chatbot_service.settings, "EMBEDDING_MODEL", "test-model"), \
-             patch.dict(chatbot_service._chains, {}, clear=True), \
-             patch("langchain_community.embeddings.HuggingFaceEmbeddings", return_value=embeddings), \
-             patch("langchain_openai.ChatOpenAI"), \
-             patch("langchain.chains.ConversationalRetrievalChain.from_llm", return_value=MagicMock()):
-            chatbot_service._get_chain_for_domain("ipc")
-            chatbot_service._chains.clear()
-            chatbot_service._get_chain_for_domain("ipc")
-            self.assertEqual(embeddings.calls, 1)
-            pdf.write_bytes(b"version-two")
-            chatbot_service._chains.clear()
-            chatbot_service._get_chain_for_domain("ipc")
-            self.assertEqual(embeddings.calls, 2)
-            for cache in (Path(_temp.name)/"instance"/"embeddings").glob("*.npz"):
-                cache.write_bytes(b"corrupt cache")
-            chatbot_service._chains.clear()
-            chatbot_service._get_chain_for_domain("ipc")
-            self.assertEqual(embeddings.calls, 3)
+    def test_stale_source_version_and_unknown_source_are_rejected(self):
+        from app.services import source_service
+        with patch.object(source_service, "metadata", return_value=(1, "a" * 64)):
+            self.assertEqual(self.client.get("/sources/ipc-book/pdf", params={"version": "b" * 64}).status_code, 409)
+        self.assertEqual(self.client.get("/sources/not-a-source/pdf").status_code, 404)
+
+    def test_retrieval_schema_and_missing_pdf(self):
+        for payload in ({"query": " "}, {"query": "law", "method": "unknown"}, {"query": "law", "top_k": 21}):
+            self.assertEqual(self.client.post("/search/retrieve", json=payload).status_code, 422)
+        with patch.dict(os.environ, {"CHATBOT_IPC_PDF": str(Path(_temp.name) / "missing.pdf")}):
+            self.assertEqual(self.client.post("/search/retrieve", json={"query": "historical theft"}).status_code, 503)
 
     def test_chat_validation_and_removed_auth_routes(self):
         for path, body in [("/chatbot/unknown", {"message": "Hello"}), ("/chatbot/ipc", {"message": " "}), ("/chatbot/ipc", {"message": "Hi", "history": [{"role": "system", "content": "bad"}]}), ("/chatbot/ipc", {"message": "Hi", "domain": "child"})]:

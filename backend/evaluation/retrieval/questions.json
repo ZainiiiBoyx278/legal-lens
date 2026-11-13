@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "name": "historical-ipc-passages-v1",
+  "document_id": "ipc-book",
+  "domain": "ipc",
+  "source_sha256": "5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237",
+  "authorship": "Agent-authored questions grounded in manually inspected statutory passages; not expert legal annotation or production traffic.",
+  "protocol": "Questions and quotes frozen before retrieval scores were inspected. Two variants per topic are correlated. Quotes are non-exhaustive relevance anchors, not a complete set of acceptable answers. Physical PDF pages; NFKC and whitespace normalization only.",
+  "topics": [
+    {
+      "id": "s24", "page": 55,
+      "quote": "Whoever does anything with the intention of causing wrongful gain to one person or wrongful loss to another person, is said to do that thing \"dishonestly\".",
+      "section_lookup": "What does Section 24 mean by acting dishonestly?",
+      "paraphrase": "Find the passage defining an act intended to give someone an improper gain or cause another person a wrongful loss."
+    },
+    {
+      "id": "s26", "page": 60,
+      "quote": "A person is said to have \"reason to believe\" a thing, if he has sufficient cause to believe that thing but not otherwise.",
+      "section_lookup": "How does Section 26 define reason to believe?",
+      "paraphrase": "Find the definition that requires sufficient grounds for believing something rather than a mere suspicion."
+    },
+    {
+      "id": "s52", "page": 140,
+      "quote": "Nothing is said to be done or believed in \"good faith\" which is done or believed without due care and attention.",
+      "section_lookup": "What does Section 52 require for good faith?",
+      "paraphrase": "Which passage says that a belief without due care and attention cannot count as good faith?"
+    },
+    {
+      "id": "s80", "page": 236,
+      "quote": "Nothing is an offence which is done by accident 1 or misfortune, and without any criminal intention or knowledge in the doing of a lawful act in a lawful manner by lawful means and with proper care and caution.",
+      "section_lookup": "What conditions does Section 80 give for an accident during a lawful act?",
+      "paraphrase": "Where does the book discuss accidental harm during a lawful activity performed carefully and without criminal intent?"
+    },
+    {
+      "id": "s82", "page": 247,
+      "quote": "Nothing is an offence which is done by a child under seven years of age.",
+      "section_lookup": "What age exemption is stated in Section 82?",
+      "paraphrase": "Find the rule about an act committed by a child who has not reached seven years old."
+    },
+    {
+      "id": "s83", "page": 250,
+      "quote": "Nothing is an offence which is done by a child above seven years of age and under twelve, who has not attained sufficient maturity of understanding to judge of the nature and consequences of his conduct on that occasion.",
+      "section_lookup": "What maturity condition does Section 83 set for a child above seven and under twelve?",
+      "paraphrase": "Find the passage about an older child who is still too immature to understand the nature and consequences of the act."
+    },
+    {
+      "id": "s84", "page": 254,
+      "quote": "Nothing is an offence which is done by a person who, at the time of doing it, 1 by reason of unsoundness of mind, 2 is incapable of knowing the nature of the act, or that he is doing what is either wrong or contrary to law. 3",
+      "section_lookup": "What incapacity at the time of an act is described in Section 84?",
+      "paraphrase": "Where does the book discuss mental incapacity that prevents a person from understanding an act or knowing it is wrong?"
+    },
+    {
+      "id": "s95", "page": 315,
+      "quote": "Nothing is an offence by reason that it causes, or that it is intended to cause, or that it is known to be likely to cause, any harm, if that harm is so slight that no person of ordinary sense and temper would complain of such harm.",
+      "section_lookup": "What kind of slight harm does Section 95 describe?",
+      "paraphrase": "Find the passage about harm so trivial that a person with ordinary sense and temper would not complain."
+    },
+    {
+      "id": "s107", "page": 392,
+      "quote": "Thirdly.—Intentionally aids, by any act or illegal omission, the doing of that thing.",
+      "section_lookup": "Does Section 107 include intentional aid through an act or illegal omission?",
+      "paraphrase": "Which passage lists deliberately helping through an action or unlawful failure to act as a form of abetment?"
+    },
+    {
+      "id": "s141", "page": 533,
+      "quote": "An assembly of five or more1 persons is designated an \"unlawful assembly\", if the common object2 of the persons composing that assembly is—",
+      "section_lookup": "What minimum number of persons is mentioned in Section 141 on unlawful assembly?",
+      "paraphrase": "Find the passage setting the minimum group size for an unlawful assembly with a prohibited common object."
+    },
+    {
+      "id": "s159", "page": 622,
+      "quote": "When two or more persons1, by fighting in a public place, 2 disturb the public peace,3 they are said to \"commit an affray\".",
+      "section_lookup": "How does Section 159 define an affray?",
+      "paraphrase": "Which passage describes a fight between at least two people in a public place that disrupts public peace?"
+    },
+    {
+      "id": "s319", "page": 1199,
+      "quote": "Whoever causes bodily pain, disease or infirmity to any person is said to cause hurt.",
+      "section_lookup": "Which effects are included in hurt under Section 319?",
+      "paraphrase": "Find the definition covering physical pain, disease or infirmity caused to another person."
+    },
+    {
+      "id": "s339", "page": 1259,
+      "quote": "Whoever voluntarily obstructs any person so as to prevent that person from proceeding in any direction in which that person has a right to proceed, is said wrongfully to restrain that person.",
+      "section_lookup": "What obstruction does Section 339 describe as wrongful restraint?",
+      "paraphrase": "Find the rule about deliberately blocking someone from going in a direction they have a right to take."
+    },
+    {
+      "id": "s340", "page": 1263,
+      "quote": "Whoever wrongfully restrains any person in such a manner as to prevent that person from proceedings1 beyond certain circumscribing limits,2 is said \"wrongfully to confine\" that person.",
+      "section_lookup": "How does Section 340 define wrongful confinement?",
+      "paraphrase": "Which definition covers keeping someone within fixed boundaries so that they cannot leave?"
+    },
+    {
+      "id": "s378", "page": 1407,
+      "quote": "Whoever, intending to take dishonestly1. any movable property2. out of the possession of any person3. without that person's consent,4. moves that property5. in order to such taking, is said to commit theft.",
+      "section_lookup": "What elements of taking property are listed in Section 378?",
+      "paraphrase": "Find the passage defining dishonest movement of another person's movable property without consent."
+    },
+    {
+      "id": "s383", "page": 1429,
+      "quote": "Whoever intentionally puts any person in fear of any injury1 to that person, or to any other, and thereby dishonestly induces the person so put in fear to deliver to any person any property2 or valuable security, or anything signed or sealed which may be converted into a valuable security, commits \"extortion\".",
+      "section_lookup": "How does Section 383 connect fear of injury with delivery of property?",
+      "paraphrase": "Find the definition of using fear of harm to dishonestly make someone hand over property or valuable security."
+    },
+    {
+      "id": "s391", "page": 1444,
+      "quote": "When five or more persons conjointly commit or attempt to commit a robbery, or where the whole number of persons conjointly committing or attempting to commit a robbery, and persons present and aiding such commission or attempt, amount to five or more, every person so committing, attempting or aiding, is said to commit \"dacoity\".",
+      "section_lookup": "How does Section 391 count participants in dacoity?",
+      "paraphrase": "Find the robbery provision that counts both those committing it and those present helping toward a total of at least five."
+    },
+    {
+      "id": "s405", "page": 1483,
+      "quote": "Whoever, being in any manner entrusted with property,1 or with any dominion over property, dishonestly misappropriates2 or converts to his own use that property, or dishonestly uses or disposes of that property3 in violation of any direction of law prescribing the mode in which such trust4 is to be discharged, or of any legal contract, express or implied, which he has made touching the discharge of such trust, or wilfully suffers any other person so to do, commits \"criminal breach of trust\".",
+      "section_lookup": "What misuse of entrusted property does Section 405 describe?",
+      "paraphrase": "Where does the book define dishonest personal use or disposal of property that someone was entrusted to manage?"
+    },
+    {
+      "id": "s415", "page": 1527,
+      "quote": "Explanation.—A dishonest concealment of facts is a deception within the meaning of this section.",
+      "section_lookup": "Does the explanation to Section 415 treat dishonest concealment as deception?",
+      "paraphrase": "Find the cheating provision explaining that dishonestly hiding facts counts as deception."
+    },
+    {
+      "id": "s503", "page": 1764,
+      "quote": "Explanation.—A threat to injure the reputation of any deceased person in whom the person threatened is interested, is within this section.",
+      "section_lookup": "Does Section 503 include a threat to the reputation of a deceased person?",
+      "paraphrase": "Find the intimidation passage covering threats to damage a dead person's reputation when the threatened person has an interest in them."
+    }
+  ],
+  "negative_queries": [
+    {"id": "n01", "query": "How do I bake a chocolate cake with butter and cocoa?"},
+    {"id": "n02", "query": "What is the weather forecast for Paris tomorrow?"},
+    {"id": "n03", "query": "How does backpropagation update neural network weights?"},
+    {"id": "n04", "query": "Which GPU has the fastest tensor cores for matrix multiplication?"},
+    {"id": "n05", "query": "What causes a black hole to emit Hawking radiation?"},
+    {"id": "n06", "query": "How can I configure Kubernetes pod autoscaling?"},
+    {"id": "n07", "query": "xqzzvprlm zznvktq"},
+    {"id": "n08", "query": "the and of"}
+  ]
+}
