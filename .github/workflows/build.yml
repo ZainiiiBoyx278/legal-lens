@@ -59,6 +59,12 @@ jobs:
         run: python -c "from app.main import app; assert app.title"
         env:
           OPENAI_API_KEY: ''
+      - name: Run offline API and retrieval reliability tests
+        run: python -m unittest discover -s tests -v
+        env:
+          OPENAI_API_KEY: ''
+          HF_HUB_OFFLINE: '1'
+          TRANSFORMERS_OFFLINE: '1'
       - name: Validate Compose configuration
         working-directory: .
         run: docker compose config --quiet

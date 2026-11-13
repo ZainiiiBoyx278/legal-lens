@@ -28,4 +28,5 @@ Thumbs.db
 
 # Local runtime state
 backend/instance/
+models/minilm-eval/
 !.env.example

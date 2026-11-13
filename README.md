@@ -10,6 +10,13 @@ The bundled book is **historical IPC research material**. Current-law BNS/BNSS/B
 
 ## What we built
 
+**Retrieval evaluation:** a frozen, passage-grounded benchmark now compares BM25
+and hybrid retrieval on 40 questions across 20 topics. Hybrid passage Hit@5 is
+72.5% (29/40), versus 65.0% (26/40) for BM25. The report includes raw results,
+latency, eight unrelated-query probes, encoder-truncation findings and 30 passing
+offline regression tests. These are small-benchmark retrieval results, not legal
+answer accuracy. See [method, results and reproduction](backend/evaluation/retrieval/README.md).
+
 The 2.0 work focused on connecting retrieval, machine learning, evidence inspection, and failure handling into one usable research workflow.
 
 | Area we worked on | Implemented work | Where to inspect it |
