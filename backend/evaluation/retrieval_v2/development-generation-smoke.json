@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-13T17:46:17.451586+00:00",
+  "split": "development",
+  "scope": "Local generator component with shared production prompt/validator and source-scope guard. Classifier and HTTP routing bypassed; not OpenAI production performance.",
+  "retrieval_sha256": "9ab946c1f62ad021ccdc30cbdbdfb8b7095aa3afd4b1f4cbd28896260b7b2b6c",
+  "questions_sha256": "48925250b0c096259acfd29cf17589004be76b032788a51446d37bd8627bb048",
+  "source_sha256": "5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237",
+  "generation_code_sha256": {
+    "scripts/evaluate_local_answers.py": "f6c44f8eee6ef9f921f60cfdbf95116ba07f290bac8742393b80665335152a60",
+    "app/services/evidence_contract.py": "9da6e0afd00f577b9390985c330af1457fce5111694769d3f9ebceca9db1942d",
+    "app/services/question_policy.py": "d093f8b51bde3017e858660369e5feabb690c149ec07e1fc460fcd2ff8fe6d30",
+    "scripts/evaluation_integrity.py": "f90e50b34ae623664ddf42ba472f6907e79ac93726234d9c00da11031c749f27",
+    "evaluation/retrieval_v2/local-model.json": "c37716a7b36e483d47c34a0dc290b9ae4e07bd9d83d93869de59c7e6393f1e8c"
+  },
+  "settings": {
+    "do_sample": false,
+    "max_new_tokens": 640,
+    "max_input_tokens": 6144,
+    "top_k_sources": 6,
+    "seed": 20261113,
+    "dtype": "bfloat16",
+    "attention": "sdpa"
+  },
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "code_hash_normalization": "UTF-8 with LF newlines; data and model hashes use raw bytes",
+  "model_files_sha256": {
+    "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+    "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+    "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "README.md": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "4.57.3",
+      "pydantic": "2.13.5",
+      "numpy": "2.3.5"
+    }
+  },
+  "cases": [
+    {
+      "id": "n04",
+      "query": "Which GPU has the fastest tensor cores for matrix multiplication?",
+      "answerable": false,
+      "kind": "unrelated",
+      "sources": [],
+      "claims": [],
+      "raw_response": null,
+      "generation_seconds": null,
+      "mode": "retrieval_abstention",
+      "reason": "No matching excerpts"
+    },
+    {
+      "id": "s24-paraphrase",
+      "query": "Find the passage defining an act intended to give someone an improper gain or cause another person a wrongful loss.",
+      "answerable": true,
+      "kind": "answerable",
+      "sources": [
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p1528:c4",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 1528,
+          "excerpt": "which that other person is entitled to recover\nby law. In all these cases, therefore, the object has been wrongful gain, attended with\nwrongful loss. In all, therefore, there has, according to our deﬁnition, been cheating\".472.\n\n[s 415.1] Ingredients.—\n\nThe section requires—\n\n\n   (1)  Deception of any person.\n\n   (2)  (a) Fraudulently or dishonestly inducing that person—\n\n               (i)  to deliver any property to any person; or\n\n                (ii)  to consent that any person shall retain any property; or\n\n(b) Intentionally inducing that person to do or omit to do anything which he would not\ndo or omit if he were not so deceived, and which act or omission causes or is likely to\ncause damage or harm to that person in body, mind, reputation or property.473. There",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=1528",
+          "corpus_status": "historical",
+          "score": 0.028577260665441927,
+          "rank": 1
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p1528:c3",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 1528,
+          "excerpt": ", we\ndo not consider it as an offence against the rights of property if its object is only to\ncause a distribution of property which the law recognizes as rightful.\n\n\"We propose to punish as guilty of cheating a man who, by false representations,\nobtains a loan of money, not meaning to repay it; a man who, by false representations,\nobtains an advance of money, not meaning to perform the service or to deliver the\narticle for which the advance is given; a man who, by falsely pretending to have\nperformed work for which he was hired, obtains pay to which he is not entitled.\n\n\"In all these cases there is deception. In all, the deceiver's object is fraudulent. He\nintends in all these cases to acquire or retain wrongful possession of that to which\nsome other person has a better claim and which that other person is entitled to recover\nby law. In all these cases, therefore, the object has been wrongful gain, attended with\nwrongful loss.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=1528",
+          "corpus_status": "historical",
+          "score": 0.028404512489927477,
+          "rank": 2
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p55:c1",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 55,
+          "excerpt": "THE INDIAN PENAL CODE\n\nCHAPTER II GENERAL EXPLANATIONS\n\nTHIS Chapter is for the most part an elaborate interpretation clause. It is a key to the\ninterpretation of the whole Code. The leading terms used are here deﬁned and\nexplained and the meanings thus, announced are steadily adhered to throughout the\nsubsequent chapters.\n\n[s 24] \"Dishonestly.\".\n\nWhoever does anything with the intention of causing wrongful gain to one person or\nwrongful loss to another person, is said to do that thing \"dishonestly\".\n\n\n\n\nCOMMENT—\n\nFrom this deﬁnition it will appear that the term 'dishonestly' is not used in the Code in\nits popular signiﬁcance. Unless there is wrongful gain to one person, or wrongful loss\nto another, an act would not be 'dishonest'. Wrongful gain includes wrongful retention\nand wrongful loss includes being kept out of the property as well as being wrongfully\ndeprived of property.117. An act done with the intention to cause 'wrongful gain' can be\nsaid to be dishonest.118.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=55",
+          "corpus_status": "historical",
+          "score": 0.02750455373406193,
+          "rank": 3
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p58:c4",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 58,
+          "excerpt": "ﬁnition of \"dishonestly\", wrongful gain or wrongful loss is the necessary ingredient.\nBoth need not exist, one would be enough. So too, if the expression \"fraudulently\" were\nto be held to involve the element of injury to the person or persons deceived, it would\nbe reasonable to assume that the injury should be something other than pecuniary or\neconomic loss. Though almost always an advantage to one causes loss to another and\nvice versa, it need not necessarily be so.\"133.\n\nWhere the accused, after the execution and registration of a document, which was not\nrequired by law to be attested, added his name to the document as an attesting\nwitness, it was held that his act was neither fraudulent nor dishonest and the accused\nwas, therefore, not guilty of forgery.134. A person who is not a member of Scheduled\nCaste or Scheduled Tribes obtains a false certiﬁcate with a view to gain undue\nadvantage to which he or she was not otherwise entitled to would amount to\ncommission of fraud135.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=58",
+          "corpus_status": "historical",
+          "score": 0.026041666666666664,
+          "rank": 4
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p53:c1",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 53,
+          "excerpt": "THE INDIAN PENAL CODE\n\nCHAPTER II GENERAL EXPLANATIONS\n\nTHIS Chapter is for the most part an elaborate interpretation clause. It is a key to the\ninterpretation of the whole Code. The leading terms used are here deﬁned and\nexplained and the meanings thus, announced are steadily adhered to throughout the\nsubsequent chapters.\n\n[s 23] \"Wrongful gain.\".\n\n\"Wrongful gain\" is gain by unlawful means of property to which the person gaining is\nnot legally entitled.\n\n\n    \"Wrongful loss.\"\n\n    \"Wrongful loss\" is the loss by unlawful means of property to which the person\n    losing it is legally entitled.\n\n\n    Gaining wrongfully, Losing wrongfully\n\n   A person is said to gain wrongfully when such person retains wrongfully, as well\n    as when such person acquires wrongfully. A person is said to lose wrongfully\n   when such person is wrongfully kept out of any property,1 as well as when such\n    person is wrongfully deprived of property.\n\n\n\n\nCOMMENT—",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=53",
+          "corpus_status": "historical",
+          "score": 0.01639344262295082,
+          "rank": 5
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p53:c2",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 53,
+          "excerpt": "to lose wrongfully\n   when such person is wrongfully kept out of any property,1 as well as when such\n    person is wrongfully deprived of property.\n\n\n\n\nCOMMENT—\n\nThe word 'wrongful' means prejudicially affecting a party in some legal right. For either\nwrongful loss or gain, the property must be lost to the owner, or the owner must be\nwrongfully kept out of it. Thus, where a pledgee used a turban that was pledged, it was\nheld that the deterioration of the turban by use was not 'wrongful loss' of property to\nthe owner, and the wrongful beneﬁcial use of it by the pledgee was not a 'wrongful gain'\nto him.108. The gain or loss contemplated need not be a total acquisition or a total\ndeprivation but  it is enough if  it is a temporary retention of property by the person\nwrongfully gaining or a temporary \"keeping out\" of property from the person legally\nentitled.109.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=53",
+          "corpus_status": "historical",
+          "score": 0.016129032258064516,
+          "rank": 6
+        }
+      ],
+      "claims": [],
+      "raw_response": "{\"sufficient_evidence\": true, \"claims\":[{\"text\":\"An act intended to give someone an improper gain or cause another person a wrongful loss.\",\"citation_ids\":[\"ipc-book:5706a1b995df:640388196e:p1528:c4\",\"ipc-book:5706a1b995df:640388196e:p1528:c3\",\"ipc-book:5706a1b995df:640388196e:p55:c1\",\"ipc-book:5706a1b995df:640388196e:p58:c4\",\"ipc-book:5706a1b995df:640388196e:p53:c1\",\"ipc-book:5706a1b995df:640388196e:p53:c2\"]}]",
+      "generation_seconds": 11.558080399991013,
+      "prompt_tokens": 2206,
+      "output_tokens": 225,
+      "mode": "validation_failure",
+      "reason": "1 validation error for EvidenceAnswer\n  Invalid JSON: EOF while parsing an object at line 1 column 414 [type=json_invalid, input_value='{\"sufficient_evidence\": ...f:640388196e:p53:c2\"]}]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+    },
+    {
+      "id": "s52-paraphrase",
+      "query": "Which passage says that a belief without due care and attention cannot count as good faith?",
+      "answerable": true,
+      "kind": "answerable",
+      "sources": [
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p140:c1",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 140,
+          "excerpt": "THE INDIAN PENAL CODE\n\nCHAPTER II GENERAL EXPLANATIONS\n\nTHIS Chapter is for the most part an elaborate interpretation clause. It is a key to the\ninterpretation of the whole Code. The leading terms used are here deﬁned and\nexplained and the meanings thus, announced are steadily adhered to throughout the\nsubsequent chapters.\n\n[s 52] \"Good faith.\".\n\nNothing is said to be done or believed in \"good faith\" which is done or believed without\ndue care and attention.\n\n\n\n\nCOMMENT—\n\nThe expression \"good faith\" in criminal jurisprudence has a deﬁnite connotation. Its\nimport is totally different from saying that the person concerned has honestly believed\nthe truth of what is said. See the language of the law in this regard. It starts in the\nnegative tone excluding all except what is allowed to be within its amplitude. Insistence\nsought to be achieved through the commencing words of the deﬁnition \"nothing is said\nto be done or believed in good faith\" is that the solitary item included within the purview\nof the expression \"good faith\" is what is done with \"due care and attention\".",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=140",
+          "corpus_status": "historical",
+          "score": 0.031754032258064516,
+          "rank": 1
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p140:c2",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 140,
+          "excerpt": "faith\" is that the solitary item included within the purview\nof the expression \"good faith\" is what is done with \"due care and attention\". Due care\ndenotes the degree of reasonableness in the care sought to be exercised. In Black's\nLaw Dictionary, \"reasonable care\" is explained as \"such a degree of care, precaution, or\ndiligence as may fairly and properly be expected or required, having regard to the\nnature of the action, or of the subject matter and the circumstances surrounding the\ntransaction. It is such care as an ordinary prudent person would exercise under the\nconditions existing at the time he is called upon to act\".331. The element of honesty\nwhich is introduced by the deﬁnition prescribed by the General Clauses Act is not\nintroduced by the deﬁnition of the Penal Code; and we are governed by the deﬁnition\nprescribed by section 52 of that Code.332.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=140",
+          "corpus_status": "historical",
+          "score": 0.03131881575727918,
+          "rank": 2
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p229:c2",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 229,
+          "excerpt": "good faith\nbelieved that he was justiﬁed by law in committing the act, then, the weapon of section\n79 demolishes the prosecution.19.\n\n2. 'Mistake of fact'.—Under this section, although an act may not be justiﬁed by law, yet\nif it is done under a mistake of fact, in the belief in good faith that it is justiﬁed by law it\nwill not be an offence. Such cases are not uncommon where the Courts in the facts\nand circumstances of the particular case have exonerated the accused under section\n79 on the ground of having acted in good faith under the belief, owing to a mistake of\nfact that he was justiﬁed in doing the act which constituted an offence. As laid down in\nsection 52 of the IPC, 1860, nothing is said to be done or believed in good faith which is\ndone or believed without due care and attention. The question of good faith must be\nconsidered with reference to the position of the accused and the circumstances under\nwhich he acted.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=229",
+          "corpus_status": "historical",
+          "score": 0.03128054740957967,
+          "rank": 3
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p141:c1",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 141,
+          "excerpt": "believe the truth of the statement he made. The accused must prove by preponderance\nof probability that there was good faith on his part. The accused also should show that\nthere was no malice on his part, that is to say, that there was no ill-will or spite towards\nthe person against whom he made the imputation. What must ultimately be decided is\nthe honesty of the accused in publishing the words complained of. So also the accused\nare not entitled to exception 9 of section 499, IPC, 1860 merely on the reason that the\npublications were not made in good faith.335.\n\nGood faith is a question of fact to be considered and decided on the facts of each\ncase. Section 52 of the Penal Code emphasizes due care and attention in relation to\nthe good faith. In the General Clauses Act emphasis is laid on honesty.336. The\nmeaning of the expression \"good faith\" is what is done with \"due care and attention\".\nDue care denotes the degree of reasonableness in the care sought to be exercised.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=141",
+          "corpus_status": "historical",
+          "score": 0.03125763125763126,
+          "rank": 4
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p141:c2",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 141,
+          "excerpt": "\"good faith\" is what is done with \"due care and attention\".\nDue care denotes the degree of reasonableness in the care sought to be exercised. So,\nbefore a person proposes to make an imputation, he must ﬁrst make an enquiry into\nthe factum of the imputation which he proposes to make. It is not enough that he does\njust a make believe show for an enquiry. The enquiry expected of him is of such a depth\nas a reasonable and prudent man would make with the genuine intention in knowing\nthe real truth of the imputation. If he does not do so he cannot claim that what he did\nwas bona ﬁde i.e. done in good faith. Thus, a contemner, if he is to establish \"good\nfaith\" has to say that he conducted a reasonable and proper enquiry before making an\nimputation.337. The question of good faith must be considered with reference to the\nposition of the accused and the circumstances under which he acted.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=141",
+          "corpus_status": "historical",
+          "score": 0.03125763125763126,
+          "rank": 5
+        },
+        {
+          "id": "ipc-book:5706a1b995df:640388196e:p229:c3",
+          "document_id": "ipc-book",
+          "title": "Indian Penal Code Book",
+          "page": 229,
+          "excerpt": "or believed without due care and attention. The question of good faith must be\nconsidered with reference to the position of the accused and the circumstances under\nwhich he acted. 'Good faith' requires not logical infallibility but due care and attention.\nThe question of good faith is always a question of fact to be determined in accordance\nwith the proved facts and circumstances of each case.20.\n\n'Mistake'  is not mere forgetfulness.21.  It  is a  slip \"made, not by design, but by\nmischance.\"22. Under sections 76 and 79 a mistake must be one of fact and not of law.\nAt common law an honest and reasonable belief in the existence of circumstances,\nwhich, if true, would make the act for which a prisoner is indicted an innocent act has\nalways been held to be a good defence. Honest and reasonable mistake stands in fact\non the same footing as absence of the reasoning faculty, as in infancy, or perversion of\nthat faculty, as in lunacy.23.",
+          "url": "/sources/ipc-book/pdf?version=5706a1b995df774c4c4ea1868223e18a13ba619977d323d3cab76a1cc095e237#page=229",
+          "corpus_status": "historical",
+          "score": 0.030886196246139225,
+          "rank": 6
+        }
+      ],
+      "claims": [
+        {
+          "text": "Nothing is said to be done or believed in \"good faith\" which is done or believed without due care and attention.",
+          "citation_ids": [
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2"
+          ]
+        },
+        {
+          "text": "Due care denotes the degree of reasonableness in the care sought to be exercised.",
+          "citation_ids": [
+            "ipc-book:5706a1b995df:640388196e:p140:c2"
+          ]
+        }
+      ],
+      "raw_response": "{\"sufficient_evidence\": true, \"claims\":[{\"text\":\"Nothing is said to be done or believed in \\\"good faith\\\" which is done or believed without due care and attention.\",\"citation_ids\":[\"ipc-book:5706a1b995df:640388196e:p140:c1\",\"ipc-book:5706a1b995df:640388196e:p140:c2\"]},{\"text\":\"Due care denotes the degree of reasonableness in the care sought to be exercised.\",\"citation_ids\":[\"ipc-book:5706a1b995df:640388196e:p140:c2\"]}]}",
+      "generation_seconds": 10.292093099997146,
+      "prompt_tokens": 2218,
+      "output_tokens": 161,
+      "mode": "generated",
+      "reason": null
+    },
+    {
+      "id": "s80-paraphrase",
+      "query": "Where does the book discuss accidental harm during a lawful activity performed carefully and without criminal intent?",
+      "answerable": true,
+      "kind": "answerable",
+      "sources": [],
+      "claims": [],
+      "raw_response": null,
+      "generation_seconds": null,
+      "mode": "retrieval_abstention",
+      "reason": "No matching excerpts"
+    }
+  ]
+}

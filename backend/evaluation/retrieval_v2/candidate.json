@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "frozen_utc": "2026-11-13T17:58:39.887424+00:00",
+  "selection": "Six-candidate development-only hybrid sweep: maximize negative abstention, then Hit@5, then MRR. Select coverage 0.35 and RRF constant 20. Standalone BM25 and model-failure fallback keep the basic content-term filter; fusion coverage applies only when using dense retrieval. No held-out rankings or generated answers inspected.",
+  "development_tradeoff": "Hybrid Hit@5 28/40 versus v1 29/40; Hit@10 35/40 versus 32/40; negatives empty 8/8 versus 7/8. Accept truncation removal and top-10/negative gains while disclosing top-5 regression.",
+  "generation_selection": "Shared production prompt unchanged. Smoke-test malformed JSON retained; no JSON repair or repeated best-of selection. Increase output budget from diagnostic 640 to production-matching 1600 before held-out run; confirm on the same development smoke cases.",
+  "retrieval_code_sha256": {
+    "app/services/retrieval_service.py": "c247d9af64e31ba835574ad17c8ce7f753b9e5ca546a943d44e9873e2809ebb5",
+    "app/services/passage_chunking.py": "f0f7f121cf1078c06bd0b5d3f7ace59b3e88a3d320f496a01db2f8e914e34f0d",
+    "app/services/source_service.py": "3c202b8016d2283a8f49f5d6a40dfcda55d1586b3280a09a7026f94088c456ff",
+    "scripts/compare_retrieval.py": "7e9d6e89541fa54d18a3bf49eb25375109f95b14d53e70df066f347df87b2394",
+    "scripts/evaluate_retrieval.py": "975396e3dece45fcd3aa439c11cd0d4238ddd1d52713d075004fb1187b13cab4",
+    "scripts/evaluation_integrity.py": "f90e50b34ae623664ddf42ba472f6907e79ac93726234d9c00da11031c749f27"
+  },
+  "embedding_files_sha256": {
+    "config.json": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+    "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+    "model.safetensors": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+    "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+    "README.md": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+    "sentence_bert_config.json": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+    "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+    "tokenizer.json": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+    "tokenizer_config.json": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+    "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+    "1_Pooling/config.json": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23"
+  },
+  "retrieval_settings": {
+    "coverage": 0.35,
+    "dense_similarity": 0.35,
+    "rrf_rank_constant": 20,
+    "repeats": 1,
+    "seed": 20261113
+  },
+  "generation_code_sha256": {
+    "scripts/evaluate_local_answers.py": "91505c084062c40239712dc22ff1d92d7c760ecfd87589c9f925b6204a68e223",
+    "app/services/evidence_contract.py": "9da6e0afd00f577b9390985c330af1457fce5111694769d3f9ebceca9db1942d",
+    "app/services/question_policy.py": "d093f8b51bde3017e858660369e5feabb690c149ec07e1fc460fcd2ff8fe6d30",
+    "scripts/evaluation_integrity.py": "f90e50b34ae623664ddf42ba472f6907e79ac93726234d9c00da11031c749f27",
+    "evaluation/retrieval_v2/local-model.json": "c37716a7b36e483d47c34a0dc290b9ae4e07bd9d83d93869de59c7e6393f1e8c"
+  },
+  "generation_settings": {
+    "do_sample": false,
+    "max_new_tokens": 1600,
+    "max_input_tokens": 6144,
+    "top_k_sources": 6,
+    "seed": 20261113,
+    "dtype": "bfloat16",
+    "attention": "sdpa"
+  },
+  "development_artifact_sha256": {
+    "development-01.json": "9ab946c1f62ad021ccdc30cbdbdfb8b7095aa3afd4b1f4cbd28896260b7b2b6c",
+    "development-02.json": "e58a14774fdb708b22aaf22016b1f916c78cf2660c3d518688d5410cccded37c",
+    "development-grid.json": "6e821562bc728103365a68538d5928ddc4a2704db16016168ab03da008f7f8da",
+    "development-final.json": "e8f4bfa028668395007560538c8ed77b32a1a71b260f0e943baf099f4492baa5",
+    "development-generation-smoke.json": "542ddab6387362de54c50d824170585fd279c28137486f26816e3730b9e7d150",
+    "development-generation-final.json": "1fabbd0a7a2e9f4e471707508801c9c2b28b5fbb349ad08b14a21e431c54eaa3"
+  },
+  "validation": {
+    "offline_unit_tests_passed": 46,
+    "command": "python -m unittest discover -s tests -v",
+    "paid_inference_api_calls": 0
+  },
+  "code_hash_normalization": "UTF-8 with LF newlines; data/model hashes are exact bytes"
+}

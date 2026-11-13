@@ -11,7 +11,7 @@ import numpy as np
 from openai import APITimeoutError, AuthenticationError, RateLimitError
 import pymupdf
 
-from app.services import chatbot_service as chat, retrieval_service as retrieval, source_service
+from app.services import chatbot_service as chat, retrieval_service as retrieval, source_service, passage_chunking
 from scripts.evaluate_retrieval import normalize, query_metrics, validate_questions
 
 READY = {"status": "ready", "model_version": "test", "scope": "historical", "intent": "explanation", "note": "test"}
@@ -151,6 +151,9 @@ class RetrievalReliabilityTests(unittest.TestCase):
         self.path = Path(self.temp.name) / "source.pdf"
         self.write_pdf("Unique quokka evidence concerning wildlife.")
         self.document = source_service.SourceDocument("test-source", "Test", ("ipc",), self.path, "unverified")
+        patcher = patch.object(passage_chunking, "profile", return_value=passage_chunking.ChunkProfile(None, "offline-test"))
+        patcher.start()
+        self.addCleanup(patcher.stop)
         patcher = patch.object(source_service, "for_domain", return_value=self.document)
         patcher.start()
         self.addCleanup(patcher.stop)
@@ -187,6 +190,39 @@ class RetrievalReliabilityTests(unittest.TestCase):
                 self.assertEqual(retrieval.retrieve(query)["results"], [])
         model.assert_not_called()
 
+    def test_oversized_query_does_not_trip_the_model_failure_circuit(self):
+        corpus = retrieval._get_corpus("ipc")
+        with patch.object(retrieval, "_vectors", return_value=np.ones((len(corpus.ids), 3))), patch.object(retrieval, "encode_texts", side_effect=retrieval.EmbeddingInputTooLongError("query too long")):
+            result = retrieval.retrieve("unique quokka", method="hybrid")
+        self.assertEqual(result["retrieval"]["method"], "bm25")
+        self.assertIn("without truncated", result["retrieval"]["warning"])
+        self.assertEqual(retrieval._dense_failures, {})
+
+    def test_semantic_evidence_can_recover_a_lexically_filtered_query(self):
+        corpus = retrieval._get_corpus("ipc")
+        vectors = np.zeros((len(corpus.ids), 2), dtype=np.float32)
+        vectors[:, 1] = 1
+        vectors[0] = [1, 0]
+        with patch.object(retrieval, "_vectors", return_value=vectors), patch.object(retrieval, "encode_texts", return_value=np.array([[1, 0]], dtype=np.float32)):
+            response = retrieval.retrieve("unseenword quokka", method="hybrid")
+        self.assertEqual(response["retrieval"]["method"], "hybrid")
+        self.assertEqual(response["results"][0]["page"], 1)
+
+    def test_chunk_policy_change_invalidates_evidence_ids(self):
+        original = retrieval.retrieve("unique quokka", method="bm25")["results"][0]
+        with patch.object(passage_chunking, "profile", return_value=passage_chunking.ChunkProfile(None, "different-policy")):
+            updated = retrieval.retrieve("unique quokka", method="bm25")["results"][0]
+        self.assertNotEqual(original["id"], updated["id"])
+        self.assertEqual(original["url"], updated["url"])
+
+    def test_dense_failure_restores_full_standalone_keyword_results(self):
+        query = "unique quokka zzzmissing"
+        expected = retrieval.retrieve(query, method="bm25")["results"]
+        with patch.object(retrieval, "MIN_QUERY_COVERAGE", 0.99), patch.object(retrieval, "_vectors", side_effect=OSError("no weights")):
+            response = retrieval.retrieve(query, method="hybrid")
+        self.assertTrue(expected)
+        self.assertEqual(response["results"], expected)
+
     def test_source_change_invalidates_corpus_and_evidence_ids(self):
         original = retrieval.retrieve("unique quokka", method="bm25")["results"][0]
         self.path.unlink()
@@ -212,6 +248,8 @@ class RetrievalReliabilityTests(unittest.TestCase):
         corpus = retrieval._get_corpus("ipc")
         model = MagicMock()
         model.encode.return_value = np.ones((len(corpus.ids), 3), dtype=np.float32)
+        model.max_seq_length = 256
+        model.tokenizer.return_value = {"input_ids": [[1, 2] for _ in corpus.texts]}
         with patch.object(retrieval, "BASE_DIR", Path(self.temp.name)), patch.object(retrieval, "_model", return_value=model):
             first = retrieval._vectors(corpus)
             corpus.vectors = None
