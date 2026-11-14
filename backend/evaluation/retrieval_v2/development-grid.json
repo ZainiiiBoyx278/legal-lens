@@ -1,0 +1,5285 @@
+{
+  "split": "development",
+  "questions_sha256": "48925250b0c096259acfd29cf17589004be76b032788a51446d37bd8627bb048",
+  "selection_rule": "Maximize unrelated abstentions, then Hit@5, then MRR@10; lower coverage wins exact ties",
+  "code_sha256": {
+    "scripts/tune_retrieval.py": "bfb5ae3e26255bee09efb70ce57ad8a628bff6f308d1cd4ca7ee979ddff5ad23",
+    "app/services/retrieval_service.py": "cb5fb5282814d5b019213350c9122b7d454d292cac2f1642058deaec9f23d222",
+    "app/services/passage_chunking.py": "f0f7f121cf1078c06bd0b5d3f7ace59b3e88a3d320f496a01db2f8e914e34f0d"
+  },
+  "chosen": {
+    "coverage": 0.35,
+    "rrf_rank_constant": 20,
+    "overall": {
+      "hit_at_1": 0.325,
+      "hit_at_5": 0.7,
+      "hit_at_10": 0.875,
+      "mrr_at_10": 0.5065972222222223
+    },
+    "negative_abstentions": 8
+  },
+  "trials": [
+    {
+      "coverage": 0.0,
+      "rrf_rank_constant": 20,
+      "overall": {
+        "hit_at_1": 0.35,
+        "hit_at_5": 0.675,
+        "hit_at_10": 0.85,
+        "mrr_at_10": 0.4996527777777778
+      },
+      "negative_abstentions": 8,
+      "queries": [
+        {
+          "id": "s24-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p55:c3",
+            "ipc-book:5706a1b995df:640388196e:p435:c4",
+            "ipc-book:5706a1b995df:640388196e:p458:c4",
+            "ipc-book:5706a1b995df:640388196e:p661:c2",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p485:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s24-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p53:c1",
+            "ipc-book:5706a1b995df:640388196e:p53:c2",
+            "ipc-book:5706a1b995df:640388196e:p53:c3",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1528:c3",
+            "ipc-book:5706a1b995df:640388196e:p58:c4",
+            "ipc-book:5706a1b995df:640388196e:p1073:c2",
+            "ipc-book:5706a1b995df:640388196e:p286:c5",
+            "ipc-book:5706a1b995df:640388196e:p55:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.25
+          }
+        },
+        {
+          "id": "s26-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p1003:c4",
+            "ipc-book:5706a1b995df:640388196e:p1472:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s26-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1649:c1",
+            "ipc-book:5706a1b995df:640388196e:p60:c2",
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p778:c2",
+            "ipc-book:5706a1b995df:640388196e:p463:c6",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p778:c1",
+            "ipc-book:5706a1b995df:640388196e:p440:c4",
+            "ipc-book:5706a1b995df:640388196e:p706:c4",
+            "ipc-book:5706a1b995df:640388196e:p788:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p218:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c3",
+            "ipc-book:5706a1b995df:640388196e:p1011:c2",
+            "ipc-book:5706a1b995df:640388196e:p1753:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p141:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c3",
+            "ipc-book:5706a1b995df:640388196e:p1745:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p217:c1",
+            "ipc-book:5706a1b995df:640388196e:p221:c1",
+            "ipc-book:5706a1b995df:640388196e:p224:c1",
+            "ipc-book:5706a1b995df:640388196e:p227:c1",
+            "ipc-book:5706a1b995df:640388196e:p236:c1",
+            "ipc-book:5706a1b995df:640388196e:p241:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c1",
+            "ipc-book:5706a1b995df:640388196e:p250:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p241:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p1802:c3",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p1802:c4",
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p237:c1",
+            "ipc-book:5706a1b995df:640388196e:p237:c2",
+            "ipc-book:5706a1b995df:640388196e:p1257:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s82-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p997:c1",
+            "ipc-book:5706a1b995df:640388196e:p156:c6",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p156:c5",
+            "ipc-book:5706a1b995df:640388196e:p671:c1",
+            "ipc-book:5706a1b995df:640388196e:p49:c6",
+            "ipc-book:5706a1b995df:640388196e:p410:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s82-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p248:c1",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p22:c1",
+            "ipc-book:5706a1b995df:640388196e:p216:c2",
+            "ipc-book:5706a1b995df:640388196e:p220:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s83-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3",
+            "ipc-book:5706a1b995df:640388196e:p235:c3",
+            "ipc-book:5706a1b995df:640388196e:p240:c3",
+            "ipc-book:5706a1b995df:640388196e:p246:c3",
+            "ipc-book:5706a1b995df:640388196e:p249:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s83-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p1132:c3",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p980:c2",
+            "ipc-book:5706a1b995df:640388196e:p1845:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s84-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p255:c4",
+            "ipc-book:5706a1b995df:640388196e:p261:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p267:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p279:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c4",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p264:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1
+          }
+        },
+        {
+          "id": "s84-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p258:c3",
+            "ipc-book:5706a1b995df:640388196e:p230:c4",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p979:c6",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s95-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p317:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s95-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p1041:c2",
+            "ipc-book:5706a1b995df:640388196e:p1740:c1",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p1201:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s107-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p462:c3",
+            "ipc-book:5706a1b995df:640388196e:p439:c3",
+            "ipc-book:5706a1b995df:640388196e:p397:c5",
+            "ipc-book:5706a1b995df:640388196e:p398:c3",
+            "ipc-book:5706a1b995df:640388196e:p393:c3",
+            "ipc-book:5706a1b995df:640388196e:p398:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p392:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1111111111111111
+          }
+        },
+        {
+          "id": "s107-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p411:c1",
+            "ipc-book:5706a1b995df:640388196e:p409:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p397:c3",
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p411:c3",
+            "ipc-book:5706a1b995df:640388196e:p392:c3",
+            "ipc-book:5706a1b995df:640388196e:p472:c5",
+            "ipc-book:5706a1b995df:640388196e:p1166:c1",
+            "ipc-book:5706a1b995df:640388196e:p392:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s141-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p537:c2",
+            "ipc-book:5706a1b995df:640388196e:p536:c3",
+            "ipc-book:5706a1b995df:640388196e:p581:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p549:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p537:c3",
+            "ipc-book:5706a1b995df:640388196e:p533:c2",
+            "ipc-book:5706a1b995df:640388196e:p1816:c3",
+            "ipc-book:5706a1b995df:640388196e:p1458:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.125
+          }
+        },
+        {
+          "id": "s141-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p84:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c4",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c3",
+            "ipc-book:5706a1b995df:640388196e:p540:c1",
+            "ipc-book:5706a1b995df:640388196e:p561:c3",
+            "ipc-book:5706a1b995df:640388196e:p561:c1",
+            "ipc-book:5706a1b995df:640388196e:p101:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p567:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s159-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p583:c3",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p624:c2",
+            "ipc-book:5706a1b995df:640388196e:p618:c3",
+            "ipc-book:5706a1b995df:640388196e:p579:c3",
+            "ipc-book:5706a1b995df:640388196e:p560:c3",
+            "ipc-book:5706a1b995df:640388196e:p614:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s159-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c2",
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p625:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p1037:c4",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p582:c1",
+            "ipc-book:5706a1b995df:640388196e:p1767:c4",
+            "ipc-book:5706a1b995df:640388196e:p589:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s319-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1203:c5",
+            "ipc-book:5706a1b995df:640388196e:p1199:c3",
+            "ipc-book:5706a1b995df:640388196e:p725:c1",
+            "ipc-book:5706a1b995df:640388196e:p1838:c1",
+            "ipc-book:5706a1b995df:640388196e:p1448:c4",
+            "ipc-book:5706a1b995df:640388196e:p130:c4",
+            "ipc-book:5706a1b995df:640388196e:p1199:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s319-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1244:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1202:c3",
+            "ipc-book:5706a1b995df:640388196e:p1017:c2",
+            "ipc-book:5706a1b995df:640388196e:p1207:c2",
+            "ipc-book:5706a1b995df:640388196e:p130:c3",
+            "ipc-book:5706a1b995df:640388196e:p1838:c3",
+            "ipc-book:5706a1b995df:640388196e:p1201:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s339-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1261:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1261:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1839:c4",
+            "ipc-book:5706a1b995df:640388196e:p1260:c5",
+            "ipc-book:5706a1b995df:640388196e:p1267:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s339-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c4",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1260:c1",
+            "ipc-book:5706a1b995df:640388196e:p321:c5",
+            "ipc-book:5706a1b995df:640388196e:p351:c2",
+            "ipc-book:5706a1b995df:640388196e:p440:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s340-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c4",
+            "ipc-book:5706a1b995df:640388196e:p1265:c4",
+            "ipc-book:5706a1b995df:640388196e:p1270:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c2",
+            "ipc-book:5706a1b995df:640388196e:p1266:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s340-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1707:c2",
+            "ipc-book:5706a1b995df:640388196e:p1264:c2",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p643:c4",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1767:c4",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s378-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1419:c4",
+            "ipc-book:5706a1b995df:640388196e:p1407:c1",
+            "ipc-book:5706a1b995df:640388196e:p1416:c2",
+            "ipc-book:5706a1b995df:640388196e:p1419:c3",
+            "ipc-book:5706a1b995df:640388196e:p1847:c2",
+            "ipc-book:5706a1b995df:640388196e:p1413:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s378-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1556:c3",
+            "ipc-book:5706a1b995df:640388196e:p1529:c2",
+            "ipc-book:5706a1b995df:640388196e:p1417:c2",
+            "ipc-book:5706a1b995df:640388196e:p1417:c3",
+            "ipc-book:5706a1b995df:640388196e:p1476:c1",
+            "ipc-book:5706a1b995df:640388196e:p1509:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s383-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1429:c1",
+            "ipc-book:5706a1b995df:640388196e:p339:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s383-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c4",
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1547:c1",
+            "ipc-book:5706a1b995df:640388196e:p312:c3",
+            "ipc-book:5706a1b995df:640388196e:p1807:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s391-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1445:c2",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1850:c3",
+            "ipc-book:5706a1b995df:640388196e:p1445:c1",
+            "ipc-book:5706a1b995df:640388196e:p1850:c2",
+            "ipc-book:5706a1b995df:640388196e:p1784:c4",
+            "ipc-book:5706a1b995df:640388196e:p1445:c3",
+            "ipc-book:5706a1b995df:640388196e:p356:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s391-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1444:c3",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1451:c2",
+            "ipc-book:5706a1b995df:640388196e:p1454:c2",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1469:c4",
+            "ipc-book:5706a1b995df:640388196e:p1451:c1",
+            "ipc-book:5706a1b995df:640388196e:p1458:c1",
+            "ipc-book:5706a1b995df:640388196e:p1440:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s405-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1484:c3",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1503:c2",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1483:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c3",
+            "ipc-book:5706a1b995df:640388196e:p1506:c5",
+            "ipc-book:5706a1b995df:640388196e:p1492:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s405-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1489:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c4",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1476:c3",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1518:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s415-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1534:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1530:c2",
+            "ipc-book:5706a1b995df:640388196e:p1532:c1",
+            "ipc-book:5706a1b995df:640388196e:p1530:c1",
+            "ipc-book:5706a1b995df:640388196e:p1548:c1",
+            "ipc-book:5706a1b995df:640388196e:p1536:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s415-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1530:c4",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1531:c3",
+            "ipc-book:5706a1b995df:640388196e:p1530:c3",
+            "ipc-book:5706a1b995df:640388196e:p1536:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c3",
+            "ipc-book:5706a1b995df:640388196e:p1529:c3",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s503-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1142:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p703:c2",
+            "ipc-book:5706a1b995df:640388196e:p1142:c1",
+            "ipc-book:5706a1b995df:640388196e:p387:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s503-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c3",
+            "ipc-book:5706a1b995df:640388196e:p1765:c1",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p1868:c4",
+            "ipc-book:5706a1b995df:640388196e:p311:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        }
+      ],
+      "negatives": [
+        {
+          "id": "n01",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n02",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n03",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n04",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n05",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n06",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n07",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n08",
+          "ids": [],
+          "abstained": true
+        }
+      ]
+    },
+    {
+      "coverage": 0.0,
+      "rrf_rank_constant": 60,
+      "overall": {
+        "hit_at_1": 0.35,
+        "hit_at_5": 0.65,
+        "hit_at_10": 0.85,
+        "mrr_at_10": 0.49697420634920636
+      },
+      "negative_abstentions": 8,
+      "queries": [
+        {
+          "id": "s24-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p55:c3",
+            "ipc-book:5706a1b995df:640388196e:p435:c4",
+            "ipc-book:5706a1b995df:640388196e:p458:c4",
+            "ipc-book:5706a1b995df:640388196e:p661:c2",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p485:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s24-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p53:c1",
+            "ipc-book:5706a1b995df:640388196e:p53:c2",
+            "ipc-book:5706a1b995df:640388196e:p53:c3",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1528:c3",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p58:c4",
+            "ipc-book:5706a1b995df:640388196e:p1073:c2",
+            "ipc-book:5706a1b995df:640388196e:p1564:c2",
+            "ipc-book:5706a1b995df:640388196e:p1566:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s26-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p1003:c4",
+            "ipc-book:5706a1b995df:640388196e:p1472:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s26-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1649:c1",
+            "ipc-book:5706a1b995df:640388196e:p60:c2",
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p778:c2",
+            "ipc-book:5706a1b995df:640388196e:p463:c6",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p440:c4",
+            "ipc-book:5706a1b995df:640388196e:p463:c3",
+            "ipc-book:5706a1b995df:640388196e:p778:c1",
+            "ipc-book:5706a1b995df:640388196e:p706:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p218:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c3",
+            "ipc-book:5706a1b995df:640388196e:p1011:c2",
+            "ipc-book:5706a1b995df:640388196e:p1753:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p141:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c3",
+            "ipc-book:5706a1b995df:640388196e:p1745:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p217:c1",
+            "ipc-book:5706a1b995df:640388196e:p221:c1",
+            "ipc-book:5706a1b995df:640388196e:p224:c1",
+            "ipc-book:5706a1b995df:640388196e:p227:c1",
+            "ipc-book:5706a1b995df:640388196e:p236:c1",
+            "ipc-book:5706a1b995df:640388196e:p241:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c1",
+            "ipc-book:5706a1b995df:640388196e:p250:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p241:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p1802:c3",
+            "ipc-book:5706a1b995df:640388196e:p1802:c4",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p237:c1",
+            "ipc-book:5706a1b995df:640388196e:p1257:c2",
+            "ipc-book:5706a1b995df:640388196e:p315:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.14285714285714285
+          }
+        },
+        {
+          "id": "s82-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p997:c1",
+            "ipc-book:5706a1b995df:640388196e:p156:c6",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p156:c5",
+            "ipc-book:5706a1b995df:640388196e:p671:c1",
+            "ipc-book:5706a1b995df:640388196e:p49:c6",
+            "ipc-book:5706a1b995df:640388196e:p410:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s82-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p248:c1",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p22:c1",
+            "ipc-book:5706a1b995df:640388196e:p216:c2",
+            "ipc-book:5706a1b995df:640388196e:p220:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s83-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3",
+            "ipc-book:5706a1b995df:640388196e:p235:c3",
+            "ipc-book:5706a1b995df:640388196e:p240:c3",
+            "ipc-book:5706a1b995df:640388196e:p246:c3",
+            "ipc-book:5706a1b995df:640388196e:p249:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s83-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p291:c3",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p1804:c4",
+            "ipc-book:5706a1b995df:640388196e:p1132:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s84-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p255:c4",
+            "ipc-book:5706a1b995df:640388196e:p261:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p267:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p279:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c4",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p264:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1
+          }
+        },
+        {
+          "id": "s84-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p230:c4",
+            "ipc-book:5706a1b995df:640388196e:p258:c3",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s95-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p317:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s95-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p316:c5",
+            "ipc-book:5706a1b995df:640388196e:p1041:c2",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p1740:c1",
+            "ipc-book:5706a1b995df:640388196e:p242:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s107-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p462:c3",
+            "ipc-book:5706a1b995df:640388196e:p439:c3",
+            "ipc-book:5706a1b995df:640388196e:p397:c5",
+            "ipc-book:5706a1b995df:640388196e:p398:c3",
+            "ipc-book:5706a1b995df:640388196e:p393:c3",
+            "ipc-book:5706a1b995df:640388196e:p398:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p392:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1111111111111111
+          }
+        },
+        {
+          "id": "s107-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p411:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p409:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c3",
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p411:c3",
+            "ipc-book:5706a1b995df:640388196e:p1166:c1",
+            "ipc-book:5706a1b995df:640388196e:p405:c2",
+            "ipc-book:5706a1b995df:640388196e:p406:c1",
+            "ipc-book:5706a1b995df:640388196e:p405:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s141-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p537:c2",
+            "ipc-book:5706a1b995df:640388196e:p536:c3",
+            "ipc-book:5706a1b995df:640388196e:p581:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p549:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p537:c3",
+            "ipc-book:5706a1b995df:640388196e:p533:c2",
+            "ipc-book:5706a1b995df:640388196e:p1816:c3",
+            "ipc-book:5706a1b995df:640388196e:p1458:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.125
+          }
+        },
+        {
+          "id": "s141-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p84:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c4",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c3",
+            "ipc-book:5706a1b995df:640388196e:p540:c1",
+            "ipc-book:5706a1b995df:640388196e:p561:c3",
+            "ipc-book:5706a1b995df:640388196e:p561:c1",
+            "ipc-book:5706a1b995df:640388196e:p567:c2",
+            "ipc-book:5706a1b995df:640388196e:p101:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s159-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p583:c3",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p624:c2",
+            "ipc-book:5706a1b995df:640388196e:p579:c3",
+            "ipc-book:5706a1b995df:640388196e:p560:c3",
+            "ipc-book:5706a1b995df:640388196e:p618:c3",
+            "ipc-book:5706a1b995df:640388196e:p614:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s159-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c2",
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p625:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p582:c1",
+            "ipc-book:5706a1b995df:640388196e:p1037:c4",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p1767:c4",
+            "ipc-book:5706a1b995df:640388196e:p1040:c6"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s319-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1203:c5",
+            "ipc-book:5706a1b995df:640388196e:p1199:c3",
+            "ipc-book:5706a1b995df:640388196e:p725:c1",
+            "ipc-book:5706a1b995df:640388196e:p1838:c1",
+            "ipc-book:5706a1b995df:640388196e:p1448:c4",
+            "ipc-book:5706a1b995df:640388196e:p130:c4",
+            "ipc-book:5706a1b995df:640388196e:p1199:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s319-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1244:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1202:c3",
+            "ipc-book:5706a1b995df:640388196e:p1017:c2",
+            "ipc-book:5706a1b995df:640388196e:p1207:c2",
+            "ipc-book:5706a1b995df:640388196e:p130:c3",
+            "ipc-book:5706a1b995df:640388196e:p1687:c4",
+            "ipc-book:5706a1b995df:640388196e:p130:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s339-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1261:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1261:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1839:c4",
+            "ipc-book:5706a1b995df:640388196e:p1260:c5",
+            "ipc-book:5706a1b995df:640388196e:p1267:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s339-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1260:c4",
+            "ipc-book:5706a1b995df:640388196e:p1260:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p321:c5",
+            "ipc-book:5706a1b995df:640388196e:p351:c2",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s340-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c4",
+            "ipc-book:5706a1b995df:640388196e:p1265:c4",
+            "ipc-book:5706a1b995df:640388196e:p1270:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c2",
+            "ipc-book:5706a1b995df:640388196e:p1266:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s340-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1707:c2",
+            "ipc-book:5706a1b995df:640388196e:p1264:c2",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p643:c4",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1767:c4",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s378-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1419:c4",
+            "ipc-book:5706a1b995df:640388196e:p1407:c1",
+            "ipc-book:5706a1b995df:640388196e:p1416:c2",
+            "ipc-book:5706a1b995df:640388196e:p1419:c3",
+            "ipc-book:5706a1b995df:640388196e:p1847:c2",
+            "ipc-book:5706a1b995df:640388196e:p1413:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s378-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1556:c3",
+            "ipc-book:5706a1b995df:640388196e:p1529:c2",
+            "ipc-book:5706a1b995df:640388196e:p1476:c1",
+            "ipc-book:5706a1b995df:640388196e:p1417:c2",
+            "ipc-book:5706a1b995df:640388196e:p1417:c3",
+            "ipc-book:5706a1b995df:640388196e:p1509:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s383-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1429:c1",
+            "ipc-book:5706a1b995df:640388196e:p339:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s383-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c4",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p312:c3",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1851:c1",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s391-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1445:c2",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1850:c3",
+            "ipc-book:5706a1b995df:640388196e:p1445:c1",
+            "ipc-book:5706a1b995df:640388196e:p1850:c2",
+            "ipc-book:5706a1b995df:640388196e:p1784:c4",
+            "ipc-book:5706a1b995df:640388196e:p1445:c3",
+            "ipc-book:5706a1b995df:640388196e:p356:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s391-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1444:c3",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1454:c2",
+            "ipc-book:5706a1b995df:640388196e:p1451:c2",
+            "ipc-book:5706a1b995df:640388196e:p1451:c1",
+            "ipc-book:5706a1b995df:640388196e:p1469:c4",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1458:c1",
+            "ipc-book:5706a1b995df:640388196e:p1440:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s405-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1484:c3",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1503:c2",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1483:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c3",
+            "ipc-book:5706a1b995df:640388196e:p1506:c5",
+            "ipc-book:5706a1b995df:640388196e:p1492:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s405-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1489:c2",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c4",
+            "ipc-book:5706a1b995df:640388196e:p1476:c3",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1518:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s415-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1534:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1530:c2",
+            "ipc-book:5706a1b995df:640388196e:p1530:c1",
+            "ipc-book:5706a1b995df:640388196e:p1532:c1",
+            "ipc-book:5706a1b995df:640388196e:p1548:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s415-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1530:c4",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1531:c3",
+            "ipc-book:5706a1b995df:640388196e:p1530:c3",
+            "ipc-book:5706a1b995df:640388196e:p1536:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c3",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s503-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1142:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p703:c2",
+            "ipc-book:5706a1b995df:640388196e:p1142:c1",
+            "ipc-book:5706a1b995df:640388196e:p387:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s503-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c3",
+            "ipc-book:5706a1b995df:640388196e:p1765:c1",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p1868:c4",
+            "ipc-book:5706a1b995df:640388196e:p311:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        }
+      ],
+      "negatives": [
+        {
+          "id": "n01",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n02",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n03",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n04",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n05",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n06",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n07",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n08",
+          "ids": [],
+          "abstained": true
+        }
+      ]
+    },
+    {
+      "coverage": 0.15,
+      "rrf_rank_constant": 20,
+      "overall": {
+        "hit_at_1": 0.35,
+        "hit_at_5": 0.675,
+        "hit_at_10": 0.85,
+        "mrr_at_10": 0.4986111111111111
+      },
+      "negative_abstentions": 8,
+      "queries": [
+        {
+          "id": "s24-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p55:c3",
+            "ipc-book:5706a1b995df:640388196e:p435:c4",
+            "ipc-book:5706a1b995df:640388196e:p458:c4",
+            "ipc-book:5706a1b995df:640388196e:p661:c2",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p485:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s24-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p53:c1",
+            "ipc-book:5706a1b995df:640388196e:p53:c2",
+            "ipc-book:5706a1b995df:640388196e:p53:c3",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1528:c3",
+            "ipc-book:5706a1b995df:640388196e:p58:c4",
+            "ipc-book:5706a1b995df:640388196e:p1073:c2",
+            "ipc-book:5706a1b995df:640388196e:p286:c5",
+            "ipc-book:5706a1b995df:640388196e:p55:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.25
+          }
+        },
+        {
+          "id": "s26-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p1003:c4",
+            "ipc-book:5706a1b995df:640388196e:p1472:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s26-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1649:c1",
+            "ipc-book:5706a1b995df:640388196e:p60:c2",
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p778:c2",
+            "ipc-book:5706a1b995df:640388196e:p463:c6",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p778:c1",
+            "ipc-book:5706a1b995df:640388196e:p440:c4",
+            "ipc-book:5706a1b995df:640388196e:p706:c4",
+            "ipc-book:5706a1b995df:640388196e:p788:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p218:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c3",
+            "ipc-book:5706a1b995df:640388196e:p1011:c2",
+            "ipc-book:5706a1b995df:640388196e:p1753:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p141:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c3",
+            "ipc-book:5706a1b995df:640388196e:p1745:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p217:c1",
+            "ipc-book:5706a1b995df:640388196e:p221:c1",
+            "ipc-book:5706a1b995df:640388196e:p224:c1",
+            "ipc-book:5706a1b995df:640388196e:p227:c1",
+            "ipc-book:5706a1b995df:640388196e:p236:c1",
+            "ipc-book:5706a1b995df:640388196e:p241:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c1",
+            "ipc-book:5706a1b995df:640388196e:p250:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p241:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p1802:c3",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p1802:c4",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p237:c2",
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p589:c1",
+            "ipc-book:5706a1b995df:640388196e:p597:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.125
+          }
+        },
+        {
+          "id": "s82-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p997:c1",
+            "ipc-book:5706a1b995df:640388196e:p156:c6",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p156:c5",
+            "ipc-book:5706a1b995df:640388196e:p671:c1",
+            "ipc-book:5706a1b995df:640388196e:p49:c6",
+            "ipc-book:5706a1b995df:640388196e:p410:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s82-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p248:c1",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p22:c1",
+            "ipc-book:5706a1b995df:640388196e:p216:c2",
+            "ipc-book:5706a1b995df:640388196e:p220:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s83-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3",
+            "ipc-book:5706a1b995df:640388196e:p235:c3",
+            "ipc-book:5706a1b995df:640388196e:p240:c3",
+            "ipc-book:5706a1b995df:640388196e:p246:c3",
+            "ipc-book:5706a1b995df:640388196e:p249:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s83-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p1132:c3",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p980:c2",
+            "ipc-book:5706a1b995df:640388196e:p1845:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s84-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p255:c4",
+            "ipc-book:5706a1b995df:640388196e:p261:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p267:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p279:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c4",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p264:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1
+          }
+        },
+        {
+          "id": "s84-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p258:c3",
+            "ipc-book:5706a1b995df:640388196e:p230:c4",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p979:c6",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s95-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p317:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s95-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p1041:c2",
+            "ipc-book:5706a1b995df:640388196e:p1740:c1",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p1201:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s107-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p462:c3",
+            "ipc-book:5706a1b995df:640388196e:p439:c3",
+            "ipc-book:5706a1b995df:640388196e:p397:c5",
+            "ipc-book:5706a1b995df:640388196e:p398:c3",
+            "ipc-book:5706a1b995df:640388196e:p393:c3",
+            "ipc-book:5706a1b995df:640388196e:p398:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p392:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1111111111111111
+          }
+        },
+        {
+          "id": "s107-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p411:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p411:c3",
+            "ipc-book:5706a1b995df:640388196e:p392:c3",
+            "ipc-book:5706a1b995df:640388196e:p472:c5",
+            "ipc-book:5706a1b995df:640388196e:p1166:c1",
+            "ipc-book:5706a1b995df:640388196e:p392:c4",
+            "ipc-book:5706a1b995df:640388196e:p395:c1",
+            "ipc-book:5706a1b995df:640388196e:p450:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s141-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p537:c2",
+            "ipc-book:5706a1b995df:640388196e:p536:c3",
+            "ipc-book:5706a1b995df:640388196e:p581:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p549:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p537:c3",
+            "ipc-book:5706a1b995df:640388196e:p533:c2",
+            "ipc-book:5706a1b995df:640388196e:p1816:c3",
+            "ipc-book:5706a1b995df:640388196e:p1458:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.125
+          }
+        },
+        {
+          "id": "s141-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p84:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c4",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c3",
+            "ipc-book:5706a1b995df:640388196e:p540:c1",
+            "ipc-book:5706a1b995df:640388196e:p561:c3",
+            "ipc-book:5706a1b995df:640388196e:p561:c1",
+            "ipc-book:5706a1b995df:640388196e:p101:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p567:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s159-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p583:c3",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p624:c2",
+            "ipc-book:5706a1b995df:640388196e:p618:c3",
+            "ipc-book:5706a1b995df:640388196e:p579:c3",
+            "ipc-book:5706a1b995df:640388196e:p560:c3",
+            "ipc-book:5706a1b995df:640388196e:p614:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s159-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c2",
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p625:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p1037:c4",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p582:c1",
+            "ipc-book:5706a1b995df:640388196e:p1767:c4",
+            "ipc-book:5706a1b995df:640388196e:p1040:c6"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s319-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1203:c5",
+            "ipc-book:5706a1b995df:640388196e:p1199:c3",
+            "ipc-book:5706a1b995df:640388196e:p725:c1",
+            "ipc-book:5706a1b995df:640388196e:p1838:c1",
+            "ipc-book:5706a1b995df:640388196e:p1448:c4",
+            "ipc-book:5706a1b995df:640388196e:p130:c4",
+            "ipc-book:5706a1b995df:640388196e:p1199:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s319-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1244:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1202:c3",
+            "ipc-book:5706a1b995df:640388196e:p1017:c2",
+            "ipc-book:5706a1b995df:640388196e:p1207:c2",
+            "ipc-book:5706a1b995df:640388196e:p130:c3",
+            "ipc-book:5706a1b995df:640388196e:p1838:c3",
+            "ipc-book:5706a1b995df:640388196e:p1201:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s339-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1261:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1261:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1839:c4",
+            "ipc-book:5706a1b995df:640388196e:p1260:c5",
+            "ipc-book:5706a1b995df:640388196e:p1267:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s339-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c4",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1260:c1",
+            "ipc-book:5706a1b995df:640388196e:p321:c5",
+            "ipc-book:5706a1b995df:640388196e:p351:c2",
+            "ipc-book:5706a1b995df:640388196e:p440:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s340-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c4",
+            "ipc-book:5706a1b995df:640388196e:p1265:c4",
+            "ipc-book:5706a1b995df:640388196e:p1270:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c2",
+            "ipc-book:5706a1b995df:640388196e:p1266:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s340-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1707:c2",
+            "ipc-book:5706a1b995df:640388196e:p1264:c2",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p643:c4",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1767:c4",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s378-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1419:c4",
+            "ipc-book:5706a1b995df:640388196e:p1407:c1",
+            "ipc-book:5706a1b995df:640388196e:p1416:c2",
+            "ipc-book:5706a1b995df:640388196e:p1419:c3",
+            "ipc-book:5706a1b995df:640388196e:p1847:c2",
+            "ipc-book:5706a1b995df:640388196e:p1413:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s378-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1556:c3",
+            "ipc-book:5706a1b995df:640388196e:p1529:c2",
+            "ipc-book:5706a1b995df:640388196e:p1417:c2",
+            "ipc-book:5706a1b995df:640388196e:p1417:c3",
+            "ipc-book:5706a1b995df:640388196e:p1476:c1",
+            "ipc-book:5706a1b995df:640388196e:p1509:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s383-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1429:c1",
+            "ipc-book:5706a1b995df:640388196e:p339:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s383-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c4",
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1547:c1",
+            "ipc-book:5706a1b995df:640388196e:p312:c3",
+            "ipc-book:5706a1b995df:640388196e:p1807:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s391-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1445:c2",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1850:c3",
+            "ipc-book:5706a1b995df:640388196e:p1445:c1",
+            "ipc-book:5706a1b995df:640388196e:p1850:c2",
+            "ipc-book:5706a1b995df:640388196e:p1784:c4",
+            "ipc-book:5706a1b995df:640388196e:p1445:c3",
+            "ipc-book:5706a1b995df:640388196e:p356:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s391-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1444:c3",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1454:c2",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1469:c4",
+            "ipc-book:5706a1b995df:640388196e:p1458:c1",
+            "ipc-book:5706a1b995df:640388196e:p1444:c4",
+            "ipc-book:5706a1b995df:640388196e:p1440:c2",
+            "ipc-book:5706a1b995df:640388196e:p1095:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s405-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1484:c3",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1503:c2",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1483:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c3",
+            "ipc-book:5706a1b995df:640388196e:p1506:c5",
+            "ipc-book:5706a1b995df:640388196e:p1492:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s405-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1489:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c4",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1476:c3",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1476:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s415-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1534:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1530:c2",
+            "ipc-book:5706a1b995df:640388196e:p1532:c1",
+            "ipc-book:5706a1b995df:640388196e:p1530:c1",
+            "ipc-book:5706a1b995df:640388196e:p1548:c1",
+            "ipc-book:5706a1b995df:640388196e:p1536:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s415-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1530:c4",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1531:c3",
+            "ipc-book:5706a1b995df:640388196e:p1530:c3",
+            "ipc-book:5706a1b995df:640388196e:p1536:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c3",
+            "ipc-book:5706a1b995df:640388196e:p1529:c3",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s503-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1142:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p703:c2",
+            "ipc-book:5706a1b995df:640388196e:p1142:c1",
+            "ipc-book:5706a1b995df:640388196e:p387:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s503-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c3",
+            "ipc-book:5706a1b995df:640388196e:p1765:c1",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p703:c2",
+            "ipc-book:5706a1b995df:640388196e:p1587:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        }
+      ],
+      "negatives": [
+        {
+          "id": "n01",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n02",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n03",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n04",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n05",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n06",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n07",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n08",
+          "ids": [],
+          "abstained": true
+        }
+      ]
+    },
+    {
+      "coverage": 0.15,
+      "rrf_rank_constant": 60,
+      "overall": {
+        "hit_at_1": 0.35,
+        "hit_at_5": 0.65,
+        "hit_at_10": 0.85,
+        "mrr_at_10": 0.4965277777777778
+      },
+      "negative_abstentions": 8,
+      "queries": [
+        {
+          "id": "s24-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p55:c3",
+            "ipc-book:5706a1b995df:640388196e:p435:c4",
+            "ipc-book:5706a1b995df:640388196e:p458:c4",
+            "ipc-book:5706a1b995df:640388196e:p661:c2",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p485:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s24-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p53:c1",
+            "ipc-book:5706a1b995df:640388196e:p53:c2",
+            "ipc-book:5706a1b995df:640388196e:p53:c3",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1528:c3",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p58:c4",
+            "ipc-book:5706a1b995df:640388196e:p1073:c2",
+            "ipc-book:5706a1b995df:640388196e:p1564:c2",
+            "ipc-book:5706a1b995df:640388196e:p1566:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s26-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p1003:c4",
+            "ipc-book:5706a1b995df:640388196e:p1472:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s26-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1649:c1",
+            "ipc-book:5706a1b995df:640388196e:p60:c2",
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p778:c2",
+            "ipc-book:5706a1b995df:640388196e:p463:c6",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p440:c4",
+            "ipc-book:5706a1b995df:640388196e:p463:c3",
+            "ipc-book:5706a1b995df:640388196e:p778:c1",
+            "ipc-book:5706a1b995df:640388196e:p706:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p218:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c3",
+            "ipc-book:5706a1b995df:640388196e:p1011:c2",
+            "ipc-book:5706a1b995df:640388196e:p1753:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p141:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c3",
+            "ipc-book:5706a1b995df:640388196e:p1745:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p217:c1",
+            "ipc-book:5706a1b995df:640388196e:p221:c1",
+            "ipc-book:5706a1b995df:640388196e:p224:c1",
+            "ipc-book:5706a1b995df:640388196e:p227:c1",
+            "ipc-book:5706a1b995df:640388196e:p236:c1",
+            "ipc-book:5706a1b995df:640388196e:p241:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c1",
+            "ipc-book:5706a1b995df:640388196e:p250:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p241:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p1802:c3",
+            "ipc-book:5706a1b995df:640388196e:p1802:c4",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p237:c2",
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p589:c1",
+            "ipc-book:5706a1b995df:640388196e:p597:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.125
+          }
+        },
+        {
+          "id": "s82-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p997:c1",
+            "ipc-book:5706a1b995df:640388196e:p156:c6",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p156:c5",
+            "ipc-book:5706a1b995df:640388196e:p671:c1",
+            "ipc-book:5706a1b995df:640388196e:p49:c6",
+            "ipc-book:5706a1b995df:640388196e:p410:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s82-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p248:c1",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p22:c1",
+            "ipc-book:5706a1b995df:640388196e:p216:c2",
+            "ipc-book:5706a1b995df:640388196e:p220:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s83-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3",
+            "ipc-book:5706a1b995df:640388196e:p235:c3",
+            "ipc-book:5706a1b995df:640388196e:p240:c3",
+            "ipc-book:5706a1b995df:640388196e:p246:c3",
+            "ipc-book:5706a1b995df:640388196e:p249:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s83-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p291:c3",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p1804:c4",
+            "ipc-book:5706a1b995df:640388196e:p1132:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s84-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p255:c4",
+            "ipc-book:5706a1b995df:640388196e:p261:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p267:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p279:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c4",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p264:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1
+          }
+        },
+        {
+          "id": "s84-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p230:c4",
+            "ipc-book:5706a1b995df:640388196e:p258:c3",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s95-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p317:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s95-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p316:c5",
+            "ipc-book:5706a1b995df:640388196e:p1041:c2",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p1740:c1",
+            "ipc-book:5706a1b995df:640388196e:p242:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s107-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p462:c3",
+            "ipc-book:5706a1b995df:640388196e:p439:c3",
+            "ipc-book:5706a1b995df:640388196e:p397:c5",
+            "ipc-book:5706a1b995df:640388196e:p398:c3",
+            "ipc-book:5706a1b995df:640388196e:p393:c3",
+            "ipc-book:5706a1b995df:640388196e:p398:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p392:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1111111111111111
+          }
+        },
+        {
+          "id": "s107-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p411:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p411:c3",
+            "ipc-book:5706a1b995df:640388196e:p1166:c1",
+            "ipc-book:5706a1b995df:640388196e:p396:c4",
+            "ipc-book:5706a1b995df:640388196e:p392:c3",
+            "ipc-book:5706a1b995df:640388196e:p472:c5",
+            "ipc-book:5706a1b995df:640388196e:p392:c4",
+            "ipc-book:5706a1b995df:640388196e:p395:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s141-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p537:c2",
+            "ipc-book:5706a1b995df:640388196e:p536:c3",
+            "ipc-book:5706a1b995df:640388196e:p581:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p549:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p537:c3",
+            "ipc-book:5706a1b995df:640388196e:p533:c2",
+            "ipc-book:5706a1b995df:640388196e:p1816:c3",
+            "ipc-book:5706a1b995df:640388196e:p1458:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.125
+          }
+        },
+        {
+          "id": "s141-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p84:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c4",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c3",
+            "ipc-book:5706a1b995df:640388196e:p540:c1",
+            "ipc-book:5706a1b995df:640388196e:p561:c3",
+            "ipc-book:5706a1b995df:640388196e:p561:c1",
+            "ipc-book:5706a1b995df:640388196e:p567:c2",
+            "ipc-book:5706a1b995df:640388196e:p101:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s159-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p583:c3",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p624:c2",
+            "ipc-book:5706a1b995df:640388196e:p579:c3",
+            "ipc-book:5706a1b995df:640388196e:p560:c3",
+            "ipc-book:5706a1b995df:640388196e:p618:c3",
+            "ipc-book:5706a1b995df:640388196e:p614:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s159-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c2",
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p625:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p1037:c4",
+            "ipc-book:5706a1b995df:640388196e:p582:c1",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p1767:c4",
+            "ipc-book:5706a1b995df:640388196e:p1040:c6"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s319-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1203:c5",
+            "ipc-book:5706a1b995df:640388196e:p1199:c3",
+            "ipc-book:5706a1b995df:640388196e:p725:c1",
+            "ipc-book:5706a1b995df:640388196e:p1838:c1",
+            "ipc-book:5706a1b995df:640388196e:p1448:c4",
+            "ipc-book:5706a1b995df:640388196e:p130:c4",
+            "ipc-book:5706a1b995df:640388196e:p1199:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s319-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1244:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1202:c3",
+            "ipc-book:5706a1b995df:640388196e:p1017:c2",
+            "ipc-book:5706a1b995df:640388196e:p1207:c2",
+            "ipc-book:5706a1b995df:640388196e:p130:c3",
+            "ipc-book:5706a1b995df:640388196e:p130:c2",
+            "ipc-book:5706a1b995df:640388196e:p1017:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s339-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1261:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1261:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1839:c4",
+            "ipc-book:5706a1b995df:640388196e:p1260:c5",
+            "ipc-book:5706a1b995df:640388196e:p1267:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s339-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1260:c4",
+            "ipc-book:5706a1b995df:640388196e:p1260:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p321:c5",
+            "ipc-book:5706a1b995df:640388196e:p351:c2",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s340-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c4",
+            "ipc-book:5706a1b995df:640388196e:p1265:c4",
+            "ipc-book:5706a1b995df:640388196e:p1270:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c2",
+            "ipc-book:5706a1b995df:640388196e:p1266:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s340-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1707:c2",
+            "ipc-book:5706a1b995df:640388196e:p1264:c2",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p643:c4",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1767:c4",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s378-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1419:c4",
+            "ipc-book:5706a1b995df:640388196e:p1407:c1",
+            "ipc-book:5706a1b995df:640388196e:p1416:c2",
+            "ipc-book:5706a1b995df:640388196e:p1419:c3",
+            "ipc-book:5706a1b995df:640388196e:p1847:c2",
+            "ipc-book:5706a1b995df:640388196e:p1413:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s378-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1556:c3",
+            "ipc-book:5706a1b995df:640388196e:p1529:c2",
+            "ipc-book:5706a1b995df:640388196e:p1476:c1",
+            "ipc-book:5706a1b995df:640388196e:p1417:c2",
+            "ipc-book:5706a1b995df:640388196e:p1417:c3",
+            "ipc-book:5706a1b995df:640388196e:p1509:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s383-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1429:c1",
+            "ipc-book:5706a1b995df:640388196e:p339:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s383-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c4",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p312:c3",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1851:c1",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s391-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1445:c2",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1850:c3",
+            "ipc-book:5706a1b995df:640388196e:p1445:c1",
+            "ipc-book:5706a1b995df:640388196e:p1850:c2",
+            "ipc-book:5706a1b995df:640388196e:p1784:c4",
+            "ipc-book:5706a1b995df:640388196e:p1445:c3",
+            "ipc-book:5706a1b995df:640388196e:p356:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s391-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1444:c3",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1454:c2",
+            "ipc-book:5706a1b995df:640388196e:p1469:c4",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1458:c1",
+            "ipc-book:5706a1b995df:640388196e:p1444:c4",
+            "ipc-book:5706a1b995df:640388196e:p1095:c3",
+            "ipc-book:5706a1b995df:640388196e:p1440:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s405-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1484:c3",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1503:c2",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1483:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c3",
+            "ipc-book:5706a1b995df:640388196e:p1506:c5",
+            "ipc-book:5706a1b995df:640388196e:p1492:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s405-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1489:c2",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c4",
+            "ipc-book:5706a1b995df:640388196e:p1476:c3",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1476:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s415-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1534:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1530:c2",
+            "ipc-book:5706a1b995df:640388196e:p1530:c1",
+            "ipc-book:5706a1b995df:640388196e:p1532:c1",
+            "ipc-book:5706a1b995df:640388196e:p1548:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s415-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1530:c4",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1531:c3",
+            "ipc-book:5706a1b995df:640388196e:p1530:c3",
+            "ipc-book:5706a1b995df:640388196e:p1536:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c3",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s503-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1142:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p703:c2",
+            "ipc-book:5706a1b995df:640388196e:p1142:c1",
+            "ipc-book:5706a1b995df:640388196e:p387:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s503-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c3",
+            "ipc-book:5706a1b995df:640388196e:p1765:c1",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p703:c2",
+            "ipc-book:5706a1b995df:640388196e:p1587:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        }
+      ],
+      "negatives": [
+        {
+          "id": "n01",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n02",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n03",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n04",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n05",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n06",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n07",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n08",
+          "ids": [],
+          "abstained": true
+        }
+      ]
+    },
+    {
+      "coverage": 0.35,
+      "rrf_rank_constant": 20,
+      "overall": {
+        "hit_at_1": 0.325,
+        "hit_at_5": 0.7,
+        "hit_at_10": 0.875,
+        "mrr_at_10": 0.5065972222222223
+      },
+      "negative_abstentions": 8,
+      "queries": [
+        {
+          "id": "s24-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p55:c3",
+            "ipc-book:5706a1b995df:640388196e:p435:c4",
+            "ipc-book:5706a1b995df:640388196e:p458:c4",
+            "ipc-book:5706a1b995df:640388196e:p661:c2",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p485:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s24-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1528:c3",
+            "ipc-book:5706a1b995df:640388196e:p58:c4",
+            "ipc-book:5706a1b995df:640388196e:p53:c1",
+            "ipc-book:5706a1b995df:640388196e:p53:c2",
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p1410:c3",
+            "ipc-book:5706a1b995df:640388196e:p1781:c2",
+            "ipc-book:5706a1b995df:640388196e:p53:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s26-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p1003:c4",
+            "ipc-book:5706a1b995df:640388196e:p1472:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s26-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1649:c1",
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p60:c2",
+            "ipc-book:5706a1b995df:640388196e:p778:c1",
+            "ipc-book:5706a1b995df:640388196e:p706:c4",
+            "ipc-book:5706a1b995df:640388196e:p778:c2",
+            "ipc-book:5706a1b995df:640388196e:p441:c1",
+            "ipc-book:5706a1b995df:640388196e:p461:c1",
+            "ipc-book:5706a1b995df:640388196e:p463:c6",
+            "ipc-book:5706a1b995df:640388196e:p924:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s52-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p218:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c3",
+            "ipc-book:5706a1b995df:640388196e:p1011:c2",
+            "ipc-book:5706a1b995df:640388196e:p1753:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p141:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c3",
+            "ipc-book:5706a1b995df:640388196e:p1745:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p217:c1",
+            "ipc-book:5706a1b995df:640388196e:p221:c1",
+            "ipc-book:5706a1b995df:640388196e:p224:c1",
+            "ipc-book:5706a1b995df:640388196e:p227:c1",
+            "ipc-book:5706a1b995df:640388196e:p236:c1",
+            "ipc-book:5706a1b995df:640388196e:p241:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c1",
+            "ipc-book:5706a1b995df:640388196e:p250:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p237:c2",
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p241:c5",
+            "ipc-book:5706a1b995df:640388196e:p1173:c1",
+            "ipc-book:5706a1b995df:640388196e:p1016:c3",
+            "ipc-book:5706a1b995df:640388196e:p237:c1",
+            "ipc-book:5706a1b995df:640388196e:p1024:c3",
+            "ipc-book:5706a1b995df:640388196e:p1041:c5",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s82-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p997:c1",
+            "ipc-book:5706a1b995df:640388196e:p156:c6",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p156:c5",
+            "ipc-book:5706a1b995df:640388196e:p671:c1",
+            "ipc-book:5706a1b995df:640388196e:p49:c6",
+            "ipc-book:5706a1b995df:640388196e:p410:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s82-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p1179:c4",
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p403:c3",
+            "ipc-book:5706a1b995df:640388196e:p1100:c1",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p248:c1",
+            "ipc-book:5706a1b995df:640388196e:p1715:c1",
+            "ipc-book:5706a1b995df:640388196e:p251:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s83-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3",
+            "ipc-book:5706a1b995df:640388196e:p235:c3",
+            "ipc-book:5706a1b995df:640388196e:p240:c3",
+            "ipc-book:5706a1b995df:640388196e:p246:c3",
+            "ipc-book:5706a1b995df:640388196e:p249:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s83-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p980:c2",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p248:c1",
+            "ipc-book:5706a1b995df:640388196e:p1321:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s84-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p255:c4",
+            "ipc-book:5706a1b995df:640388196e:p261:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p267:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p279:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c4",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p264:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1
+          }
+        },
+        {
+          "id": "s84-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p979:c6",
+            "ipc-book:5706a1b995df:640388196e:p257:c3",
+            "ipc-book:5706a1b995df:640388196e:p258:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p260:c4",
+            "ipc-book:5706a1b995df:640388196e:p230:c4",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p23:c1",
+            "ipc-book:5706a1b995df:640388196e:p259:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s95-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p317:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s95-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p1740:c1",
+            "ipc-book:5706a1b995df:640388196e:p1201:c2",
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1041:c5",
+            "ipc-book:5706a1b995df:640388196e:p1279:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s107-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p462:c3",
+            "ipc-book:5706a1b995df:640388196e:p439:c3",
+            "ipc-book:5706a1b995df:640388196e:p397:c5",
+            "ipc-book:5706a1b995df:640388196e:p398:c3",
+            "ipc-book:5706a1b995df:640388196e:p393:c3",
+            "ipc-book:5706a1b995df:640388196e:p398:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p392:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1111111111111111
+          }
+        },
+        {
+          "id": "s107-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p392:c3",
+            "ipc-book:5706a1b995df:640388196e:p392:c4",
+            "ipc-book:5706a1b995df:640388196e:p395:c1",
+            "ipc-book:5706a1b995df:640388196e:p419:c2",
+            "ipc-book:5706a1b995df:640388196e:p409:c1",
+            "ipc-book:5706a1b995df:640388196e:p392:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c3",
+            "ipc-book:5706a1b995df:640388196e:p397:c4",
+            "ipc-book:5706a1b995df:640388196e:p403:c1",
+            "ipc-book:5706a1b995df:640388196e:p1160:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s141-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p537:c2",
+            "ipc-book:5706a1b995df:640388196e:p536:c3",
+            "ipc-book:5706a1b995df:640388196e:p581:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p549:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p537:c3",
+            "ipc-book:5706a1b995df:640388196e:p533:c2",
+            "ipc-book:5706a1b995df:640388196e:p1816:c3",
+            "ipc-book:5706a1b995df:640388196e:p1458:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.125
+          }
+        },
+        {
+          "id": "s141-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p84:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c4",
+            "ipc-book:5706a1b995df:640388196e:p563:c3",
+            "ipc-book:5706a1b995df:640388196e:p540:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p101:c4",
+            "ipc-book:5706a1b995df:640388196e:p561:c1",
+            "ipc-book:5706a1b995df:640388196e:p536:c3",
+            "ipc-book:5706a1b995df:640388196e:p567:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s159-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p583:c3",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p624:c2",
+            "ipc-book:5706a1b995df:640388196e:p618:c3",
+            "ipc-book:5706a1b995df:640388196e:p579:c3",
+            "ipc-book:5706a1b995df:640388196e:p560:c3",
+            "ipc-book:5706a1b995df:640388196e:p614:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s159-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c2",
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p625:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1",
+            "ipc-book:5706a1b995df:640388196e:p626:c2",
+            "ipc-book:5706a1b995df:640388196e:p588:c2",
+            "ipc-book:5706a1b995df:640388196e:p596:c2",
+            "ipc-book:5706a1b995df:640388196e:p1037:c4",
+            "ipc-book:5706a1b995df:640388196e:p584:c1",
+            "ipc-book:5706a1b995df:640388196e:p582:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s319-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1203:c5",
+            "ipc-book:5706a1b995df:640388196e:p1199:c3",
+            "ipc-book:5706a1b995df:640388196e:p725:c1",
+            "ipc-book:5706a1b995df:640388196e:p1838:c1",
+            "ipc-book:5706a1b995df:640388196e:p1448:c4",
+            "ipc-book:5706a1b995df:640388196e:p130:c4",
+            "ipc-book:5706a1b995df:640388196e:p1199:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s319-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1244:c2",
+            "ipc-book:5706a1b995df:640388196e:p1017:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c3",
+            "ipc-book:5706a1b995df:640388196e:p1201:c4",
+            "ipc-book:5706a1b995df:640388196e:p1833:c2",
+            "ipc-book:5706a1b995df:640388196e:p1839:c2",
+            "ipc-book:5706a1b995df:640388196e:p1012:c2",
+            "ipc-book:5706a1b995df:640388196e:p1820:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s339-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1261:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1261:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1839:c4",
+            "ipc-book:5706a1b995df:640388196e:p1260:c5",
+            "ipc-book:5706a1b995df:640388196e:p1267:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s339-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1259:c3",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p961:c1",
+            "ipc-book:5706a1b995df:640388196e:p1268:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c4",
+            "ipc-book:5706a1b995df:640388196e:p1261:c2",
+            "ipc-book:5706a1b995df:640388196e:p321:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s340-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c4",
+            "ipc-book:5706a1b995df:640388196e:p1265:c4",
+            "ipc-book:5706a1b995df:640388196e:p1270:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c2",
+            "ipc-book:5706a1b995df:640388196e:p1266:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s340-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1264:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1264:c3",
+            "ipc-book:5706a1b995df:640388196e:p1596:c3",
+            "ipc-book:5706a1b995df:640388196e:p1687:c4",
+            "ipc-book:5706a1b995df:640388196e:p1259:c3",
+            "ipc-book:5706a1b995df:640388196e:p1263:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s378-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1419:c4",
+            "ipc-book:5706a1b995df:640388196e:p1407:c1",
+            "ipc-book:5706a1b995df:640388196e:p1416:c2",
+            "ipc-book:5706a1b995df:640388196e:p1419:c3",
+            "ipc-book:5706a1b995df:640388196e:p1847:c2",
+            "ipc-book:5706a1b995df:640388196e:p1413:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s378-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c2",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1410:c1",
+            "ipc-book:5706a1b995df:640388196e:p1853:c4",
+            "ipc-book:5706a1b995df:640388196e:p1409:c3",
+            "ipc-book:5706a1b995df:640388196e:p1848:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s383-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1429:c1",
+            "ipc-book:5706a1b995df:640388196e:p339:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s383-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1430:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c2",
+            "ipc-book:5706a1b995df:640388196e:p1547:c1",
+            "ipc-book:5706a1b995df:640388196e:p1848:c4",
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1807:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c4",
+            "ipc-book:5706a1b995df:640388196e:p1849:c3",
+            "ipc-book:5706a1b995df:640388196e:p1429:c1",
+            "ipc-book:5706a1b995df:640388196e:p1487:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1111111111111111
+          }
+        },
+        {
+          "id": "s391-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1445:c2",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1850:c3",
+            "ipc-book:5706a1b995df:640388196e:p1445:c1",
+            "ipc-book:5706a1b995df:640388196e:p1850:c2",
+            "ipc-book:5706a1b995df:640388196e:p1784:c4",
+            "ipc-book:5706a1b995df:640388196e:p1445:c3",
+            "ipc-book:5706a1b995df:640388196e:p356:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s391-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1444:c3",
+            "ipc-book:5706a1b995df:640388196e:p1450:c1",
+            "ipc-book:5706a1b995df:640388196e:p1441:c4",
+            "ipc-book:5706a1b995df:640388196e:p1451:c2",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1471:c3",
+            "ipc-book:5706a1b995df:640388196e:p1849:c3",
+            "ipc-book:5706a1b995df:640388196e:p1442:c1",
+            "ipc-book:5706a1b995df:640388196e:p424:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s405-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1484:c3",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1503:c2",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1483:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c3",
+            "ipc-book:5706a1b995df:640388196e:p1506:c5",
+            "ipc-book:5706a1b995df:640388196e:p1492:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s405-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p1476:c3",
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p1489:c2",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1518:c1",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1560:c1",
+            "ipc-book:5706a1b995df:640388196e:p1559:c2",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s415-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1534:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1530:c2",
+            "ipc-book:5706a1b995df:640388196e:p1532:c1",
+            "ipc-book:5706a1b995df:640388196e:p1530:c1",
+            "ipc-book:5706a1b995df:640388196e:p1548:c1",
+            "ipc-book:5706a1b995df:640388196e:p1536:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s415-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1530:c4",
+            "ipc-book:5706a1b995df:640388196e:p1530:c3",
+            "ipc-book:5706a1b995df:640388196e:p1527:c2",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c3",
+            "ipc-book:5706a1b995df:640388196e:p1549:c3",
+            "ipc-book:5706a1b995df:640388196e:p1530:c1",
+            "ipc-book:5706a1b995df:640388196e:p55:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.25
+          }
+        },
+        {
+          "id": "s503-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1142:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p703:c2",
+            "ipc-book:5706a1b995df:640388196e:p1142:c1",
+            "ipc-book:5706a1b995df:640388196e:p387:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s503-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c4",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c3",
+            "ipc-book:5706a1b995df:640388196e:p1765:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1041:c5",
+            "ipc-book:5706a1b995df:640388196e:p1772:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        }
+      ],
+      "negatives": [
+        {
+          "id": "n01",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n02",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n03",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n04",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n05",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n06",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n07",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n08",
+          "ids": [],
+          "abstained": true
+        }
+      ]
+    },
+    {
+      "coverage": 0.35,
+      "rrf_rank_constant": 60,
+      "overall": {
+        "hit_at_1": 0.3,
+        "hit_at_5": 0.7,
+        "hit_at_10": 0.875,
+        "mrr_at_10": 0.48993055555555554
+      },
+      "negative_abstentions": 8,
+      "queries": [
+        {
+          "id": "s24-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p55:c3",
+            "ipc-book:5706a1b995df:640388196e:p435:c4",
+            "ipc-book:5706a1b995df:640388196e:p458:c4",
+            "ipc-book:5706a1b995df:640388196e:p661:c2",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p485:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s24-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1528:c3",
+            "ipc-book:5706a1b995df:640388196e:p55:c1",
+            "ipc-book:5706a1b995df:640388196e:p58:c4",
+            "ipc-book:5706a1b995df:640388196e:p53:c1",
+            "ipc-book:5706a1b995df:640388196e:p53:c2",
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p1410:c3",
+            "ipc-book:5706a1b995df:640388196e:p1781:c2",
+            "ipc-book:5706a1b995df:640388196e:p53:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s26-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p924:c1",
+            "ipc-book:5706a1b995df:640388196e:p862:c2",
+            "ipc-book:5706a1b995df:640388196e:p1003:c4",
+            "ipc-book:5706a1b995df:640388196e:p1472:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s26-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1649:c1",
+            "ipc-book:5706a1b995df:640388196e:p60:c1",
+            "ipc-book:5706a1b995df:640388196e:p60:c2",
+            "ipc-book:5706a1b995df:640388196e:p778:c1",
+            "ipc-book:5706a1b995df:640388196e:p706:c4",
+            "ipc-book:5706a1b995df:640388196e:p778:c2",
+            "ipc-book:5706a1b995df:640388196e:p441:c1",
+            "ipc-book:5706a1b995df:640388196e:p461:c1",
+            "ipc-book:5706a1b995df:640388196e:p463:c6",
+            "ipc-book:5706a1b995df:640388196e:p924:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s52-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p218:c2",
+            "ipc-book:5706a1b995df:640388196e:p140:c3",
+            "ipc-book:5706a1b995df:640388196e:p1011:c2",
+            "ipc-book:5706a1b995df:640388196e:p1753:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s52-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p140:c1",
+            "ipc-book:5706a1b995df:640388196e:p140:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c1",
+            "ipc-book:5706a1b995df:640388196e:p141:c2",
+            "ipc-book:5706a1b995df:640388196e:p229:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c3",
+            "ipc-book:5706a1b995df:640388196e:p1747:c2",
+            "ipc-book:5706a1b995df:640388196e:p141:c3",
+            "ipc-book:5706a1b995df:640388196e:p1745:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p217:c1",
+            "ipc-book:5706a1b995df:640388196e:p221:c1",
+            "ipc-book:5706a1b995df:640388196e:p224:c1",
+            "ipc-book:5706a1b995df:640388196e:p227:c1",
+            "ipc-book:5706a1b995df:640388196e:p236:c1",
+            "ipc-book:5706a1b995df:640388196e:p241:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c1",
+            "ipc-book:5706a1b995df:640388196e:p250:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s80-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p237:c2",
+            "ipc-book:5706a1b995df:640388196e:p236:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c2",
+            "ipc-book:5706a1b995df:640388196e:p241:c5",
+            "ipc-book:5706a1b995df:640388196e:p1173:c1",
+            "ipc-book:5706a1b995df:640388196e:p1016:c3",
+            "ipc-book:5706a1b995df:640388196e:p237:c1",
+            "ipc-book:5706a1b995df:640388196e:p1024:c3",
+            "ipc-book:5706a1b995df:640388196e:p1041:c5",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s82-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p997:c1",
+            "ipc-book:5706a1b995df:640388196e:p156:c6",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p156:c5",
+            "ipc-book:5706a1b995df:640388196e:p671:c1",
+            "ipc-book:5706a1b995df:640388196e:p49:c6",
+            "ipc-book:5706a1b995df:640388196e:p410:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s82-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p1179:c4",
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p403:c3",
+            "ipc-book:5706a1b995df:640388196e:p1100:c1",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p248:c1",
+            "ipc-book:5706a1b995df:640388196e:p1715:c1",
+            "ipc-book:5706a1b995df:640388196e:p251:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s83-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3",
+            "ipc-book:5706a1b995df:640388196e:p235:c3",
+            "ipc-book:5706a1b995df:640388196e:p240:c3",
+            "ipc-book:5706a1b995df:640388196e:p246:c3",
+            "ipc-book:5706a1b995df:640388196e:p249:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s83-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p250:c5",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p980:c2",
+            "ipc-book:5706a1b995df:640388196e:p251:c1",
+            "ipc-book:5706a1b995df:640388196e:p247:c5",
+            "ipc-book:5706a1b995df:640388196e:p251:c4",
+            "ipc-book:5706a1b995df:640388196e:p251:c2",
+            "ipc-book:5706a1b995df:640388196e:p1800:c3",
+            "ipc-book:5706a1b995df:640388196e:p248:c1",
+            "ipc-book:5706a1b995df:640388196e:p1321:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s84-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p255:c4",
+            "ipc-book:5706a1b995df:640388196e:p261:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p267:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p279:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c4",
+            "ipc-book:5706a1b995df:640388196e:p258:c1",
+            "ipc-book:5706a1b995df:640388196e:p264:c1",
+            "ipc-book:5706a1b995df:640388196e:p254:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1
+          }
+        },
+        {
+          "id": "s84-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p256:c2",
+            "ipc-book:5706a1b995df:640388196e:p979:c6",
+            "ipc-book:5706a1b995df:640388196e:p257:c3",
+            "ipc-book:5706a1b995df:640388196e:p258:c3",
+            "ipc-book:5706a1b995df:640388196e:p256:c3",
+            "ipc-book:5706a1b995df:640388196e:p260:c4",
+            "ipc-book:5706a1b995df:640388196e:p230:c4",
+            "ipc-book:5706a1b995df:640388196e:p1803:c3",
+            "ipc-book:5706a1b995df:640388196e:p23:c1",
+            "ipc-book:5706a1b995df:640388196e:p259:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s95-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p316:c3",
+            "ipc-book:5706a1b995df:640388196e:p317:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p216:c3",
+            "ipc-book:5706a1b995df:640388196e:p220:c3",
+            "ipc-book:5706a1b995df:640388196e:p223:c3",
+            "ipc-book:5706a1b995df:640388196e:p226:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s95-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p315:c5",
+            "ipc-book:5706a1b995df:640388196e:p1805:c3",
+            "ipc-book:5706a1b995df:640388196e:p316:c4",
+            "ipc-book:5706a1b995df:640388196e:p316:c5",
+            "ipc-book:5706a1b995df:640388196e:p1805:c2",
+            "ipc-book:5706a1b995df:640388196e:p1740:c1",
+            "ipc-book:5706a1b995df:640388196e:p1201:c2",
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1041:c5",
+            "ipc-book:5706a1b995df:640388196e:p1279:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s107-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p410:c2",
+            "ipc-book:5706a1b995df:640388196e:p462:c3",
+            "ipc-book:5706a1b995df:640388196e:p439:c3",
+            "ipc-book:5706a1b995df:640388196e:p397:c5",
+            "ipc-book:5706a1b995df:640388196e:p398:c3",
+            "ipc-book:5706a1b995df:640388196e:p393:c3",
+            "ipc-book:5706a1b995df:640388196e:p398:c1",
+            "ipc-book:5706a1b995df:640388196e:p398:c2",
+            "ipc-book:5706a1b995df:640388196e:p392:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1111111111111111
+          }
+        },
+        {
+          "id": "s107-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p392:c3",
+            "ipc-book:5706a1b995df:640388196e:p392:c4",
+            "ipc-book:5706a1b995df:640388196e:p395:c1",
+            "ipc-book:5706a1b995df:640388196e:p419:c2",
+            "ipc-book:5706a1b995df:640388196e:p409:c1",
+            "ipc-book:5706a1b995df:640388196e:p392:c1",
+            "ipc-book:5706a1b995df:640388196e:p397:c3",
+            "ipc-book:5706a1b995df:640388196e:p397:c4",
+            "ipc-book:5706a1b995df:640388196e:p403:c1",
+            "ipc-book:5706a1b995df:640388196e:p1160:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s141-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p537:c2",
+            "ipc-book:5706a1b995df:640388196e:p536:c3",
+            "ipc-book:5706a1b995df:640388196e:p581:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p549:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p537:c3",
+            "ipc-book:5706a1b995df:640388196e:p533:c2",
+            "ipc-book:5706a1b995df:640388196e:p1816:c3",
+            "ipc-book:5706a1b995df:640388196e:p1458:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.125
+          }
+        },
+        {
+          "id": "s141-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p84:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c4",
+            "ipc-book:5706a1b995df:640388196e:p540:c1",
+            "ipc-book:5706a1b995df:640388196e:p563:c3",
+            "ipc-book:5706a1b995df:640388196e:p539:c1",
+            "ipc-book:5706a1b995df:640388196e:p539:c2",
+            "ipc-book:5706a1b995df:640388196e:p101:c4",
+            "ipc-book:5706a1b995df:640388196e:p561:c1",
+            "ipc-book:5706a1b995df:640388196e:p536:c3",
+            "ipc-book:5706a1b995df:640388196e:p567:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s159-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p622:c2",
+            "ipc-book:5706a1b995df:640388196e:p583:c3",
+            "ipc-book:5706a1b995df:640388196e:p1816:c1",
+            "ipc-book:5706a1b995df:640388196e:p624:c2",
+            "ipc-book:5706a1b995df:640388196e:p579:c3",
+            "ipc-book:5706a1b995df:640388196e:p560:c3",
+            "ipc-book:5706a1b995df:640388196e:p618:c3",
+            "ipc-book:5706a1b995df:640388196e:p614:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s159-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p625:c2",
+            "ipc-book:5706a1b995df:640388196e:p625:c1",
+            "ipc-book:5706a1b995df:640388196e:p625:c3",
+            "ipc-book:5706a1b995df:640388196e:p623:c1",
+            "ipc-book:5706a1b995df:640388196e:p626:c2",
+            "ipc-book:5706a1b995df:640388196e:p588:c2",
+            "ipc-book:5706a1b995df:640388196e:p596:c2",
+            "ipc-book:5706a1b995df:640388196e:p1037:c4",
+            "ipc-book:5706a1b995df:640388196e:p584:c1",
+            "ipc-book:5706a1b995df:640388196e:p582:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s319-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c2",
+            "ipc-book:5706a1b995df:640388196e:p1203:c5",
+            "ipc-book:5706a1b995df:640388196e:p1199:c3",
+            "ipc-book:5706a1b995df:640388196e:p725:c1",
+            "ipc-book:5706a1b995df:640388196e:p1838:c1",
+            "ipc-book:5706a1b995df:640388196e:p1448:c4",
+            "ipc-book:5706a1b995df:640388196e:p130:c4",
+            "ipc-book:5706a1b995df:640388196e:p1199:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s319-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1199:c2",
+            "ipc-book:5706a1b995df:640388196e:p1199:c1",
+            "ipc-book:5706a1b995df:640388196e:p1244:c2",
+            "ipc-book:5706a1b995df:640388196e:p1017:c2",
+            "ipc-book:5706a1b995df:640388196e:p1838:c3",
+            "ipc-book:5706a1b995df:640388196e:p1201:c4",
+            "ipc-book:5706a1b995df:640388196e:p1833:c2",
+            "ipc-book:5706a1b995df:640388196e:p1839:c2",
+            "ipc-book:5706a1b995df:640388196e:p1012:c2",
+            "ipc-book:5706a1b995df:640388196e:p1820:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s339-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1261:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p1261:c1",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1839:c4",
+            "ipc-book:5706a1b995df:640388196e:p1260:c5",
+            "ipc-book:5706a1b995df:640388196e:p1267:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s339-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1259:c3",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1260:c3",
+            "ipc-book:5706a1b995df:640388196e:p1259:c2",
+            "ipc-book:5706a1b995df:640388196e:p1259:c1",
+            "ipc-book:5706a1b995df:640388196e:p961:c1",
+            "ipc-book:5706a1b995df:640388196e:p1268:c2",
+            "ipc-book:5706a1b995df:640388196e:p1260:c4",
+            "ipc-book:5706a1b995df:640388196e:p1261:c2",
+            "ipc-book:5706a1b995df:640388196e:p321:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.2
+          }
+        },
+        {
+          "id": "s340-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1263:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c4",
+            "ipc-book:5706a1b995df:640388196e:p1265:c4",
+            "ipc-book:5706a1b995df:640388196e:p1270:c1",
+            "ipc-book:5706a1b995df:640388196e:p1265:c2",
+            "ipc-book:5706a1b995df:640388196e:p1266:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.3333333333333333
+          }
+        },
+        {
+          "id": "s340-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1264:c2",
+            "ipc-book:5706a1b995df:640388196e:p1263:c1",
+            "ipc-book:5706a1b995df:640388196e:p1840:c1",
+            "ipc-book:5706a1b995df:640388196e:p1264:c1",
+            "ipc-book:5706a1b995df:640388196e:p1263:c3",
+            "ipc-book:5706a1b995df:640388196e:p1264:c3",
+            "ipc-book:5706a1b995df:640388196e:p1596:c3",
+            "ipc-book:5706a1b995df:640388196e:p1687:c4",
+            "ipc-book:5706a1b995df:640388196e:p1259:c3",
+            "ipc-book:5706a1b995df:640388196e:p1263:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s378-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1848:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1419:c4",
+            "ipc-book:5706a1b995df:640388196e:p1407:c1",
+            "ipc-book:5706a1b995df:640388196e:p1416:c2",
+            "ipc-book:5706a1b995df:640388196e:p1419:c3",
+            "ipc-book:5706a1b995df:640388196e:p1847:c2",
+            "ipc-book:5706a1b995df:640388196e:p1413:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s378-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1409:c2",
+            "ipc-book:5706a1b995df:640388196e:p1409:c1",
+            "ipc-book:5706a1b995df:640388196e:p1488:c2",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c2",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1410:c1",
+            "ipc-book:5706a1b995df:640388196e:p1853:c4",
+            "ipc-book:5706a1b995df:640388196e:p1409:c3",
+            "ipc-book:5706a1b995df:640388196e:p1848:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s383-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1429:c1",
+            "ipc-book:5706a1b995df:640388196e:p339:c5"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s383-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1430:c1",
+            "ipc-book:5706a1b995df:640388196e:p1430:c2",
+            "ipc-book:5706a1b995df:640388196e:p1547:c1",
+            "ipc-book:5706a1b995df:640388196e:p1848:c4",
+            "ipc-book:5706a1b995df:640388196e:p1849:c1",
+            "ipc-book:5706a1b995df:640388196e:p1807:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c4",
+            "ipc-book:5706a1b995df:640388196e:p1849:c3",
+            "ipc-book:5706a1b995df:640388196e:p1429:c1",
+            "ipc-book:5706a1b995df:640388196e:p1487:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.1111111111111111
+          }
+        },
+        {
+          "id": "s391-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1445:c2",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1457:c3",
+            "ipc-book:5706a1b995df:640388196e:p1850:c3",
+            "ipc-book:5706a1b995df:640388196e:p1445:c1",
+            "ipc-book:5706a1b995df:640388196e:p1850:c2",
+            "ipc-book:5706a1b995df:640388196e:p1784:c4",
+            "ipc-book:5706a1b995df:640388196e:p1445:c3",
+            "ipc-book:5706a1b995df:640388196e:p356:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s391-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1444:c1",
+            "ipc-book:5706a1b995df:640388196e:p1444:c3",
+            "ipc-book:5706a1b995df:640388196e:p1450:c1",
+            "ipc-book:5706a1b995df:640388196e:p1441:c4",
+            "ipc-book:5706a1b995df:640388196e:p1451:c2",
+            "ipc-book:5706a1b995df:640388196e:p1444:c2",
+            "ipc-book:5706a1b995df:640388196e:p1471:c3",
+            "ipc-book:5706a1b995df:640388196e:p1849:c3",
+            "ipc-book:5706a1b995df:640388196e:p1442:c1",
+            "ipc-book:5706a1b995df:640388196e:p424:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s405-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1484:c3",
+            "ipc-book:5706a1b995df:640388196e:p1488:c3",
+            "ipc-book:5706a1b995df:640388196e:p1503:c2",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1",
+            "ipc-book:5706a1b995df:640388196e:p1483:c1",
+            "ipc-book:5706a1b995df:640388196e:p1504:c3",
+            "ipc-book:5706a1b995df:640388196e:p1506:c5",
+            "ipc-book:5706a1b995df:640388196e:p1492:c2",
+            "ipc-book:5706a1b995df:640388196e:p1488:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.16666666666666666
+          }
+        },
+        {
+          "id": "s405-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1487:c1",
+            "ipc-book:5706a1b995df:640388196e:p1476:c3",
+            "ipc-book:5706a1b995df:640388196e:p55:c2",
+            "ipc-book:5706a1b995df:640388196e:p1489:c2",
+            "ipc-book:5706a1b995df:640388196e:p1509:c2",
+            "ipc-book:5706a1b995df:640388196e:p1518:c1",
+            "ipc-book:5706a1b995df:640388196e:p1484:c2",
+            "ipc-book:5706a1b995df:640388196e:p1560:c1",
+            "ipc-book:5706a1b995df:640388196e:p1559:c2",
+            "ipc-book:5706a1b995df:640388196e:p1852:c1"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 0,
+            "hit_at_10": 0,
+            "mrr_at_10": 0.0
+          }
+        },
+        {
+          "id": "s415-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1534:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1530:c2",
+            "ipc-book:5706a1b995df:640388196e:p1530:c1",
+            "ipc-book:5706a1b995df:640388196e:p1532:c1",
+            "ipc-book:5706a1b995df:640388196e:p1548:c1",
+            "ipc-book:5706a1b995df:640388196e:p1541:c2"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        },
+        {
+          "id": "s415-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1530:c4",
+            "ipc-book:5706a1b995df:640388196e:p1530:c3",
+            "ipc-book:5706a1b995df:640388196e:p1527:c2",
+            "ipc-book:5706a1b995df:640388196e:p1527:c1",
+            "ipc-book:5706a1b995df:640388196e:p1528:c4",
+            "ipc-book:5706a1b995df:640388196e:p1854:c1",
+            "ipc-book:5706a1b995df:640388196e:p1527:c3",
+            "ipc-book:5706a1b995df:640388196e:p1549:c3",
+            "ipc-book:5706a1b995df:640388196e:p1530:c1",
+            "ipc-book:5706a1b995df:640388196e:p55:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.25
+          }
+        },
+        {
+          "id": "s503-section_lookup",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1142:c2",
+            "ipc-book:5706a1b995df:640388196e:p1765:c3",
+            "ipc-book:5706a1b995df:640388196e:p703:c2",
+            "ipc-book:5706a1b995df:640388196e:p1142:c1",
+            "ipc-book:5706a1b995df:640388196e:p387:c4"
+          ],
+          "metrics": {
+            "hit_at_1": 1,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 1.0
+          }
+        },
+        {
+          "id": "s503-paraphrase",
+          "ids": [
+            "ipc-book:5706a1b995df:640388196e:p1764:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c4",
+            "ipc-book:5706a1b995df:640388196e:p1868:c3",
+            "ipc-book:5706a1b995df:640388196e:p1765:c2",
+            "ipc-book:5706a1b995df:640388196e:p1764:c3",
+            "ipc-book:5706a1b995df:640388196e:p1765:c1",
+            "ipc-book:5706a1b995df:640388196e:p1868:c2",
+            "ipc-book:5706a1b995df:640388196e:p1041:c5",
+            "ipc-book:5706a1b995df:640388196e:p1772:c3"
+          ],
+          "metrics": {
+            "hit_at_1": 0,
+            "hit_at_5": 1,
+            "hit_at_10": 1,
+            "mrr_at_10": 0.5
+          }
+        }
+      ],
+      "negatives": [
+        {
+          "id": "n01",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n02",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n03",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n04",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n05",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n06",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n07",
+          "ids": [],
+          "abstained": true
+        },
+        {
+          "id": "n08",
+          "ids": [],
+          "abstained": true
+        }
+      ]
+    }
+  ]
+}

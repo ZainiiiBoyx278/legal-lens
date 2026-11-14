@@ -1,0 +1,104 @@
+{
+  "results_sha256": "d471f06d6b1b19b2e467a6c60857b02d128e3d757d1461b8311f292c28e17be1",
+  "analysis_sha256": "512466c59181573071c2350fe1f63365369d42f8e242bd2e355e9a20a85d9625",
+  "topics": 40,
+  "bootstrap_resamples": 10000,
+  "seed": 20261113,
+  "interpretation": "Paired resampling keeps both variants of a section together. Descriptive sampling uncertainty only: not a correction for agent-authored labels, selection bias, or related legal topics.",
+  "comparisons": {
+    "bm25": {
+      "metrics": {
+        "hit_at_1": {
+          "v2_minus_v1": 0.025,
+          "paired_topic_bootstrap_95_percentile_interval": [
+            -0.075,
+            0.125
+          ]
+        },
+        "hit_at_5": {
+          "v2_minus_v1": 0.0375,
+          "paired_topic_bootstrap_95_percentile_interval": [
+            -0.0375,
+            0.1125
+          ]
+        },
+        "hit_at_10": {
+          "v2_minus_v1": 0.0125,
+          "paired_topic_bootstrap_95_percentile_interval": [
+            -0.05,
+            0.075
+          ]
+        },
+        "mrr_at_10": {
+          "v2_minus_v1": 0.02311011904761905,
+          "paired_topic_bootstrap_95_percentile_interval": [
+            -0.04085044642857143,
+            0.0859397321428571
+          ]
+        }
+      },
+      "hit_at_5_gains": [
+        "s20-section_lookup",
+        "s425-section_lookup",
+        "s441-paraphrase",
+        "s46-section_lookup",
+        "s511-paraphrase",
+        "s93-section_lookup"
+      ],
+      "hit_at_5_losses": [
+        "s146-paraphrase",
+        "s374-paraphrase",
+        "s45-paraphrase"
+      ]
+    },
+    "hybrid": {
+      "metrics": {
+        "hit_at_1": {
+          "v2_minus_v1": -0.05,
+          "paired_topic_bootstrap_95_percentile_interval": [
+            -0.15,
+            0.05
+          ]
+        },
+        "hit_at_5": {
+          "v2_minus_v1": -0.0125,
+          "paired_topic_bootstrap_95_percentile_interval": [
+            -0.1,
+            0.075
+          ]
+        },
+        "hit_at_10": {
+          "v2_minus_v1": 0.0125,
+          "paired_topic_bootstrap_95_percentile_interval": [
+            -0.0625,
+            0.0875
+          ]
+        },
+        "mrr_at_10": {
+          "v2_minus_v1": -0.043819444444444446,
+          "paired_topic_bootstrap_95_percentile_interval": [
+            -0.10956919642857141,
+            0.0201205357142857
+          ]
+        }
+      },
+      "hit_at_5_gains": [
+        "s201-paraphrase",
+        "s23-paraphrase",
+        "s25-paraphrase",
+        "s403-paraphrase",
+        "s425-section_lookup",
+        "s499-paraphrase"
+      ],
+      "hit_at_5_losses": [
+        "s146-section_lookup",
+        "s29-paraphrase",
+        "s320-paraphrase",
+        "s374-paraphrase",
+        "s441-section_lookup",
+        "s79-section_lookup",
+        "s93-paraphrase"
+      ]
+    }
+  }
+}
