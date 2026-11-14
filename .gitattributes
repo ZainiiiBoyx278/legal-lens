@@ -5,3 +5,8 @@ backend/app/data/classification/*.json text eol=lf
 backend/evaluation/retrieval/questions.json -text
 backend/evaluation/retrieval_v2/*.json -text
 backend/evaluation/retrieval_v2/baselines/retrieval_v1.py -text
+
+# Keep large raw experiment traces available without crowding the code review.
+backend/evaluation/retrieval_v2/development*.json linguist-generated=true
+backend/evaluation/retrieval_v2/holdout-retrieval.json linguist-generated=true
+backend/evaluation/retrieval_v2/holdout-generation*.json linguist-generated=true

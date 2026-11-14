@@ -1,8 +1,12 @@
 # Passage-grounded retrieval evaluation
 
-This benchmark compares the **existing** BM25 and MiniLM + BM25 reciprocal-rank
+This archived report records the **v1** BM25 and MiniLM + BM25 reciprocal-rank
 fusion implementations. No ranking thresholds, fusion weights, chunking settings,
-or model weights were tuned on this set.
+or model weights were tuned on these questions for that original run.
+
+These questions later became development data for the [v2 follow-up](../retrieval_v2/README.md).
+They are no longer an untouched test set for v2. The original implementation is
+preserved in [retrieval_v1.py](../retrieval_v2/baselines/retrieval_v1.py).
 
 ## Measured result
 
@@ -99,10 +103,12 @@ immutable MiniLM snapshot once (no API key required):
 ```powershell
 python -c "from huggingface_hub import snapshot_download; print(snapshot_download('sentence-transformers/all-MiniLM-L6-v2', revision='1110a243fdf4706b3f48f1d95db1a4f5529b4d41', local_dir='models/minilm-eval', allow_patterns=['*.json','*.safetensors','vocab.txt','1_Pooling/*']))"
 cd backend
-python scripts/evaluate_retrieval.py --model-path ../models/minilm-eval --model-revision 1110a243fdf4706b3f48f1d95db1a4f5529b4d41 --output evaluation/retrieval/results-rerun.json
+python scripts/compare_retrieval.py --development --questions evaluation/retrieval/questions.json --model-path ../models/minilm-eval --output evaluation/retrieval_v2/development-rerun.json --repeats 3
 ```
 
-The evaluator needs an existing local model, disables Hub network access, clears
+Read the `v1_bm25` and `v1_hybrid` entries to reproduce this archived ranking. The
+comparison also reports v2 on these now-development questions. The evaluator
+needs an existing local model, disables Hub network access, clears
 the provider key for its process and calls no generation API. It checks the source
 hash and every annotated passage before ranking. It builds an isolated temporary
 embedding cache and refuses to overwrite existing results. For the recorded

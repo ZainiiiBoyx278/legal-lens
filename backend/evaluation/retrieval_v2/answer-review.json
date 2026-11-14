@@ -1,0 +1,1426 @@
+{
+  "schema_version": 1,
+  "generation_sha256": "cce05e2d16581d15e4f7712f4b40bd5f13f1a86ae3f33d962afca6da87c92d8c",
+  "reviewer": "Codex agent; questions and reference answers also agent-authored; no independent human or legal review",
+  "rubric": "Supported means every material assertion follows from the cited excerpts, with no missing condition. Unsupported means absent; contradicted means the excerpt conflicts; uncertain means ambiguous. Completeness is separately assessed against the question and source-grounded reference. A supported but irrelevant answer is not complete.",
+  "cases": [
+    {
+      "id": "n01",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n02",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n03",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n04",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n05",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n06",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n07",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n08",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n09",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n10",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The retriever returned no excerpts, so no model answer was attempted.",
+      "claims": []
+    },
+    {
+      "id": "n11",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "incorrect",
+      "reason": "The question asks for an address absent from the corpus; the answer substitutes an unrelated arrest case and never supplies supported address information.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited excerpt concerns an unnamed drunk person and police officers, not person A in a theft illustration; it does not establish this assertion about A."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited excerpt concerns an unnamed drunk person and police officers, not person A in a theft illustration; it does not establish this assertion about A."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited excerpt concerns an unnamed drunk person and police officers, not person A in a theft illustration; it does not establish this assertion about A."
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "incorrect",
+      "reason": "The question is unanswerable from these excerpts. The answer switches from extortion to unrelated banking assertions and repeats unsupported claims.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage is a cheating illustration about a loan, not the extortion illustration; its silence cannot establish the requested claim about that different illustration."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage describes A deceiving Z about repaying a loan. It says nothing about Z opening a bank account or introducing someone to a bank."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage describes A deceiving Z about repaying a loan. It says nothing about Z opening a bank account or introducing someone to a bank."
+        },
+        {
+          "index": 3,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage describes A deceiving Z about repaying a loan. It says nothing about Z opening a bank account or introducing someone to a bank."
+        },
+        {
+          "index": 4,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage describes A deceiving Z about repaying a loan. It says nothing about Z opening a bank account or introducing someone to a bank."
+        },
+        {
+          "index": 5,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage describes A deceiving Z about repaying a loan. It says nothing about Z opening a bank account or introducing someone to a bank."
+        },
+        {
+          "index": 6,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage describes A deceiving Z about repaying a loan. It says nothing about Z opening a bank account or introducing someone to a bank."
+        },
+        {
+          "index": 7,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage describes A deceiving Z about repaying a loan. It says nothing about Z opening a bank account or introducing someone to a bank."
+        }
+      ]
+    },
+    {
+      "id": "n13",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "n14",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "n15",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The model explicitly returned insufficient evidence and no claims.",
+      "claims": []
+    },
+    {
+      "id": "n16",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "n17",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The source-scope guard correctly withheld a current-law or applicability answer; this was not a model-generated answer.",
+      "claims": []
+    },
+    {
+      "id": "n18",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The source-scope guard correctly withheld a current-law or applicability answer; this was not a model-generated answer.",
+      "claims": []
+    },
+    {
+      "id": "n19",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The source-scope guard correctly withheld a current-law or applicability answer; this was not a model-generated answer.",
+      "claims": []
+    },
+    {
+      "id": "n20",
+      "reference_answer": "The provided source does not establish the requested answer.",
+      "completeness": "not_answered",
+      "reason": "The source-scope guard correctly withheld a current-law or applicability answer; this was not a model-generated answer.",
+      "claims": []
+    },
+    {
+      "id": "s108-paraphrase",
+      "reference_answer": "Neither commission of the abetted act nor occurrence of the effect required to constitute that offence is necessary.",
+      "completeness": "incorrect",
+      "reason": "The answer never states that neither completion nor the required effect is necessary for abetment. It substitutes other offences and sentencing rules for the requested Explanation 2 rule.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "an act may be an offence, definitionally speaking but a forbidden act may not spell inevitable guilt if the law itself declares that in certain special circumstances it is not to be regarded as an offence.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p228:c3"
+            }
+          ],
+          "reason": "This accurately restates the cited discussion of general exceptions, although it does not answer the abetment question."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The excerpt's actual-commission requirement concerns the specific military offence in section 138. Removing that context does not support a general answer about when abetment is an offence."
+        },
+        {
+          "index": 2,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "When the act abetted is committed as a consequence of abetment, the abettor should be punished with the punishment provided for the main offence with the help of section 109, IPC, 1860",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p411:c5"
+            }
+          ],
+          "reason": "The conditional sentencing statement and section number are expressly present in the cited excerpt."
+        },
+        {
+          "index": 3,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "The offence for the abetment of which a person is charged with the abetment is normally linked with the proved offence.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p410:c4"
+            }
+          ],
+          "reason": "The cited passage states this proposition directly, even though it does not resolve the requested necessity question."
+        },
+        {
+          "index": 4,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The only cited excerpt describes aiding under the third clause of section 107. It does not establish the unqualified necessary condition for all abetment asserted by this claim; a different retrieved excerpt cannot substitute for a citation."
+        }
+      ]
+    },
+    {
+      "id": "s120-paraphrase",
+      "reference_answer": "The stated limit is one-fourth of the longest term if the offence is committed, and one-eighth if it is not committed.",
+      "completeness": "incorrect",
+      "reason": "The answer discusses imprisonment in default of a fine under different provisions instead of the one-fourth versus one-eighth limits for concealment.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited excerpts address default imprisonment after nonpayment of a fine and sections 65/419/109. They do not connect these rules to concealment of an offence's plan."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited excerpts address default imprisonment after nonpayment of a fine and sections 65/419/109. They do not connect these rules to concealment of an offence's plan."
+        }
+      ]
+    },
+    {
+      "id": "s146-paraphrase",
+      "reference_answer": "Every member is guilty when the unlawful assembly or a member uses force or violence in prosecution of the assembly's common object.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s160-paraphrase",
+      "reference_answer": "Imprisonment of either description up to one month, a fine up to one hundred rupees, or both.",
+      "completeness": "incorrect",
+      "reason": "The answer gives the one-month limit but repeatedly mislabels the monetary fine as imprisonment, so it does not correctly state the two penalties.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Whoever commits an affray, shall be punished with imprisonment of either description for a term which may extend to one month, or with fine which may extend to one hundred rupees, or with both.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p624:c2"
+            }
+          ],
+          "reason": "The cited historical provision expressly limits imprisonment to one month."
+        },
+        {
+          "index": 1,
+          "support": "contradicted",
+          "evidence": [
+            {
+              "quote": "Whoever commits an affray, shall be punished with imprisonment of either description for a term which may extend to one month, or with fine which may extend to one hundred rupees, or with both.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p624:c2"
+            }
+          ],
+          "reason": "The passage calls one hundred rupees a fine, not a term of imprisonment."
+        },
+        {
+          "index": 2,
+          "support": "contradicted",
+          "evidence": [
+            {
+              "quote": "Whoever commits an affray, shall be punished with imprisonment of either description for a term which may extend to one month, or with fine which may extend to one hundred rupees, or with both.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p624:c2"
+            }
+          ],
+          "reason": "The claim treats the monetary fine as an imprisonment limit; the passage distinguishes imprisonment from a fine."
+        }
+      ]
+    },
+    {
+      "id": "s191-paraphrase",
+      "reference_answer": "The statement is false and the person knows or believes it to be false, or does not believe it to be true, while legally bound to state the truth or make the declaration.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s20-paraphrase",
+      "reference_answer": "A judge legally empowered to act judicially alone, or a body of judges legally empowered to act judicially together, qualifies while acting judicially.",
+      "completeness": "incorrect",
+      "reason": "It does not answer whether a single legally empowered judge qualifies, despite that definition being in the retrieved source, and adds a false statement about a court ceasing to exist.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "A panchayat acting under 31.Regulation VII, 1816, of the Madras Code, having power to try and determine suits, is a Court of Justice.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p42:c1"
+            }
+          ],
+          "reason": "The historical illustration directly gives the example described by this claim."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The protection is asserted without qualification, but the cited excerpt immediately says a judge acting without jurisdiction and good faith would be responsible. Judicial action alone is not sufficient support for the unconditional claim."
+        },
+        {
+          "index": 2,
+          "support": "contradicted",
+          "evidence": [
+            {
+              "quote": "But that is not to say that when a Judge demits office the court ceases to exist",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p42:c2"
+            }
+          ],
+          "reason": "The claim drops the passage's explicit negation and states the opposite."
+        },
+        {
+          "index": 3,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited excerpt discusses judicial protection of a Collector and a Commissioner, not whether a person qualifies as a public servant under another statute."
+        },
+        {
+          "index": 4,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "A Collector who exercises powers of enquiry and award under the Land Acquisition Act, 1894 is not acting judicially because he is not a judge.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p222:c2"
+            }
+          ],
+          "reason": "The statement about the Collector's function appears expressly in the cited passage."
+        },
+        {
+          "index": 5,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Regional Provident Fund Commissioner while passing order under section 7-A of 1952 Act is entitled to get protection as envisaged under section 77 of IPC, 1860 and section 3(1) of Judges (Protection) Act, 1985.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p222:c2"
+            }
+          ],
+          "reason": "The official, action and stated protections are all directly present in the cited excerpt."
+        }
+      ]
+    },
+    {
+      "id": "s201-paraphrase",
+      "reference_answer": "The purpose is screening the offender from legal punishment; the person knows or has reason to believe an offence occurred.",
+      "completeness": "complete",
+      "reason": "The answer identifies screening the offender from legal punishment and states the knowledge condition, answering the requested connection.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "any evidence of the commission of that offence to disappear",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p746:c4"
+            },
+            {
+              "quote": "gave any information relating to that offence which he then knew or believed to be false.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p746:c4"
+            }
+          ],
+          "reason": "Both described forms of conduct are directly listed in the cited excerpt."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "That he did so as aforesaid with the intention of screening the offender from legal punishment.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p746:c4"
+            }
+          ],
+          "reason": "The required purpose is explicitly stated in the cited source."
+        },
+        {
+          "index": 2,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "If the charge be of an aggravated form, it must be further proved that the offence in respect of which the accused did as in (3) and (4) supra, was punishable with death or imprisonment for life or imprisonment extending to ten years.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p746:c4"
+            }
+          ],
+          "reason": "The claim reproduces the cited conditional description of the aggravated form."
+        },
+        {
+          "index": 3,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Causing disappearance of evidence of offence, or giving false information to screen offender",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p744:c3"
+            }
+          ],
+          "reason": "The source heading directly describes these acts and purpose."
+        },
+        {
+          "index": 4,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Whoever, knowing or having reason to believe that an offence has been committed,1 causes any evidence of the commission of that offence to disappear, with the intention of screening the offender2 from legal punishment, or with that intention gives any information respecting the offence which he knows or believes to be false;",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p744:c3"
+            }
+          ],
+          "reason": "The source supplies the knowledge, conduct and intent conditions expressed in the claim."
+        }
+      ]
+    },
+    {
+      "id": "s22-paraphrase",
+      "reference_answer": "It excludes land, things attached to the earth, and things permanently fastened to something attached to the earth.",
+      "completeness": "complete",
+      "reason": "The requested exclusions are correctly stated. The additional unsupported explanation is separately penalized in claim support, so this is not a fully supported complete answer.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "The words \"movable property\" are intended to include corporeal property 1 of every description, except land and things attached to the earth 2 or permanently fastened to anything which is attached to the earth.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p51:c1"
+            }
+          ],
+          "reason": "The definition and each exclusion match the cited historical text."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "The words \"movable property\" are intended to include corporeal property 1 of every description, except land and things attached to the earth 2 or permanently fastened to anything which is attached to the earth.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p51:c1"
+            }
+          ],
+          "reason": "The source expressly excludes land and things attached to the earth from this definition."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The source does not say land is non-corporeal or give that as the reason for its exclusion. The claim invents an explanation for an express statutory exception."
+        }
+      ]
+    },
+    {
+      "id": "s23-paraphrase",
+      "reference_answer": "Gain by unlawful means of property to which the person gaining is not legally entitled.",
+      "completeness": "partial",
+      "reason": "It mentions wrongful retention but omits the requested definition of acquisition by unlawful means of property to which the acquirer is not legally entitled.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "A person is said to gain wrongfully when such person retains wrongfully, as well as when such person acquires wrongfully.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p53:c1"
+            }
+          ],
+          "reason": "The cited source expressly includes wrongful retention within gaining wrongfully; the claim does not state it is the exclusive form."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "A person is said to gain wrongfully when such person retains wrongfully, as well as when such person acquires wrongfully.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p53:c1"
+            }
+          ],
+          "reason": "The cited source expressly includes wrongful retention within gaining wrongfully; the claim does not state it is the exclusive form."
+        },
+        {
+          "index": 2,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "when such person is wrongfully kept out of any property,1 as well as when such person is wrongfully deprived of property.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p53:c2"
+            }
+          ],
+          "reason": "The source expressly includes wrongful exclusion from property as wrongful loss."
+        },
+        {
+          "index": 3,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "A person is said to gain wrongfully when such person retains wrongfully, as well as when such person acquires wrongfully.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p53:c1"
+            }
+          ],
+          "reason": "The cited source expressly includes wrongful retention within gaining wrongfully; the claim does not state it is the exclusive form."
+        },
+        {
+          "index": 4,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "when such person is wrongfully kept out of any property,1 as well as when such person is wrongfully deprived of property.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p53:c2"
+            }
+          ],
+          "reason": "The source expressly includes wrongful exclusion from property as wrongful loss."
+        }
+      ]
+    },
+    {
+      "id": "s25-paraphrase",
+      "reference_answer": "The person must do the thing with intent to defraud.",
+      "completeness": "complete",
+      "reason": "It directly confirms the required intent to defraud and adds an explanation supported by a cited passage.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "A person is said to do a thing fraudulently if he does that thing with intent to defraud 1 but not otherwise.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p57:c1"
+            }
+          ],
+          "reason": "The cited definition expressly makes intent to defraud necessary."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "\"Intent to defraud\" is established only when the deception has as its aim some advantage or the likelihood of advantage to the person who causes the deceit or some kind of injury or the possibility of injury to another.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p58:c2"
+            }
+          ],
+          "reason": "The explanation, alternatives and qualification are directly reproduced from the cited excerpt."
+        }
+      ]
+    },
+    {
+      "id": "s269-paraphrase",
+      "reference_answer": "It concerns an unlawful or negligent act that the person knows or has reason to believe is likely to spread infection of a disease dangerous to life.",
+      "completeness": "complete",
+      "reason": "The answer identifies the relevant conduct and knowledge condition. Its additional penalty statement lacks support in the source it specifically cites.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Whoever unlawfully or negligently does any act which is, and which he knows or has reason to believe to be, likely to spread the infection of any disease dangerous to life,",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p923:c2"
+            }
+          ],
+          "reason": "The cited section and accompanying penalty establish the conduct as an offence; the statement preserves the knowledge and danger conditions."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The only citation is rank 1, which lists ingredients but no six-month penalty. Rank 2 contains the penalty, but this claim does not cite it; retrieval of another passage is not citation support."
+        }
+      ]
+    },
+    {
+      "id": "s27-paraphrase",
+      "reference_answer": "Property held by a person's wife, clerk or servant on that person's account is in that person's possession under the Code.",
+      "completeness": "complete",
+      "reason": "It supplies the employer as the requested possessor, but neither cited passage establishes the possession-deeming rule; correctness against the reference does not repair the citations.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The citations discuss falsifying employment records and definitions of employment roles. They do not establish the general legal-possession rule asserted for an item held on an employer's behalf."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited section 477-A excerpt distinguishes records belonging to an employer from those received on its behalf. It does not say receipt deems legal possession to belong to the employer."
+        }
+      ]
+    },
+    {
+      "id": "s277-paraphrase",
+      "reference_answer": "Voluntarily corrupting or fouling its water so that it is less fit for its ordinary use.",
+      "completeness": "complete",
+      "reason": "It states deliberate fouling of a public spring or reservoir and the resulting reduced fitness for its ordinary use; the additional points are also supported.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Whoever voluntarily corrupts or fouls the water of any public spring or reservoir, so as to render it less fit for the purpose for which it is ordinarily used,",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p942:c2"
+            }
+          ],
+          "reason": "The conduct, public-water source and effect are all explicitly present in the cited provision."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "The water of a public spring or reservoir belongs to every member of the public in common",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p942:c2"
+            }
+          ],
+          "reason": "This statement is directly given by the cited commentary."
+        },
+        {
+          "index": 2,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "voluntary corruption or fouling of water;",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p942:c2"
+            }
+          ],
+          "reason": "The cited ingredient list expressly includes this element; the claim does not say it is the only element."
+        }
+      ]
+    },
+    {
+      "id": "s279-paraphrase",
+      "reference_answer": "It concerns driving or riding on a public way so rashly or negligently as to endanger human life or be likely to cause hurt or injury to another person.",
+      "completeness": "incorrect",
+      "reason": "The answer omits the required public-way location and recasts the danger alternatives and mental state as stricter necessary conditions.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The excerpt's opening rule permits danger to human life OR likely hurt/injury to another. The claim makes danger to life the exclusive necessary condition, dropping a material alternative."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "The criminality lies in running the risk of doing such an act with recklessness and indifference to the consequences.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p947:c1"
+            }
+          ],
+          "reason": "In the rash-driving discussion, reckless disregard of others' safety is a reasonable paraphrase of the stated recklessness and indifference to dangerous consequences."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited excerpt does not establish conscious disregard of rights as a necessary mental-state condition. That stronger requirement is not supported merely by the wording about recklessness."
+        }
+      ]
+    },
+    {
+      "id": "s28-paraphrase",
+      "reference_answer": "An exact imitation is not essential to counterfeiting.",
+      "completeness": "partial",
+      "reason": "It gives resemblance as an ingredient but never answers whether an exact copy is required, even though the cited evidence explicitly says it is not.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "Resemblance is supported, but the claimed statutory pinpoint 'Section 28(1)' is not. The source cites section 28 and has an editorial heading 's 28.1 Foreign Currency', not the asserted subsection."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "causing one thing to resemble another thing",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p63:c3"
+            }
+          ],
+          "reason": "This is explicitly listed as an ingredient of counterfeiting in the cited excerpt."
+        }
+      ]
+    },
+    {
+      "id": "s29-paraphrase",
+      "reference_answer": "It is immaterial whether the evidence is intended for, or may be used in, a Court of Justice.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s30-paraphrase",
+      "reference_answer": "The definition includes documents creating, extending, transferring, restricting, extinguishing or releasing legal rights, and acknowledgments of legal liability or absence of a legal right.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s320-paraphrase",
+      "reference_answer": "Yes. The seventh category includes fracture or dislocation of a bone or tooth.",
+      "completeness": "complete",
+      "reason": "In the question's category context, it affirms inclusion of a fractured/dislocated tooth, but the second claim's broader wording is ambiguous.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Clause 7.—Fracture, dislocation bone, tooth.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1202:c2"
+            }
+          ],
+          "reason": "The cited heading explicitly includes tooth as well as bone in the requested category."
+        },
+        {
+          "index": 1,
+          "support": "uncertain",
+          "evidence": [],
+          "reason": "The heading covers fracture/dislocation of a tooth, but 'tooth injuries' could generalize to every tooth injury. The other citation concerns a tooth as a weapon, not this classification."
+        }
+      ]
+    },
+    {
+      "id": "s321-paraphrase",
+      "reference_answer": "The person must intend to cause hurt or know hurt is likely, and must thereby actually cause hurt.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s350-paraphrase",
+      "reference_answer": "The force is used without consent, to commit an offence or with intent or knowledge of likely injury, fear or annoyance to that person.",
+      "completeness": "partial",
+      "reason": "It covers lack of consent and intent/purpose, but omits the separate alternative of knowing injury, fear or annoyance is likely.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "there must be intentional use of force on any person, without that person's consent. Such force must have been used for committing an offence, or intending to cause, or knowing it to be likely that by the use of such force he will cause injury, fear or annoyance to the person on whom the force is used.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1278:c2"
+            }
+          ],
+          "reason": "This describes an intentional nonconsensual instance within the source definition, without stating it is the only instance."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Such force must have been used for committing an offence, or intending to cause, or knowing it to be likely that by the use of such force he will cause injury, fear or annoyance to the person on whom the force is used.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1278:c2"
+            }
+          ],
+          "reason": "Commission of an offence and intent to cause injury/fear/annoyance are listed purposes. Omission of the knowledge alternative affects completeness."
+        }
+      ]
+    },
+    {
+      "id": "s351-paraphrase",
+      "reference_answer": "Mere words do not amount to assault, but words can give gestures or preparations a meaning that makes them amount to assault.",
+      "completeness": "complete",
+      "reason": "It answers both points: words alone are insufficient, and words can change a gesture's meaning.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Mere words do not amount to an assault",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1841:c2"
+            }
+          ],
+          "reason": "The cited excerpt expressly states that words alone do not amount to assault."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "But the words which a person uses may give to his gestures or preparation such a meaning as may make those gestures or preparations amount to an assault.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1280:c1"
+            }
+          ],
+          "reason": "The cited explanation directly supports words giving a gesture a meaning that can amount to assault."
+        }
+      ]
+    },
+    {
+      "id": "s361-paraphrase",
+      "reference_answer": "The term includes anyone lawfully entrusted with the care or custody of the minor or other person described.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s362-paraphrase",
+      "reference_answer": "Compelling the person by force, or inducing the person by deceitful means, to go from any place.",
+      "completeness": "complete",
+      "reason": "The first two claims collectively identify movement by compulsion/inducement and force or fraud. Extra statements use wrong citations and prevent full support.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "To constitute an offence under section 366, IPC, 1860, it is necessary for the prosecution to prove that the accused induced the complainant-woman or compelled by force to go from any place",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1329:c3"
+            }
+          ],
+          "reason": "The claim gives a necessary element expressly stated in the cited discussion, without asserting it is sufficient on its own."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Force or fraud is essential.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1317:c1"
+            }
+          ],
+          "reason": "The cited discussion explicitly identifies these two methods."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage concerns section 366A procuration, not the general proposition that mere abduction is not an offence. Another retrieved passage states that proposition but is not cited here."
+        },
+        {
+          "index": 3,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited rank-5 excerpt discusses deceitful means and age differences, not the illicit-intercourse conditions asserted. Those occur in an uncited excerpt."
+        },
+        {
+          "index": 4,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "'Kidnapping' is committed only in respect of a minor under 16 years of age if a male, and under 18 years if a female or a person of unsound mind; 'abduction', in respect of a person of any age.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1317:c2"
+            }
+          ],
+          "reason": "The historical excerpt explicitly distinguishes the two definitions by age."
+        }
+      ]
+    },
+    {
+      "id": "s374-paraphrase",
+      "reference_answer": "It describes unlawfully compelling a person to labour against that person's will.",
+      "completeness": "incorrect",
+      "reason": "Both claims concern inflammatory historical writing, not compelled labour. They do not answer the requested conduct.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "If the writing is calculated to promote feelings of enmity or hatred, it is no defence to a charge under section 153-A of IPC, 1860, that the writing contains a truthful account of past events or is otherwise supported by good authority.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p590:c5"
+            }
+          ],
+          "reason": "The conditional statement is directly present in the cited excerpt, though irrelevant to the question."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "It is no defence to a charge under section 153-A of IPC that the writing contains a truthful account of past events or is otherwise supported by good authority.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p590:c5"
+            }
+          ],
+          "reason": "The repeated proposition occurs in the cited discussion; the preceding claim preserves its context."
+        }
+      ]
+    },
+    {
+      "id": "s39-paraphrase",
+      "reference_answer": "Yes. The definition includes effects caused by means the person knew or had reason to believe were likely to cause the effect when those means were used.",
+      "completeness": "complete",
+      "reason": "The second claim correctly gives the knowledge/reason-to-believe alternative to intention. The first claim adds an overbroad example.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The citation requires knowledge that death was likely. Knowing some harm would occur, followed by death in fact, does not establish that specific condition."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "A person is said to cause an effect \"voluntarily\" when he causes it by means whereby he intended to cause it, or by means which, at the time of employing those means, he knew or had reason to believe to be likely to cause it.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p117:c1"
+            }
+          ],
+          "reason": "The definition is accurately quoted, including the timing and likelihood qualifications."
+        }
+      ]
+    },
+    {
+      "id": "s390-paraphrase",
+      "reference_answer": "In every robbery there is either theft or extortion.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s403-paraphrase",
+      "reference_answer": "It concerns dishonestly misappropriating movable property or converting it to one's own use.",
+      "completeness": "complete",
+      "reason": "It gives the historical penalty for the described dishonest appropriation but repeats it with five sources that do not establish it. The obvious 'fione' typo is interpreted as 'fine'.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "This claim's citation discusses theft or breach of trust and does not establish the stated two-year misappropriation penalty. The correct provision appears in another source, which this repeated claim does not cite."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "This claim's citation discusses theft or breach of trust and does not establish the stated two-year misappropriation penalty. The correct provision appears in another source, which this repeated claim does not cite."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "This claim's citation discusses theft or breach of trust and does not establish the stated two-year misappropriation penalty. The correct provision appears in another source, which this repeated claim does not cite."
+        },
+        {
+          "index": 3,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "This claim's citation discusses theft or breach of trust and does not establish the stated two-year misappropriation penalty. The correct provision appears in another source, which this repeated claim does not cite."
+        },
+        {
+          "index": 4,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Whoever dishonestly misappropriates or converts to his own use1 any movable property, shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1476:c1"
+            }
+          ],
+          "reason": "The cited provision directly gives the conduct and two-year/fine alternatives; the response contains an obvious spelling error in 'fine'."
+        },
+        {
+          "index": 5,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "This claim's citation discusses theft or breach of trust and does not establish the stated two-year misappropriation penalty. The correct provision appears in another source, which this repeated claim does not cite."
+        }
+      ]
+    },
+    {
+      "id": "s410-paraphrase",
+      "reference_answer": "It ceases to be stolen property when it subsequently comes into the possession of a person legally entitled to possess it.",
+      "completeness": "complete",
+      "reason": "The first claim directly answers when stolen-property status ends. The added acquittal assertion is unsupported.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "But, if such property subsequently comes into the possession of a person legally entitled to the possession thereof, it then ceases to be stolen property.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1516:c1"
+            }
+          ],
+          "reason": "The cited source explicitly states this condition and consequence."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited passage concerns honest repossession and identification of stolen property under section 411, not acquittal for theft or a bar to convictions under sections 302 or 394."
+        }
+      ]
+    },
+    {
+      "id": "s425-paraphrase",
+      "reference_answer": "Yes. Explanation 2 says mischief may affect property belonging to the actor alone or jointly with others.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s44-paraphrase",
+      "reference_answer": "Injury includes harm illegally caused to a person's body, mind, reputation or property.",
+      "completeness": "partial",
+      "reason": "It addresses reputation but not harm to the mind or the definition's illegality qualification, and adds an unrelated assertion about offences.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited fragment mentions adulthood and abnormalities but does not say they cause commission of an offence. That connection is invented."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The definition requires harm illegally caused. The claim turns harm to reputation into an unconditional sufficient condition without that material qualification."
+        }
+      ]
+    },
+    {
+      "id": "s441-paraphrase",
+      "reference_answer": "Yes, by unlawfully remaining with intent to intimidate, insult or annoy a person in possession, or with intent to commit an offence.",
+      "completeness": "incorrect",
+      "reason": "It suggests the right broad possibility but misstates lawful entry as necessary for criminal trespass and does not correctly state the unlawful-remaining and intent alternatives.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The only citation defines house-trespass by assuming criminal trespass has already occurred; it does not establish the initially lawful visitor rule asserted here."
+        },
+        {
+          "index": 1,
+          "support": "contradicted",
+          "evidence": [
+            {
+              "quote": "If such entry is lawful, then unlawfully remaining upon such property.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1586:c1"
+            },
+            {
+              "quote": "Such entry or unlawful remaining must be with intent",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1586:c1"
+            }
+          ],
+          "reason": "The source treats lawful initial entry as one conditional route, alongside entry with prohibited intent; the claim makes lawful entry mandatory."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited exception also requires no intent to commit an offence. Omitting that condition makes the claimed immunity broader than the passage supports."
+        },
+        {
+          "index": 3,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "The offence would be continuing so long as the trespass is not lifted or vacated or insult etc. of the person lawfully in possession is not stopped.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1589:c3"
+            }
+          ],
+          "reason": "The continuing-offence statement is directly present in the cited passage."
+        }
+      ]
+    },
+    {
+      "id": "s45-paraphrase",
+      "reference_answer": "It denotes the life of a human being unless the context indicates otherwise.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s46-paraphrase",
+      "reference_answer": "It denotes the death of a human being unless the context indicates otherwise.",
+      "completeness": "complete",
+      "reason": "The first claim accurately answers the human-being definition and contextual exception; several added claims have citation or scope problems.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "The word \"death\" denotes the death of a human being, unless the contrary appears from the context.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p134:c1"
+            }
+          ],
+          "reason": "This is the cited definition with its contextual qualification."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited rank-2 passage defines life under section 45, not death under section 46. Correct text elsewhere is not a citation for this claim."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The excerpt starts mid-condition before the phrase about culpable homicide. It does not support the universal claim that an act causing death cannot amount to culpable homicide."
+        },
+        {
+          "index": 3,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Death occurs when brain dies completely.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1014:c3"
+            }
+          ],
+          "reason": "The statement is explicitly present in this historical excerpt; this judgment concerns textual support, not independent medical validation."
+        },
+        {
+          "index": 4,
+          "support": "uncertain",
+          "evidence": [],
+          "reason": "'Not limited to' can imply that unborn-child death is included, whereas the cited passage expressly excludes it. The ambiguous formulation cannot confidently be treated as supported."
+        },
+        {
+          "index": 5,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "It is immaterial if the person whose death has been caused is not the very person whom the accused intended to kill: see Illustration (a) and section 301.4. The offence is complete as soon as any person is killed.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1014:c3"
+            }
+          ],
+          "reason": "In this offence-definition context, the excerpt expressly allows the victim to be someone other than the intended person."
+        },
+        {
+          "index": 6,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "It is immaterial if the person whose death has been caused is not the very person whom the accused intended to kill: see Illustration (a) and section 301.4. The offence is complete as soon as any person is killed.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1014:c3"
+            }
+          ],
+          "reason": "In this offence-definition context, the excerpt expressly allows the victim to be someone other than the intended person."
+        },
+        {
+          "index": 7,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "It is immaterial if the person whose death has been caused is not the very person whom the accused intended to kill: see Illustration (a) and section 301.4. The offence is complete as soon as any person is killed.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1014:c3"
+            }
+          ],
+          "reason": "In this offence-definition context, the excerpt expressly allows the victim to be someone other than the intended person."
+        }
+      ]
+    },
+    {
+      "id": "s463-paraphrase",
+      "reference_answer": "It includes false documents, false electronic records, or parts of them, with the specified harmful or fraudulent intents.",
+      "completeness": "not_answered",
+      "reason": "The model output failed the shared schema/citation/completion contract; no generated claims were delivered. This is a validation failure, not successful semantic abstention.",
+      "claims": []
+    },
+    {
+      "id": "s499-paraphrase",
+      "reference_answer": "Yes. An imputation concerning a company, association or collection of persons as such may amount to defamation.",
+      "completeness": "complete",
+      "reason": "It affirms the requested possibility and the identifiable-group qualification. The additional publication requirement is not established by its citation.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "It may be concerning a company, an association, or collection of persons (Explanation 2).",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1865:c2"
+            }
+          ],
+          "reason": "The cited text directly allows this possibility, rather than asserting all collections qualify."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "such collection of persons must be identifiable in the sense that one could with certainty say that this group of particular people has been defamed as distinguished from the rest of the community.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p1741:c1"
+            }
+          ],
+          "reason": "The source expressly requires the collection to be identifiable."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited wording says 'makes or publishes' an imputation. It does not establish the claim that publication, as distinct from making, is always required or explain a broader legal meaning of publication."
+        }
+      ]
+    },
+    {
+      "id": "s506-paraphrase",
+      "reference_answer": "Imprisonment of either description up to two years, a fine, or both.",
+      "completeness": "partial",
+      "reason": "The two-year maximum appears, but the fine alternative is garbled and the response adds repeated corrupted aggravated-threat statements rather than cleanly answering the ordinary penalty.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "uncertain",
+          "evidence": [],
+          "reason": "The imprisonment part matches, but the other penalty is rendered as '-one' rather than a readable fine. The full claim cannot confidently be verified without repairing the model output."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The claim substitutes the source's editorial marker 31 for a substantive punishment condition, omits its imprisonment-for-life text, and garbles the fine alternative. The cited paragraph does not support that corrupted rule."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The claim substitutes the source's editorial marker 31 for a substantive punishment condition, omits its imprisonment-for-life text, and garbles the fine alternative. The cited paragraph does not support that corrupted rule."
+        },
+        {
+          "index": 3,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The claim substitutes the source's editorial marker 31 for a substantive punishment condition, omits its imprisonment-for-life text, and garbles the fine alternative. The cited paragraph does not support that corrupted rule."
+        },
+        {
+          "index": 4,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The claim substitutes the source's editorial marker 31 for a substantive punishment condition, omits its imprisonment-for-life text, and garbles the fine alternative. The cited paragraph does not support that corrupted rule."
+        },
+        {
+          "index": 5,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The claim substitutes the source's editorial marker 31 for a substantive punishment condition, omits its imprisonment-for-life text, and garbles the fine alternative. The cited paragraph does not support that corrupted rule."
+        }
+      ]
+    },
+    {
+      "id": "s511-paraphrase",
+      "reference_answer": "It applies where the Code makes no express provision punishing the attempt, and the person has done an act towards committing the specified offence.",
+      "completeness": "incorrect",
+      "reason": "The answer does not state the decisive condition that no specific attempt provision applies; it instead generalizes section 511 to all attempts.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "Neither citation establishes the stated punishment for all attempts. Both restrict section 511 to attempts not otherwise specifically punished, and no cited text gives this claimed penalty."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "Although part of the wording is quoted, the cited paragraph expressly limits the general provision to attempts not punishable by another specific section. Omitting that qualification reverses the requested distinction."
+        }
+      ]
+    },
+    {
+      "id": "s79-paraphrase",
+      "reference_answer": "The provision concerns being justified by law, or a good-faith belief in legal justification arising from a mistake of fact, not a mistake of law.",
+      "completeness": "incorrect",
+      "reason": "It allows mistake of law, the very category the cited provision expressly excludes; the reference requires a good-faith mistake of fact.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "contradicted",
+          "evidence": [
+            {
+              "quote": "by reason of a mistake of fact2 and not by reason of a mistake of law3 in good faith, believes himself to be justified by law, in doing it.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p227:c5"
+            }
+          ],
+          "reason": "The actual section text expressly distinguishes mistake of fact from, and excludes, mistake of law. The answer asserts the opposite permission."
+        },
+        {
+          "index": 1,
+          "support": "contradicted",
+          "evidence": [
+            {
+              "quote": "by reason of a mistake of fact2 and not by reason of a mistake of law3 in good faith, believes himself to be justified by law, in doing it.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p227:c5"
+            }
+          ],
+          "reason": "The actual section text expressly distinguishes mistake of fact from, and excludes, mistake of law. The answer asserts the opposite permission."
+        }
+      ]
+    },
+    {
+      "id": "s93-paraphrase",
+      "reference_answer": "The communication must be made in good faith and for the benefit of the person to whom it is made.",
+      "completeness": "incorrect",
+      "reason": "It substitutes the defamation caution exception for the requested harmful-communication exception and does not accurately state the recipient-benefit conditions.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "This restates the question as a fragment. The sole cited source concerns a particular good-faith caution against another person, not the general harmful-communication rule asserted."
+        },
+        {
+          "index": 1,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The cited tenth exception requires good faith and benefit to the recipient, someone in whom the recipient is interested, or the public good. The claim omits good faith and broadens the beneficiary to any other person."
+        },
+        {
+          "index": 2,
+          "support": "unsupported",
+          "evidence": [],
+          "reason": "The source protects a qualified caution, not every honest communication beneficial to others or the public. The claim omits the specific type of communication and beneficiary qualifications."
+        }
+      ]
+    },
+    {
+      "id": "s96-paraphrase",
+      "reference_answer": "Nothing done in the exercise of the right of private defence is an offence under this provision.",
+      "completeness": "complete",
+      "reason": "It directly states the requested exception and adds two propositions explicitly supported by their citations.",
+      "claims": [
+        {
+          "index": 0,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "Section 96 IPC, 1860 provides that nothing is an offence which is done in the exercise of the right of private defence.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p322:c1"
+            }
+          ],
+          "reason": "The source expressly states the exception asked about."
+        },
+        {
+          "index": 1,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "it was essentially a defensive right and did not include the right to launch an offensive attack, particularly when the need for defence no longer existed.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p324:c5"
+            }
+          ],
+          "reason": "The defensive nature and limit on offensive action are directly stated."
+        },
+        {
+          "index": 2,
+          "support": "supported",
+          "evidence": [
+            {
+              "quote": "In a civilised society the defence of person and property of every member thereof is the responsibility of the State.",
+              "source_id": "ipc-book:5706a1b995df:640388196e:p321:c1"
+            }
+          ],
+          "reason": "This statement is explicitly present in the cited historical commentary."
+        }
+      ]
+    }
+  ],
+  "interpretation_notes": [
+    "Reviews assess textual support, not current legal or medical truth.",
+    "Repetition counts as separate emitted claims; these are not independent facts.",
+    "Correct answers using the wrong citation are unsupported.",
+    "Complete coverage of the requested facts is separate from support of added claims. A complete answer with any unsupported, contradicted or uncertain claim is not a fully supported complete success.",
+    "Ambiguous or materially garbled statements are labeled uncertain; obvious spelling slips that do not obscure meaning are not treated as new factual claims."
+  ],
+  "recovery_audit": {
+    "preserved_cases": 56,
+    "retained_prefix_equals_interrupted_archive": true,
+    "new_cases": 4,
+    "no_saved_case_regenerated": true
+  }
+}

@@ -1,6 +1,6 @@
 # Legal Lens 2.0
 
-**A legal-document research workspace with hybrid search, page-linked evidence, a grounded assistant, and local question classification.**
+**A legal-document research workspace with hybrid search, page-linked evidence, a citation-checked assistant, and local question classification.**
 
 Legal Lens 2.0 extends the original CSE508 group project into a runnable FastAPI + Next.js application. Users can search the bundled Indian Penal Code book, inspect original PDF passages, ask questions, and export a research brief. Search, document excerpts, and local classification can run without a paid API key. Hybrid retrieval and classification use a locally cached MiniLM model. The dashboard opens directly, without signup.
 
@@ -10,12 +10,16 @@ The bundled book is **historical IPC research material**. Current-law BNS/BNSS/B
 
 ## What we built
 
-**Retrieval evaluation:** a frozen, passage-grounded benchmark now compares BM25
-and hybrid retrieval on 40 questions across 20 topics. Hybrid passage Hit@5 is
-72.5% (29/40), versus 65.0% (26/40) for BM25. The report includes raw results,
-latency, eight unrelated-query probes, encoder-truncation findings and 30 passing
-offline regression tests. These are small-benchmark retrieval results, not legal
-answer accuracy. See [method, results and reproduction](backend/evaluation/retrieval/README.md).
+**Retrieval and answer evaluation:** tokenizer-bounded chunks remove silent
+encoder truncation in the indexed corpus (22.0% of old chunks exceeded the limit;
+zero new chunks do). On 80 held-out passage queries, v2 BM25 Hit@5 is 86.25% and
+v2 hybrid is 80.0%; hybrid rejects all 10 unrelated probes, but its ranking does
+not improve uniformly over v1. A separate 60-case local-generator experiment
+records every response, validation failure, and agent-authored claim review.
+Citation IDs alone do not prove support; local generation remains experimental.
+The repository has 46 passing offline backend tests. See the
+[full results, limits and reproduction](backend/evaluation/retrieval_v2/README.md)
+and the [archived original benchmark](backend/evaluation/retrieval/README.md).
 
 The 2.0 work focused on connecting retrieval, machine learning, evidence inspection, and failure handling into one usable research workflow.
 
